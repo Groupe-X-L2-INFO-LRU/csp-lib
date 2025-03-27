@@ -50,6 +50,7 @@ Please respect the directives writen on [Contributing.md](CONTRIBUTING.md)
 ## Contributors
 
 - [Quentin Sautiere](https://github.com/SautiereQDev)
+- [Linares Julien](https://github.com/KyozuFR)
   TODO: Add your name or pseudonym and link of your profile
 
 ## License
