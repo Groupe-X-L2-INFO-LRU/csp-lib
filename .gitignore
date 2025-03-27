@@ -1,0 +1,92 @@
+# IDE config files
+.vscode
+.idea
+
+# Env variables
+.env
+.env.**
+
+
+# Build files
+/dist
+/temp
+
+
+# Logs
+/log
+/logs/**
+
+# Fichiers objets et binaires
+*.o
+*.a
+*.so
+*.dll
+*.lib
+*.dylib
+
+# Fichiers exécutables
+*.out
+*.exe
+*.app
+
+# Fichiers de débogage
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Fichiers de dépendances
+*.d
+
+# Fichiers générés par les outils de construction
+/build/
+/cmake-build-*/
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Fichiers temporaires
+*~
+*.swp
+*.swo
+
+# Autres
+.DS_Store
+# Fichiers objets et binaires
+*.o
+*.a
+*.so
+*.dll
+*.lib
+*.dylib
+
+# Fichiers exécutables
+*.out
+*.exe
+*.app
+
+# Fichiers de débogage
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Fichiers de dépendances
+*.d
+
+# Fichiers générés par les outils de construction
+/build/
+/cmake-build-*/
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+
+# Fichiers temporaires
+*~
+*.swp
+*.swo
+
+# Autres
+.DS_Store
