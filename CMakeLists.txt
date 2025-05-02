@@ -20,6 +20,7 @@ target_link_libraries(solve-queens PRIVATE csp)
 add_library(csp SHARED
   src/csp.c
   src/csp.inc
+  src/forward-checking.c
 )
 target_include_directories(csp PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
