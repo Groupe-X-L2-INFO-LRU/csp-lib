@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/build",
+  "command": "/usr/bin/gcc -Dcsp_EXPORTS  -g -std=gnu11 -fPIC -o CMakeFiles/csp.dir/csp.c.o -c /home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/csp.c",
+  "file": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/csp.c",
+  "output": "CMakeFiles/csp.dir/csp.c.o"
+},
+{
+  "directory": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/solve-queens.dir/solve-queens.c.o -c /home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/solve-queens.c",
+  "file": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/solve-queens.c",
+  "output": "CMakeFiles/solve-queens.dir/solve-queens.c.o"
+},
+{
+  "directory": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/test-constraint-accessors.dir/tests/test-constraint-accessors.c.o -c /home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-constraint-accessors.c",
+  "file": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-constraint-accessors.c",
+  "output": "CMakeFiles/test-constraint-accessors.dir/tests/test-constraint-accessors.c.o"
+},
+{
+  "directory": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/test-constraint-to-check.dir/tests/test-constraint-to-check.c.o -c /home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-constraint-to-check.c",
+  "file": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-constraint-to-check.c",
+  "output": "CMakeFiles/test-constraint-to-check.dir/tests/test-constraint-to-check.c.o"
+},
+{
+  "directory": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/test-constraint.dir/tests/test-constraint.c.o -c /home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-constraint.c",
+  "file": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-constraint.c",
+  "output": "CMakeFiles/test-constraint.dir/tests/test-constraint.c.o"
+},
+{
+  "directory": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/test-init-finish-1.dir/tests/test-init-finish-1.c.o -c /home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-init-finish-1.c",
+  "file": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-init-finish-1.c",
+  "output": "CMakeFiles/test-init-finish-1.dir/tests/test-init-finish-1.c.o"
+},
+{
+  "directory": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/test-init-finish-2.dir/tests/test-init-finish-2.c.o -c /home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-init-finish-2.c",
+  "file": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-init-finish-2.c",
+  "output": "CMakeFiles/test-init-finish-2.dir/tests/test-init-finish-2.c.o"
+},
+{
+  "directory": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/test-init-finish-3.dir/tests/test-init-finish-3.c.o -c /home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-init-finish-3.c",
+  "file": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-init-finish-3.c",
+  "output": "CMakeFiles/test-init-finish-3.dir/tests/test-init-finish-3.c.o"
+},
+{
+  "directory": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/test-problem-is-consistent.dir/tests/test-problem-is-consistent.c.o -c /home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-problem-is-consistent.c",
+  "file": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-problem-is-consistent.c",
+  "output": "CMakeFiles/test-problem-is-consistent.dir/tests/test-problem-is-consistent.c.o"
+},
+{
+  "directory": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/build",
+  "command": "/usr/bin/gcc   -g -std=gnu11 -o CMakeFiles/test-problem.dir/tests/test-problem.c.o -c /home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-problem.c",
+  "file": "/home/quentin-sautiere/Documents/fac/programmation_imperative/csp-lib/tests/test-problem.c",
+  "output": "CMakeFiles/test-problem.dir/tests/test-problem.c.o"
+}
+]

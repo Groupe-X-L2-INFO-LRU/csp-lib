@@ -5,7 +5,7 @@
 #endif
 #include <assert.h>
 
-#include "../csp.h"
+#include "../src/csp.h"
 
 int main(void) {
   assert(csp_init());

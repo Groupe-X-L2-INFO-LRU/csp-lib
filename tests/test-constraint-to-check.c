@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../csp.h"
+#include "../src/csp.h"
 #ifdef NDEBUG
 #undef NDEBUG
 #endif
