@@ -139,29 +139,3 @@ CSPForwardCheckContext *csp_forward_check_context_create(const CSPProblem *csp) 
     }
     return ctx;
 }
-
-void csp_forward_check_context_destroy(CSPForwardCheckContext *ctx) {
-    assert(csp_initialised());
-    if (!ctx) {
-        return;
-    }
-    for (size_t i = 0; i < ctx->num_domains; ++i) {
-        free(ctx->current_domains[i]);
-    }
-    free(ctx->current_domains);
-    free(ctx->original_domain_sizes);
-    free(ctx);
-}
-
-bool csp_problem_solve_forward_checking(const CSPProblem *csp,
-                                        size_t *values,
-                                        const void *data) {
-    assert(csp_initialised());
-    CSPForwardCheckContext *ctx = csp_forward_check_context_create(csp);
-    if (!ctx) {
-        return false;
-    }
-    bool solved = backtrack_fc(csp, values, data, ctx, 0);
-    csp_forward_check_context_destroy(ctx);
-    return solved;
-}
