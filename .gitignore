@@ -82,6 +82,7 @@ CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
+.cache
 
 # Fichiers temporaires
 *~

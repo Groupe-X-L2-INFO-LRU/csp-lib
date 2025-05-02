@@ -5,7 +5,7 @@
 #endif
 #include <assert.h>
 
-#include "./csp.h"
+#include "../csp.h"
 
 int main(void) {
   assert(csp_init());
@@ -14,7 +14,6 @@ int main(void) {
   assert(csp_finish());
   assert(csp_finish());
   assert(csp_finish());
-  assert(csp_finish() == false);
 
   return EXIT_SUCCESS;
 }

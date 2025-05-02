@@ -1,6 +1,6 @@
 #include <stdlib.h>
 
-#include "./csp.h"
+#include "../csp.h"
 #ifdef NDEBUG
 #undef NDEBUG
 #endif

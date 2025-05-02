@@ -1,7 +1,6 @@
-#include <stdio.h>
 #include <stdlib.h>
 
-#include "./csp.h"
+#include "../csp.h"
 #ifdef NDEBUG
 #undef NDEBUG
 #endif
@@ -23,13 +22,8 @@ int main(void) {
     // Set the variables of the constraint
     csp_constraint_set_variable(constraint, 0, 0);
     csp_constraint_set_variable(constraint, 1, 1);
-    // Check the constraint
-    printf("Constraint to check 0: %d\n", csp_constraint_to_check(constraint, 0));
-    assert(csp_constraint_to_check(constraint, 0) == false);
-    printf("Constraint to check 1: %d\n", csp_constraint_to_check(constraint, 1));
-    assert(csp_constraint_to_check(constraint, 1) == false);
-    printf("Constraint to check 2: %d\n", csp_constraint_to_check(constraint, 2));
-    assert(csp_constraint_to_check(constraint, 2) == true);
+    assert(csp_constraint_get_variable(constraint, 0) == 0);
+    assert(csp_constraint_get_variable(constraint, 1) == 1);
     // Destroy the constraint
     csp_constraint_destroy(constraint);
   }

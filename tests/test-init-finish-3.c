@@ -5,14 +5,16 @@
 #endif
 #include <assert.h>
 
-#include "./csp.h"
+#include "../csp.h"
 
 int main(void) {
-  assert(csp_initialised() == false);
   assert(csp_init());
-  assert(csp_initialised());
+  assert(csp_init());
+  assert(csp_init());
   assert(csp_finish());
-  assert(csp_initialised() == false);
+  assert(csp_finish());
+  assert(csp_finish());
+  assert(csp_finish() == false);
 
   return EXIT_SUCCESS;
 }

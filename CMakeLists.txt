@@ -22,7 +22,7 @@ add_library(csp SHARED csp.c csp.h csp.inc)
 target_link_libraries(solve-queens csp)
 
 # Find test files
-file(GLOB FILES "${CMAKE_CURRENT_SOURCE_DIR}/test-*.c")
+file(GLOB FILES "${CMAKE_CURRENT_SOURCE_DIR}/tests/test-*.c")
 
 enable_testing()
 
@@ -30,18 +30,19 @@ find_program(VALGRIND valgrind)
 
 # Add tests
 foreach(FILENAME ${FILES})
-  get_filename_component(SRC ${FILENAME} NAME)
-  get_filename_component(TEST ${FILENAME} NAME_WE)
-  add_executable(${TEST} ${SRC} csp.h csp.inc)
+  get_filename_component(SRC_NAME ${FILENAME} NAME) # Get only the filename (e.g., test-constraint.c)
+  get_filename_component(TEST ${FILENAME} NAME_WE) # Get filename without extension (e.g., test-constraint)
+  # Use FILENAME which contains the full path (tests/test-constraint.c) for add_executable
+  add_executable(${TEST} ${FILENAME} csp.h csp.inc)
   add_dependencies(${TEST} csp)
   target_link_libraries(${TEST} csp)
 #  target_link_libraries(${TEST} efence)
-  # Add the test
-  add_test(${TEST} ./${TEST})
+  # Add the test - executable will be in the build directory root
+  add_test(${TEST} ${CMAKE_BINARY_DIR}/${TEST})
   if(VALGRIND)
     # Add the valgrind test
     add_test(
-      "${TEST}[valgrind]" ${VALGRIND} --leak-check=full --quiet --error-exitcode=1 ./${TEST}
+      NAME "${TEST}[valgrind]" COMMAND ${VALGRIND} --leak-check=full --quiet --error-exitcode=1 ${CMAKE_BINARY_DIR}/${TEST}
     )
   endif()
 endforeach()
