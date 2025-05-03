@@ -137,7 +137,7 @@ void order_values_lcv(const CSPProblem *csp, CSPForwardCheckContext *ctx, const 
             CSPConstraint *con = csp_problem_get_constraint(csp, ci);
 
             // We only consider binary constraints (between 2 variables)
-            if (con->arity != 2) continue;
+            if (csp_constraint_get_arity(con) != 2) continue;
 
             // Get the two variables involved in this constraint
             size_t a = csp_constraint_get_variable(con, 0);
@@ -245,7 +245,7 @@ void prune_neighbors(const CSPProblem *csp, const size_t *values, const void *da
         CSPConstraint *con = csp_problem_get_constraint(csp, ci);
 
         // We only consider binary constraints (between 2 variables)
-        if (con->arity != 2) continue;
+        if (csp_constraint_get_arity(con) != 2) continue;
 
         // Get the two variables involved in this constraint
         size_t a = csp_constraint_get_variable(con, 0);
@@ -275,7 +275,8 @@ void prune_neighbors(const CSPProblem *csp, const size_t *values, const void *da
             vals[other] = o_val;
 
             // Check if this combination violates the constraint
-            if (!con->check(con, vals, data)) {
+            CSPChecker *check_func = csp_constraint_get_check(con);
+            if (!check_func(con, vals, data)) {
                 // This value is incompatible with our current assignment,
                 // so prune it from the domain
                 ctx->current_domains[other][o_val] = false;
