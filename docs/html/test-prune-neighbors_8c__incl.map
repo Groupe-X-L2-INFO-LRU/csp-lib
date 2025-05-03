@@ -1,0 +1,20 @@
+<map id="tests/test&#45;prune&#45;neighbors.c" name="tests/test&#45;prune&#45;neighbors.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="103,5,303,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,77,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,33,81,75,79,71,176,28"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="101,79,165,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="193,33,156,71,152,67,189,29"/>
+<area shape="rect" id="Node000004" href="$csp_8h.html" title="Header file for the CSP (Constraint Satisfaction Problem) library." alt="" coords="283,225,373,251"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="204,31,203,59,205,97,213,138,230,176,254,200,283,217,280,222,251,204,226,179,208,140,199,97,197,59,199,31"/>
+<area shape="rect" id="Node000007" href="$forward-checking_8h.html" title="Forward checking algorithm for constraint satisfaction problems." alt="" coords="240,152,416,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="215,29,311,140,307,143,211,33"/>
+<area shape="rect" id="Node000008" href="$heuristics_8h.html" title="Heuristics for improving CSP solver performance." alt="" coords="291,79,419,104"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="228,28,319,70,317,75,226,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="288,299,368,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="331,251,331,285,325,285,325,251"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="405,299,478,324"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="348,248,413,289,410,294,345,253"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="331,178,331,212,325,212,325,178"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="378,102,406,122,430,151,443,185,449,222,448,285,442,285,444,222,438,187,426,153,403,126,375,106"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="353,105,340,140,335,138,348,103"/>
+</map>

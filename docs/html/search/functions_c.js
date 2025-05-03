@@ -1,15 +1,9 @@
 var searchData=
 [
-  ['test_5fcontext_5fcreate_5fdestroy_0',['test_context_create_destroy',['../test-context_8c.html#a885c8a80baefd5f7c87af51f76ffb2f9',1,'test-context.c']]],
-  ['test_5flcv_5fbasic_1',['test_lcv_basic',['../test-order-values-lcv_8c.html#a2e8b8362481e9c5d3c195e4bb6c66f85',1,'test-order-values-lcv.c']]],
-  ['test_5fmrv_5fsimple_2',['test_mrv_simple',['../test-select-unassigned-var_8c.html#abd1084a4ba75b3e0e2f222dc15cdbec8',1,'test-select-unassigned-var.c']]],
-  ['test_5fmrv_5fskip_5fassigned_3',['test_mrv_skip_assigned',['../test-select-unassigned-var_8c.html#ade408e9a4302addb0a1986d2b9b5e039',1,'test-select-unassigned-var.c']]],
-  ['test_5fprune_5fneighbors_4',['test_prune_neighbors',['../test-prune-neighbors_8c.html#adfd3efeb770bf4bc80c71cdab729c81d',1,'test-prune-neighbors.c']]],
-  ['test_5frestore_5fpruned_5',['test_restore_pruned',['../test-restore-pruned_8c.html#a762d70ca352fb5ef5378618485a8b591',1,'test-restore-pruned.c']]],
-  ['test_5fsingle_5fvar_6',['test_single_var',['../test-forward-checking_8c.html#ad73208eb4ba9df875d1fdf3c0b43a6e7',1,'test-forward-checking.c']]],
-  ['test_5fsolve_5fsimple_7',['test_solve_simple',['../test-solve-forward-checking_8c.html#ad2ec5370481a424ba0df59de2b8ede5b',1,'test-solve-forward-checking.c']]],
-  ['test_5fthree_5fvar_5fdiff_8',['test_three_var_diff',['../test-forward-checking_8c.html#aebadbf73aad5c0730e4272306f6a5388',1,'test-forward-checking.c']]],
-  ['test_5ftwo_5fvar_5fdiff_9',['test_two_var_diff',['../test-forward-checking_8c.html#ab497f67117be78c07a415960ba822485',1,'test-forward-checking.c']]],
-  ['test_5funsatisfiable_10',['test_unsatisfiable',['../test-forward-checking_8c.html#a769d87bae594656fbf9732ac5173f5b1',1,'test-forward-checking.c']]],
-  ['test_5fwith_5fdata_11',['test_with_data',['../test-forward-checking_8c.html#a8d8bb23667ef5a832ac998a3204d6838',1,'test-forward-checking.c']]]
+  ['select_5funassigned_5fvar_0',['select_unassigned_var',['../heuristics_8c.html#a934ee1c54ecdfa65b205d3f9888e38de',1,'select_unassigned_var(const CSPForwardCheckContext *ctx):&#160;heuristics.c'],['../heuristics_8h.html#a934ee1c54ecdfa65b205d3f9888e38de',1,'select_unassigned_var(const CSPForwardCheckContext *ctx):&#160;heuristics.c']]],
+  ['sudoku_5fnot_5fequal_1',['sudoku_not_equal',['../solve-sudoku_8c.html#afb4bcd67882bd5f0bab530abc8ac1b41',1,'solve-sudoku.c']]],
+  ['sudoku_5fnot_5fequal_5fchecker_2',['sudoku_not_equal_checker',['../sudoku__utils_8c.html#a10505509f8f62f6ab218963ba678a7c7',1,'sudoku_utils.c']]],
+  ['sudoku_5fpreassigned_3',['sudoku_preassigned',['../solve-sudoku_8c.html#a57be35bb847709b5413ff936f9ce1f5c',1,'solve-sudoku.c']]],
+  ['sudoku_5fpreassigned_5fchecker_4',['sudoku_preassigned_checker',['../sudoku__utils_8c.html#aaeca61f4b50e068c553d17aca39d8653',1,'sudoku_utils.c']]],
+  ['sumleq_5',['sumleq',['../test-forward-checking_8c.html#a6b4a37aa63bd372d499018b7e0a71a01',1,'sumLeq(const CSPConstraint *constraint, const size_t *values, const void *data):&#160;test-forward-checking.c'],['../test-order-values-lcv_8c.html#a522f11a170b84aca2da6e173cb73bbd1',1,'sumLeq(CSPConstraint const *c, const size_t *v, const void *d):&#160;test-order-values-lcv.c']]]
 ];

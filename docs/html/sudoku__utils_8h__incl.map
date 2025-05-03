@@ -1,0 +1,12 @@
+<map id="src/sudoku_utils.h" name="src/sudoku_utils.h">
+<area shape="rect" id="Node000001" title="Utilities for modeling and solving Sudoku puzzles using the CSP framework." alt="" coords="22,5,154,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,152,85,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,32,61,53,47,80,42,109,43,138,38,138,36,109,41,78,56,50,74,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="56,79,120,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,31,91,65,85,65,85,31"/>
+<area shape="rect" id="Node000004" href="$csp_8h.html" title="Header file for the CSP (Constraint Satisfaction Problem) library." alt="" coords="145,79,199,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="103,29,149,67,146,72,100,33"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="153,106,79,147,77,143,150,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="135,152,209,177"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="175,104,175,138,169,138,169,104"/>
+</map>

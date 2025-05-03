@@ -8,6 +8,7 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "heuristics.c", "heuristics_8c.html", "heuristics_8c" ],
     [ "heuristics.h", "heuristics_8h.html", "heuristics_8h" ],
     [ "main.c", "main_8c.html", "main_8c" ],
+    [ "solve-queens.c", "solve-queens_8c.html", "solve-queens_8c" ],
     [ "solve-sudoku.c", "solve-sudoku_8c.html", "solve-sudoku_8c" ],
     [ "sudoku_utils.c", "sudoku__utils_8c.html", "sudoku__utils_8c" ],
     [ "sudoku_utils.h", "sudoku__utils_8h.html", "sudoku__utils_8h" ]

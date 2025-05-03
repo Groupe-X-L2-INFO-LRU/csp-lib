@@ -1,0 +1,12 @@
+<map id="csp_problem_backtrack" name="csp_problem_backtrack">
+<area shape="rect" id="Node000001" title="Recursively solves the CSP problem using backtracking from a given variable." alt="" coords="5,29,169,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="51,31,43,21,47,11,62,5,87,3,118,6,130,15,127,20,116,11,87,8,64,10,51,15,49,20,55,28"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="667,55,772,80"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,36,374,33,497,37,619,46,653,51,653,56,618,51,496,42,374,38,170,41"/>
+<area shape="rect" id="Node000003" href="$csp_8c.html#aa99de6b1a87c93273c7e4df221ad4318" title="Checks if the current partial assignment is consistent with all constraints." alt="" coords="217,55,401,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="170,49,204,53,204,58,169,54"/>
+<area shape="poly" id="edge6_Node000003_Node000002" title=" " alt="" coords="402,65,653,65,653,70,402,70"/>
+<area shape="rect" id="Node000004" href="$csp_8c.html#a8e96fe29fce42103f0e6dc9cc5baa167" title="Determines if a constraint can be checked at the current stage of problem solving." alt="" coords="449,105,619,131"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="367,78,465,100,463,105,366,83"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="581,103,658,81,660,86,582,108"/>
+</map>

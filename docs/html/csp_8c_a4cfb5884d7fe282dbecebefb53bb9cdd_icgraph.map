@@ -1,0 +1,100 @@
+<map id="csp_constraint_get_variable" name="csp_constraint_get_variable">
+<area shape="rect" id="Node000001" title="Gets the variable ID associated with a specific position in the constraint." alt="" coords="991,419,1127,459"/>
+<area shape="rect" id="Node000002" href="$forward-checking_8c.html#a80a2e22a4514587505e87b68cd29841b" title="Creates and initializes a forward checking context." alt="" coords="752,263,943,303"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1034,409,994,362,969,338,941,317,919,305,921,300,944,312,972,334,998,358,1038,406"/>
+<area shape="rect" id="Node000020" href="$test-forward-checking_8c.html#a250d496ab2050def23b015480d7a5568" title=" " alt="" coords="367,134,410,159"/>
+<area shape="poly" id="edge23_Node000001_Node000020" title=" " alt="" coords="1055,405,1050,338,1034,254,1020,211,1000,170,974,134,941,103,907,88,860,80,804,77,744,79,625,91,534,104,466,121,411,140,410,135,464,115,533,99,624,85,744,73,804,72,860,74,908,83,944,99,978,130,1005,167,1025,209,1039,253,1056,337,1060,405"/>
+<area shape="rect" id="Node000021" href="$test-prune-neighbors_8c.html#abd0847773c06a7d842cf8e52cad2f59e" title=" " alt="" coords="826,475,869,501"/>
+<area shape="poly" id="edge27_Node000001_Node000021" title=" " alt="" coords="978,460,869,486,868,481,976,455"/>
+<area shape="rect" id="Node000022" href="$test-solve-forward-checking_8c.html#abd0847773c06a7d842cf8e52cad2f59e" title=" " alt="" coords="367,813,410,838"/>
+<area shape="poly" id="edge29_Node000001_Node000022" title=" " alt="" coords="1055,473,1041,560,1018,671,1003,725,986,774,966,812,944,838,911,859,876,876,838,888,800,896,721,901,642,896,568,884,502,867,409,836,411,831,503,862,569,878,643,891,721,896,799,891,837,883,874,871,909,855,941,834,962,810,981,772,998,724,1013,670,1036,559,1050,472"/>
+<area shape="rect" id="Node000023" href="$test-problem-is-consistent_8c.html#ab480e0c778943bce321ba5bb775a1a79" title=" " alt="" coords="809,114,885,139"/>
+<area shape="poly" id="edge31_Node000001_Node000023" title=" " alt="" coords="1051,405,1041,350,1021,281,1007,246,989,212,967,180,941,153,914,138,885,131,886,125,916,133,944,148,971,177,994,209,1012,244,1026,279,1046,348,1056,404"/>
+<area shape="rect" id="Node000025" href="$forward-checking_8c.html#a400289d0fceaceb244ed1e32f4860880" title="Checks consistency of the current assignment under forward checking." alt="" coords="789,327,906,353"/>
+<area shape="poly" id="edge33_Node000001_Node000025" title=" " alt="" coords="1019,412,983,388,942,366,905,354,907,349,944,361,985,383,1022,408"/>
+<area shape="rect" id="Node000027" href="$test-create-sudoku-problem_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="363,551,415,577"/>
+<area shape="poly" id="edge37_Node000001_Node000027" title=" " alt="" coords="1025,469,987,494,944,514,896,526,832,537,677,552,415,566,415,560,677,546,831,531,895,521,942,509,984,489,1022,464"/>
+<area shape="rect" id="Node000028" href="$test-constraint-accessors_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="821,377,873,402"/>
+<area shape="poly" id="edge38_Node000001_Node000028" title=" " alt="" coords="976,422,873,398,874,392,977,417"/>
+<area shape="rect" id="Node000029" href="$heuristics_8c.html#a9c3a8a6b03e49553f45c6144f97e1fb4" title="Implements the Least Constraining Value (LCV) heuristic for value ordering." alt="" coords="785,213,909,238"/>
+<area shape="poly" id="edge39_Node000001_Node000029" title=" " alt="" coords="1044,406,1028,370,1006,328,977,287,941,253,908,237,911,232,944,248,981,284,1011,326,1033,368,1048,404"/>
+<area shape="rect" id="Node000030" href="$heuristics_8c.html#a2840f304ec278feae32d3d11915a7a78" title="Prunes inconsistent values from neighboring variables during forward checking." alt="" coords="783,426,912,451"/>
+<area shape="poly" id="edge42_Node000001_Node000030" title=" " alt="" coords="976,441,912,441,912,436,976,436"/>
+<area shape="rect" id="Node000031" href="$solve-queens_8c.html#aef85da0b7a911f108338f8e93e28e37b" title=" " alt="" coords="317,655,460,681"/>
+<area shape="poly" id="edge45_Node000001_Node000031" title=" " alt="" coords="1060,473,1056,540,1040,626,1025,670,1005,712,978,749,944,781,891,813,841,830,794,835,747,830,699,817,648,799,532,756,495,740,459,720,405,683,408,678,462,715,497,735,534,751,650,794,700,812,748,825,794,830,840,825,889,808,941,776,974,746,1000,709,1020,668,1035,625,1051,540,1055,472"/>
+<area shape="rect" id="Node000032" href="$solve-sudoku_8c.html#afb4bcd67882bd5f0bab530abc8ac1b41" title="Checker for binary all&#45;different constraint." alt="" coords="780,691,915,717"/>
+<area shape="poly" id="edge47_Node000001_Node000032" title=" " alt="" coords="1053,473,1040,520,1019,576,988,632,968,658,944,681,916,696,914,691,941,676,964,654,983,629,1014,573,1035,518,1048,471"/>
+<area shape="rect" id="Node000034" href="$sudoku__utils_8c.html#a10505509f8f62f6ab218963ba678a7c7" title=" " alt="" coords="753,577,942,602"/>
+<area shape="poly" id="edge49_Node000001_Node000034" title=" " alt="" coords="1037,471,997,516,971,539,944,559,902,579,899,574,941,555,968,535,993,513,1033,467"/>
+<area shape="rect" id="Node000036" href="$solve-sudoku_8c.html#a57be35bb847709b5413ff936f9ce1f5c" title="Checker to enforce a cell&#39;s pre&#45;assigned value." alt="" coords="773,741,921,766"/>
+<area shape="poly" id="edge52_Node000001_Node000036" title=" " alt="" coords="1056,473,1046,529,1026,598,1012,634,994,669,971,701,944,730,923,743,920,739,941,726,967,698,989,666,1007,632,1021,596,1041,528,1051,472"/>
+<area shape="rect" id="Node000037" href="$sudoku__utils_8c.html#aaeca61f4b50e068c553d17aca39d8653" title=" " alt="" coords="773,627,921,667"/>
+<area shape="poly" id="edge54_Node000001_Node000037" title=" " alt="" coords="1046,473,1007,544,978,582,944,615,922,629,920,624,941,611,974,579,1002,541,1041,470"/>
+<area shape="rect" id="Node000038" href="$test-forward-checking_8c.html#a6b4a37aa63bd372d499018b7e0a71a01" title=" " alt="" coords="583,13,654,38"/>
+<area shape="poly" id="edge56_Node000001_Node000038" title=" " alt="" coords="1056,405,1053,331,1038,236,1024,187,1004,139,976,96,941,59,908,38,871,23,831,14,791,9,715,11,655,20,654,15,715,6,791,4,832,8,872,18,910,33,944,55,980,93,1008,137,1029,185,1044,235,1058,330,1061,404"/>
+<area shape="rect" id="Node000039" href="$test-order-values-lcv_8c.html#a522f11a170b84aca2da6e173cb73bbd1" title=" " alt="" coords="812,163,883,189"/>
+<area shape="poly" id="edge58_Node000001_Node000039" title=" " alt="" coords="1048,406,1035,359,1014,304,983,249,964,224,941,202,913,187,882,180,883,175,915,182,944,198,968,220,988,246,1019,302,1040,358,1053,404"/>
+<area shape="rect" id="Node000003" href="$forward-checking_8c.html#aab2b763fd1833131dc1b7f43b2c7942a" title="Solves a CSP problem using the forward checking algorithm with heuristics." alt="" coords="292,283,485,323"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="738,290,486,301,485,296,738,285"/>
+<area shape="rect" id="Node000014" href="$test-context_8c.html#a885c8a80baefd5f7c87af51f76ffb2f9" title=" " alt="" coords="547,225,690,265"/>
+<area shape="poly" id="edge17_Node000002_Node000014" title=" " alt="" coords="737,267,690,259,691,254,738,262"/>
+<area shape="rect" id="Node000016" href="$test-order-values-lcv_8c.html#a2e8b8362481e9c5d3c195e4bb6c66f85" title=" " alt="" coords="567,175,671,201"/>
+<area shape="poly" id="edge19_Node000002_Node000016" title=" " alt="" coords="767,260,751,251,727,233,703,216,670,203,672,198,705,211,730,229,753,247,770,255"/>
+<area shape="rect" id="Node000018" href="$test-prune-neighbors_8c.html#adfd3efeb770bf4bc80c71cdab729c81d" title=" " alt="" coords="539,426,698,451"/>
+<area shape="poly" id="edge21_Node000002_Node000018" title=" " alt="" coords="760,312,754,316,737,337,730,358,723,380,706,403,686,418,664,428,661,423,683,413,702,399,718,378,725,356,732,335,750,313,757,308"/>
+<area shape="rect" id="Node000004" href="$test-solve-sudoku-integration_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="149,335,201,361"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="281,328,202,345,201,340,280,323"/>
+<area shape="rect" id="Node000005" href="$solve-queens_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="149,429,201,454"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="347,332,197,431,194,426,344,328"/>
+<area shape="rect" id="Node000006" href="$test-forward-checking_8c.html#ad73208eb4ba9df875d1fdf3c0b43a6e7" title=" " alt="" coords="117,286,232,311"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="278,303,232,302,232,297,278,298"/>
+<area shape="rect" id="Node000008" href="$test-solve-forward-checking_8c.html#ad2ec5370481a424ba0df59de2b8ede5b" title=" " alt="" coords="109,565,240,590"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="362,335,294,415,232,500,187,566,182,563,227,497,290,412,358,331"/>
+<area shape="rect" id="Node000010" href="$test-forward-checking_8c.html#aebadbf73aad5c0730e4272306f6a5388" title=" " alt="" coords="105,187,244,213"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="305,279,291,271,276,260,266,248,257,237,243,226,220,215,222,210,245,222,260,233,270,245,279,256,293,267,307,275"/>
+<area shape="rect" id="Node000011" href="$test-forward-checking_8c.html#ab497f67117be78c07a415960ba822485" title=" " alt="" coords="111,237,238,262"/>
+<area shape="poly" id="edge11_Node000003_Node000011" title=" " alt="" coords="294,282,226,264,227,259,296,277"/>
+<area shape="rect" id="Node000012" href="$test-forward-checking_8c.html#a769d87bae594656fbf9732ac5173f5b1" title=" " alt="" coords="110,138,239,163"/>
+<area shape="poly" id="edge13_Node000003_Node000012" title=" " alt="" coords="299,278,290,271,272,247,265,223,259,199,242,176,225,166,228,161,246,173,264,197,271,221,277,244,294,267,302,273"/>
+<area shape="rect" id="Node000013" href="$test-forward-checking_8c.html#a8d8bb23667ef5a832ac998a3204d6838" title=" " alt="" coords="119,89,230,114"/>
+<area shape="poly" id="edge15_Node000003_Node000013" title=" " alt="" coords="296,277,290,271,276,252,269,234,265,197,262,162,255,145,242,127,227,116,230,112,246,123,260,142,267,161,271,197,274,233,281,250,294,267,300,273"/>
+<area shape="rect" id="Node000007" href="$test-forward-checking_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,187,57,213"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="117,283,104,275,67,245,41,215,45,211,71,241,107,271,119,278"/>
+<area shape="rect" id="Node000009" href="$test-solve-forward-checking_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,565,57,590"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="96,580,57,580,57,575,96,575"/>
+<area shape="poly" id="edge10_Node000010_Node000007" title=" " alt="" coords="91,203,57,203,57,197,91,197"/>
+<area shape="poly" id="edge12_Node000011_Node000007" title=" " alt="" coords="123,235,57,211,59,206,125,229"/>
+<area shape="poly" id="edge14_Node000012_Node000007" title=" " alt="" coords="125,170,59,194,57,189,123,165"/>
+<area shape="poly" id="edge16_Node000013_Node000007" title=" " alt="" coords="117,122,107,127,70,158,44,189,40,185,67,154,104,123,114,117"/>
+<area shape="rect" id="Node000015" href="$test-context_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="363,233,415,258"/>
+<area shape="poly" id="edge18_Node000014_Node000015" title=" " alt="" coords="534,248,415,248,415,243,534,243"/>
+<area shape="rect" id="Node000017" href="$test-order-values-lcv_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="363,183,415,209"/>
+<area shape="poly" id="edge20_Node000016_Node000017" title=" " alt="" coords="553,193,415,198,415,192,552,187"/>
+<area shape="rect" id="Node000019" href="$test-prune-neighbors_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="363,426,415,451"/>
+<area shape="poly" id="edge22_Node000018_Node000019" title=" " alt="" coords="526,441,415,441,415,436,526,436"/>
+<area shape="poly" id="edge24_Node000020_Node000010" title=" " alt="" coords="355,157,293,173,227,190,226,185,291,168,354,152"/>
+<area shape="poly" id="edge25_Node000020_Node000011" title=" " alt="" coords="354,153,323,160,293,173,279,185,270,198,261,212,246,226,221,239,218,234,242,222,257,209,265,195,275,181,291,168,322,155,353,147"/>
+<area shape="poly" id="edge26_Node000020_Node000012" title=" " alt="" coords="353,150,239,152,239,147,353,144"/>
+<area shape="poly" id="edge28_Node000021_Node000018" title=" " alt="" coords="812,483,678,454,679,449,813,478"/>
+<area shape="poly" id="edge30_Node000022_Node000008" title=" " alt="" coords="365,804,185,592,189,588,369,800"/>
+<area shape="rect" id="Node000024" href="$test-problem-is-consistent_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="593,114,645,139"/>
+<area shape="poly" id="edge32_Node000023_Node000024" title=" " alt="" coords="795,129,645,129,645,124,795,124"/>
+<area shape="rect" id="Node000026" href="$forward-checking_8c.html#a1f0b1f4d23987c6c2209df2c7e2570ce" title=" " alt="" coords="570,365,667,390"/>
+<area shape="poly" id="edge34_Node000025_Node000026" title=" " alt="" coords="775,354,668,372,667,367,774,349"/>
+<area shape="poly" id="edge36_Node000026_Node000003" title=" " alt="" coords="565,363,450,325,452,320,566,358"/>
+<area shape="poly" id="edge35_Node000026_Node000026" title=" " alt="" coords="659,355,649,347,619,343,594,345,582,350,579,355,586,363,582,366,574,356,578,346,593,340,619,338,651,342,663,351"/>
+<area shape="poly" id="edge41_Node000029_Node000016" title=" " alt="" coords="771,216,670,199,671,194,772,210"/>
+<area shape="poly" id="edge40_Node000029_Node000026" title=" " alt="" coords="773,244,753,253,715,280,680,311,632,366,628,362,676,307,711,275,751,248,771,239"/>
+<area shape="poly" id="edge44_Node000030_Node000018" title=" " alt="" coords="769,441,698,441,698,436,769,436"/>
+<area shape="poly" id="edge43_Node000030_Node000026" title=" " alt="" coords="785,425,751,416,666,392,667,387,753,411,786,420"/>
+<area shape="poly" id="edge46_Node000031_Node000005" title=" " alt="" coords="357,649,290,590,227,515,183,456,187,452,231,512,294,586,361,645"/>
+<area shape="rect" id="Node000033" href="$solve-sudoku_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="593,717,645,742"/>
+<area shape="poly" id="edge48_Node000032_Node000033" title=" " alt="" coords="766,715,645,729,645,724,766,710"/>
+<area shape="rect" id="Node000035" href="$sudoku__utils_8c.html#ade548bfca512830b9aac3569243d254f" title="Creates a CSP problem that models the Sudoku puzzle." alt="" coords="533,577,704,602"/>
+<area shape="poly" id="edge50_Node000034_Node000035" title=" " alt="" coords="739,592,704,592,704,587,739,587"/>
+<area shape="poly" id="edge51_Node000035_Node000027" title=" " alt="" coords="520,581,415,569,415,564,520,576"/>
+<area shape="poly" id="edge53_Node000036_Node000033" title=" " alt="" coords="759,747,645,734,645,729,760,741"/>
+<area shape="poly" id="edge55_Node000037_Node000035" title=" " alt="" coords="759,627,669,604,671,599,761,622"/>
+<area shape="poly" id="edge57_Node000038_Node000013" title=" " alt="" coords="570,36,231,95,230,89,569,31"/>
+<area shape="poly" id="edge59_Node000039_Node000016" title=" " alt="" coords="798,181,671,188,671,182,798,176"/>
+</map>

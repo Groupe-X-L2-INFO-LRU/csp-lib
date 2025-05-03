@@ -1,0 +1,13 @@
+<map id="src/sudoku_utils.h" name="src/sudoku_utils.h">
+<area shape="rect" id="Node000001" title="Utilities for modeling and solving Sudoku puzzles using the CSP framework." alt="" coords="374,5,506,31"/>
+<area shape="rect" id="Node000002" href="$sudoku__utils_8c.html" title=" " alt="" coords="5,86,136,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="368,36,149,81,117,89,116,83,147,76,367,31"/>
+<area shape="rect" id="Node000003" href="$test-create-sudoku-problem_8c.html" title=" " alt="" coords="160,79,333,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="400,38,294,81,292,76,398,33"/>
+<area shape="rect" id="Node000004" href="$test-print-sudoku-solution_8c.html" title=" " alt="" coords="358,79,522,119"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="443,44,443,79,437,79,437,44"/>
+<area shape="rect" id="Node000005" href="$test-read-sudoku-puzzle_8c.html" title=" " alt="" coords="547,79,709,119"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="481,33,584,76,582,81,479,38"/>
+<area shape="rect" id="Node000006" href="$test-solve-sudoku-integration_8c.html" title=" " alt="" coords="734,79,901,119"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="509,31,734,77,733,83,508,36"/>
+</map>

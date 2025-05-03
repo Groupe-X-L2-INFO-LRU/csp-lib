@@ -1,0 +1,13 @@
+<map id="tests/test&#45;init&#45;finish&#45;1.c" name="tests/test&#45;init&#45;finish&#45;1.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="51,5,213,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,72,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,33,66,72,63,68,115,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="96,79,168,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,31,135,65,129,65,129,31"/>
+<area shape="rect" id="Node000004" href="$csp_8h.html" title="Header file for the CSP (Constraint Satisfaction Problem) library." alt="" coords="193,79,282,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,28,210,69,208,73,147,33"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="147,152,227,177"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="231,106,205,142,201,139,227,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="251,152,325,177"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="248,103,274,139,270,142,244,106"/>
+</map>

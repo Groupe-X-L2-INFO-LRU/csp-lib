@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['what_20is_20a_20csp_0',['What is a CSP?',['../index.html#autotoc_md1',1,'']]],
-  ['workflow_1',['Basic Workflow',['../csp_8h.html#csp_workflow',1,'']]]
+  ['value_20ordering_0',['Value Ordering',['../heuristics_8h.html#value_ordering',1,'']]],
+  ['variable_20ordering_1',['Variable Ordering',['../heuristics_8h.html#variable_ordering',1,'']]],
+  ['variables_2',['variables',['../struct___c_s_p_constraint.html#a451242bab6a8aa0216439004e8bdacfe',1,'_CSPConstraint']]]
 ];

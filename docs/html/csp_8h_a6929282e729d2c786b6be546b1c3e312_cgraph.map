@@ -1,0 +1,5 @@
+<map id="csp_constraint_set_variable" name="csp_constraint_set_variable">
+<area shape="rect" id="Node000001" title="Sets which CSP variable is related to a specific position in the constraint." alt="" coords="5,5,140,45"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="188,13,293,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,23,174,23,174,28,140,28"/>
+</map>

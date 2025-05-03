@@ -103,24 +103,10 @@ typedef bool CSPChecker(const CSPConstraint *, const size_t *, const void *);
 
 /**
  * @brief Initializes the CSP library.
- * @ingroup core
  *
  * This function must be called before using any other function in the CSP library.
  * The library uses a reference counting mechanism, so each call to csp_init() must
  * be matched with a corresponding call to csp_finish().
- * 
- * @code{.c}
- * // Initialize the library
- * if (!csp_init()) {
- *     fprintf(stderr, "Failed to initialize CSP library\n");
- *     return EXIT_FAILURE;
- * }
- * 
- * // Use the library...
- * 
- * // Clean up when done
- * csp_finish();
- * @endcode
  *
  * @return true if the library was successfully initialized (or was already initialized),
  *         false otherwise.

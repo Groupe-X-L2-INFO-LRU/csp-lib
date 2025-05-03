@@ -1,0 +1,7 @@
+<map id="diff" name="diff">
+<area shape="rect" id="Node000001" title=" " alt="" coords="284,5,327,31"/>
+<area shape="rect" id="Node000002" href="$test-solve-forward-checking_8c.html#ad2ec5370481a424ba0df59de2b8ede5b" title=" " alt="" coords="105,5,236,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="270,21,236,21,236,15,270,15"/>
+<area shape="rect" id="Node000003" href="$test-solve-forward-checking_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,5,57,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="92,21,57,21,57,15,92,15"/>
+</map>

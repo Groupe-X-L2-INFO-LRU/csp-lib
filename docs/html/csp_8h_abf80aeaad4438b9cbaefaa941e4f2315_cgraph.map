@@ -1,0 +1,5 @@
+<map id="csp_problem_get_num_domains" name="csp_problem_get_num_domains">
+<area shape="rect" id="Node000001" title="Gets the number of variables (domains) in the CSP problem." alt="" coords="5,5,167,45"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="215,13,320,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,23,201,23,201,28,167,28"/>
+</map>

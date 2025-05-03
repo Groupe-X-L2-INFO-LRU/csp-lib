@@ -10,13 +10,10 @@
 /**
  * @file sudoku_utils.h
  * @brief Utilities for modeling and solving Sudoku puzzles using the CSP framework
- * @ingroup applications
  *
  * This file provides utilities for handling Sudoku puzzles as constraint satisfaction problems.
  * It includes functions for reading puzzles from files, creating the corresponding CSP problems
  * with appropriate constraints, and printing solutions in a human-readable format.
- *
- * @section sudoku_modeling Sudoku as a CSP
  *
  * The Sudoku puzzle is modeled as a CSP with 81 variables (one for each cell), each with
  * domain {1,2,...,9}. The constraints ensure that:
@@ -25,52 +22,8 @@
  * 3. Each 3x3 block contains all digits 1-9 without repetition
  * 4. Pre-filled cells must keep their initial values
  *
- * @section sudoku_example Example Usage
- *
- * @code{.c}
- * #include "csp.h"
- * #include "forward-checking.h"
- * #include "sudoku_utils.h"
- * #include <stdio.h>
- * 
- * int main() {
- *     // Initialize the library
- *     csp_init();
- *     
- *     // Read a puzzle from a file
- *     FILE *file = fopen("puzzle.txt", "r");
- *     int grid[SUDOKU_SIZE * SUDOKU_SIZE] = {0};
- *     if (!read_sudoku_puzzle(file, grid)) {
- *         fprintf(stderr, "Failed to read puzzle\n");
- *         fclose(file);
- *         return 1;
- *     }
- *     fclose(file);
- *     
- *     // Create a CSP problem from the Sudoku puzzle
- *     CSPProblem *problem = create_sudoku_problem(grid);
- *     
- *     // Solve the puzzle
- *     size_t solution[SUDOKU_SIZE * SUDOKU_SIZE];
- *     bool solved = solve_with_forward_checking(problem, solution, NULL, NULL);
- *     
- *     // Print the solution
- *     if (solved) {
- *         print_sudoku_solution(solution);
- *     } else {
- *         printf("No solution found!\n");
- *     }
- *     
- *     // Clean up
- *     csp_problem_destroy(problem);
- *     csp_finish();
- *     
- *     return 0;
- * }
- * @endcode
- *
  * @author Quentin Sautiere
- * @date 3 mai 2025
+ * @date May 2025
  * @version 1.0
  */
 

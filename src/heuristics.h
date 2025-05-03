@@ -19,30 +19,63 @@
  * 3. How to prune impossible values during forward checking
  * 4. How to restore pruned values during backtracking
  *
- * @section heuristics_mrv Minimum Remaining Values (MRV)
- * 
- * The MRV heuristic (also known as "fail-first") selects the variable with the fewest 
- * remaining legal values in its domain. This focuses the search on the most constrained
- * variables, helping to identify inconsistencies earlier.
+ * @section heuristics_overview Overview of CSP Heuristics
  *
- * @section heuristics_lcv Least Constraining Value (LCV)
+ * Heuristics are essential for making CSP solvers efficient in practice. Without good
+ * heuristics, even moderately sized problems can become computationally intractable.
+ * The heuristics in this library focus on:
+ *
+ * @subsection variable_ordering Variable Ordering
+ *
+ * **Minimum Remaining Values (MRV)**: Also known as "fail-first" heuristic, this selects the
+ * variable with the fewest remaining legal values in its domain. The intuition is that
+ * if a variable has few legal values, it's more likely to cause a failure soon, which
+ * allows the solver to backtrack earlier rather than later.
+ *
+ * @image html mrv_heuristic.png "MRV Heuristic: Choose variable with fewest remaining values"
+ *
+ * @subsection value_ordering Value Ordering
+ *
+ * **Least Constraining Value (LCV)**: This heuristic chooses the value that rules out the
+ * fewest choices for neighboring variables. The intuition is to maximize the flexibility
+ * for subsequent variable assignments, increasing the likelihood of finding a solution
+ * without backtracking.
+ *
+ * @image html lcv_heuristic.png "LCV Heuristic: Choose value that constrains neighbors least"
  * 
- * The LCV heuristic chooses the value that imposes the fewest constraints on remaining
- * variables. This preserves maximum flexibility for future assignments, increasing the
- * chances of finding a solution without backtracking.
+ * @subsection domain_pruning Domain Pruning
  * 
+ * **Forward Checking**: While not strictly a heuristic, this approach works alongside
+ * the variable and value ordering heuristics. It prunes domain values that would
+ * violate constraints given the current assignment, which enables early detection
+ * of dead ends.
+ *
  * @section heuristics_impact Performance Impact
- * 
- * Using these heuristics can dramatically reduce the search space exploration:
- * 
- * - For simple problems: Modest performance improvement
- * - For medium problems: May reduce search time by orders of magnitude
- * - For complex problems: Can make the difference between finding a solution in seconds
- *   versus hours or days
+ *
+ * Properly implemented heuristics can dramatically improve solving performance:
+ * - Reduce search space exploration by orders of magnitude
+ * - Allow solving of much larger problems
+ * - Convert exponential-time searches to near-linear in many practical cases
+ *
+ * @section heuristics_usage Usage
+ *
+ * The heuristics are integrated directly into the forward checking algorithm and
+ * can be used by simply calling the forward checking solver:
+ *
+ * ```c
+ * // Using MRV and LCV heuristics by default
+ * solve_with_forward_checking(problem, solution, NULL, NULL);
+ *
+ * // To use custom heuristic functions
+ * solve_with_forward_checking(problem, solution, custom_select_var, custom_order_values);
+ * ```
  *
  * @author Ch. Demko (original)
- * @date 3 mai 2025
+ * @date 2024-2025
  * @version 1.0
+ * @see solve_with_forward_checking()
+ * @see select_unassigned_variable_mrv()
+ * @see order_domain_values_lcv()
  */
 
 /**

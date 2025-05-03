@@ -1,0 +1,5 @@
+<map id="read_sudoku_puzzle" name="read_sudoku_puzzle">
+<area shape="rect" id="Node000001" title="Reads a Sudoku puzzle from the given input stream." alt="" coords="105,5,252,31"/>
+<area shape="rect" id="Node000002" href="$test-read-sudoku-puzzle_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,57,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,21,58,21,58,15,92,15"/>
+</map>

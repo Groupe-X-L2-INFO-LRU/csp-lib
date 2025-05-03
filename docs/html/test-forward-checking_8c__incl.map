@@ -1,0 +1,19 @@
+<map id="tests/test&#45;forward&#45;checking.c" name="tests/test&#45;forward&#45;checking.c">
+<area shape="rect" id="Node000001" title=" " alt="" coords="135,5,270,45"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,93,77,119"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,48,79,90,76,85,163,43"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="101,93,165,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,47,155,84,151,81,184,44"/>
+<area shape="rect" id="Node000004" href="$csp_8h.html" title="Header file for the CSP (Constraint Satisfaction Problem) library." alt="" coords="267,167,357,192"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="207,45,215,80,232,117,253,140,278,158,275,162,249,144,227,120,210,82,202,46"/>
+<area shape="rect" id="Node000007" href="$csp__internal_8h.html" title="Internal header for CSP library implementation." alt="" coords="241,93,383,119"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="231,43,286,83,283,87,228,48"/>
+<area shape="rect" id="Node000008" href="$forward-checking_8h.html" title="Forward checking algorithm for constraint satisfaction problems." alt="" coords="408,93,584,119"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="271,42,441,87,439,92,270,47"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="221,240,301,265"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="306,194,280,230,275,227,301,191"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="326,240,399,265"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="323,191,349,227,344,230,318,194"/>
+<area shape="poly" id="edge7_Node000007_Node000004" title=" " alt="" coords="315,119,315,153,309,153,309,119"/>
+<area shape="poly" id="edge9_Node000008_Node000004" title=" " alt="" coords="467,121,356,164,354,159,465,116"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="csp_problem_backtrack" name="csp_problem_backtrack">
+<area shape="rect" id="Node000001" title="Recursively solves the CSP problem using backtracking from a given variable." alt="" coords="192,31,356,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="309,21,299,12,274,9,253,11,242,16,240,22,246,29,241,32,235,22,238,12,252,6,274,4,301,8,312,16"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#a076f64d67e946b4c7fc886ddb2e5b5bd" title="Solves a CSP problem using the basic backtracking algorithm." alt="" coords="5,5,144,31"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="178,34,144,29,145,24,179,29"/>
+<area shape="rect" id="Node000003" href="$test-problem-is-consistent_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="49,55,101,80"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="178,58,101,67,101,62,178,52"/>
+</map>

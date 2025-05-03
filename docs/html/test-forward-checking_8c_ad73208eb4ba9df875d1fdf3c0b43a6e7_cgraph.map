@@ -1,0 +1,85 @@
+<map id="test_single_var" name="test_single_var">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,199,120,224"/>
+<area shape="rect" id="Node000002" href="$test-forward-checking_8c.html#a7231f3eaa68050bf683cc6d3b0f8879e" title=" " alt="" coords="217,21,312,47"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,197,103,134,132,97,166,64,203,45,205,50,170,68,136,100,107,137,72,200"/>
+<area shape="rect" id="Node000003" href="$csp_8c.html#a7c7ffdd26fbe5e2729b593cc6937cdcf" title="Creates a new constraint with the specified arity and check function." alt="" coords="427,33,582,59"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="76,196,115,163,167,130,229,105,294,84,413,57,414,62,295,89,231,110,169,135,118,168,79,200"/>
+<area shape="rect" id="Node000005" href="$csp_8c.html#a6929282e729d2c786b6be546b1c3e312" title="Sets which CSP variable is related to a specific position in the constraint." alt="" coords="437,86,572,126"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="94,196,167,170,302,138,423,116,424,121,303,143,169,175,95,201"/>
+<area shape="rect" id="Node000006" href="$csp_8c.html#a536e0507b779b2300d004ef8347d4d8b" title="Creates a new CSP problem instance with the specified parameters." alt="" coords="432,155,577,180"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="120,203,418,173,419,179,120,208"/>
+<area shape="rect" id="Node000007" href="$csp_8c.html#a0f4b67899ee7788002586217b13dde81" title="Destroys a CSP problem instance and frees all associated resources." alt="" coords="667,224,820,249"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="120,211,653,231,653,236,120,216"/>
+<area shape="rect" id="Node000009" href="$csp_8c.html#ade8bd97367581ba9f1d4c8675fa11636" title="Sets a constraint at the specified position in the CSP problem." alt="" coords="169,275,361,300"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="93,222,169,253,211,268,209,273,167,258,91,227"/>
+<area shape="rect" id="Node000010" href="$csp_8c.html#a0d1cbedfaeb27e353d49f3f9c9f5a30a" title="Sets the domain size for a variable in the CSP problem." alt="" coords="176,329,353,355"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="76,223,114,265,141,289,169,309,197,322,195,327,167,314,137,293,111,269,72,226"/>
+<area shape="rect" id="Node000011" href="$forward-checking_8c.html#aab2b763fd1833131dc1b7f43b2c7942a" title="Solves a CSP problem using the forward checking algorithm with heuristics." alt="" coords="168,733,361,773"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="71,223,254,719,249,720,66,225"/>
+<area shape="rect" id="Node000004" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="1129,465,1235,491"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="554,31,661,11,729,5,802,3,877,9,951,24,1020,51,1053,70,1083,92,1103,118,1121,158,1150,260,1169,368,1180,451,1175,452,1164,369,1144,261,1116,160,1099,121,1079,96,1050,74,1018,56,949,29,876,14,801,9,729,10,662,17,555,36"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="572,97,698,89,849,87,923,90,989,98,1044,112,1083,132,1102,155,1118,190,1146,280,1167,377,1180,451,1174,452,1162,378,1141,282,1113,192,1097,158,1080,136,1042,117,988,103,922,96,849,92,698,94,573,102"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="546,152,649,128,716,117,790,111,867,112,943,123,1016,146,1051,163,1083,184,1112,212,1135,245,1153,282,1166,320,1180,394,1184,452,1178,452,1174,395,1160,322,1148,284,1131,248,1108,215,1080,188,1048,168,1014,151,942,128,866,118,790,116,717,122,650,133,547,157"/>
+<area shape="poly" id="edge11_Node000007_Node000004" title=" " alt="" coords="775,221,836,202,916,186,960,184,1003,188,1045,199,1083,219,1110,242,1131,270,1148,302,1161,335,1176,400,1182,451,1177,452,1171,400,1156,337,1143,304,1127,273,1106,246,1080,223,1043,204,1002,193,960,190,917,192,837,207,776,227"/>
+<area shape="rect" id="Node000008" href="$csp_8c.html#a8fd5c98995a35845e7e57f9b13666231" title="Destroys a constraint and frees all associated resources." alt="" coords="903,233,1065,259"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="821,237,889,240,889,245,821,242"/>
+<area shape="poly" id="edge10_Node000008_Node000004" title=" " alt="" coords="1049,257,1083,276,1119,318,1147,366,1166,413,1177,451,1172,453,1161,415,1142,368,1115,321,1080,280,1046,261"/>
+<area shape="poly" id="edge13_Node000009_Node000004" title=" " alt="" coords="361,282,536,281,747,288,851,296,945,308,1024,326,1083,349,1112,371,1137,399,1171,452,1166,455,1133,402,1108,375,1080,354,1023,331,944,314,850,301,747,293,536,287,361,287"/>
+<area shape="poly" id="edge15_Node000010_Node000004" title=" " alt="" coords="354,328,497,317,586,315,682,317,783,324,885,339,986,361,1082,393,1106,405,1128,421,1163,453,1159,457,1125,425,1103,410,1080,398,984,366,884,344,782,330,682,322,586,320,497,323,354,333"/>
+<area shape="poly" id="edge57_Node000011_Node000004" title=" " alt="" coords="280,771,301,803,330,841,367,878,411,908,506,956,595,996,678,1026,759,1043,798,1045,837,1044,876,1039,915,1028,955,1013,996,992,1037,966,1079,934,1102,903,1122,856,1138,798,1151,732,1168,601,1176,504,1182,505,1173,602,1156,733,1143,799,1127,858,1107,906,1083,937,1040,970,998,997,957,1018,917,1033,877,1044,837,1050,798,1051,758,1048,677,1031,593,1001,504,961,408,912,364,882,326,844,296,806,275,774"/>
+<area shape="rect" id="Node000012" href="$forward-checking_8c.html#a1f0b1f4d23987c6c2209df2c7e2570ce" title=" " alt="" coords="456,740,553,765"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="362,750,442,750,442,755,362,755"/>
+<area shape="rect" id="Node000023" href="$forward-checking_8c.html#a80a2e22a4514587505e87b68cd29841b" title="Creates and initializes a forward checking context." alt="" coords="648,553,839,593"/>
+<area shape="poly" id="edge44_Node000011_Node000023" title=" " alt="" coords="315,730,647,602,668,595,670,600,649,607,317,735"/>
+<area shape="rect" id="Node000026" href="$forward-checking_8c.html#a0787ac68808df63955a93e55aa5235e2" title="Destroys a forward checking context and frees all associated memory." alt="" coords="409,858,600,898"/>
+<area shape="poly" id="edge55_Node000011_Node000026" title=" " alt="" coords="305,771,455,849,452,854,303,775"/>
+<area shape="poly" id="edge19_Node000012_Node000004" title=" " alt="" coords="520,764,573,808,609,832,649,849,732,853,878,850,1080,841,1098,818,1115,782,1144,686,1163,583,1175,504,1180,505,1169,584,1149,687,1120,784,1103,821,1083,846,878,856,732,858,647,854,607,836,570,813,517,768"/>
+<area shape="poly" id="edge18_Node000012_Node000012" title=" " alt="" coords="466,742,458,732,462,722,478,716,505,713,538,717,551,727,547,731,536,722,505,719,479,721,466,726,463,731,470,738"/>
+<area shape="rect" id="Node000013" href="$forward-checking_8c.html#a400289d0fceaceb244ed1e32f4860880" title="Checks consistency of the current assignment under forward checking." alt="" coords="685,617,802,643"/>
+<area shape="poly" id="edge20_Node000012_Node000013" title=" " alt="" coords="519,738,573,696,609,672,647,652,670,643,672,648,649,657,612,677,576,700,522,742"/>
+<area shape="rect" id="Node000019" href="$heuristics_8c.html#a9c3a8a6b03e49553f45c6144f97e1fb4" title="Implements the Least Constraining Value (LCV) heuristic for value ordering." alt="" coords="681,716,805,741"/>
+<area shape="poly" id="edge31_Node000012_Node000019" title=" " alt="" coords="553,745,668,734,668,739,554,751"/>
+<area shape="rect" id="Node000020" href="$heuristics_8c.html#a2840f304ec278feae32d3d11915a7a78" title="Prunes inconsistent values from neighboring variables during forward checking." alt="" coords="679,667,808,692"/>
+<area shape="poly" id="edge36_Node000012_Node000020" title=" " alt="" coords="539,737,647,701,675,693,676,698,649,706,541,743"/>
+<area shape="rect" id="Node000021" href="$heuristics_8c.html#a22131bfb5921b024b7886b33b3fa1c4b" title="Restores values that were pruned during forward checking when backtracking occurs." alt="" coords="684,765,803,791"/>
+<area shape="poly" id="edge42_Node000012_Node000021" title=" " alt="" coords="554,755,671,768,670,773,553,761"/>
+<area shape="rect" id="Node000022" href="$heuristics_8c.html#a934ee1c54ecdfa65b205d3f9888e38de" title="Implements the Minimum Remaining Values (MRV) heuristic for variable selection." alt="" coords="663,815,823,840"/>
+<area shape="poly" id="edge43_Node000012_Node000022" title=" " alt="" coords="542,763,649,800,680,809,678,814,647,805,540,768"/>
+<area shape="rect" id="Node000014" href="$csp_8c.html#a0ec9ba5a3f78127657d0ab0f2d3a5bbd" title="Gets the arity of a constraint." alt="" coords="916,678,1052,718"/>
+<area shape="poly" id="edge21_Node000013_Node000014" title=" " alt="" coords="797,640,839,652,907,671,905,677,838,657,796,645"/>
+<area shape="rect" id="Node000015" href="$csp_8c.html#ac9b8e8925b0302c3cdd35b0186a1acd8" title="Gets the check function associated with a constraint." alt="" coords="916,550,1052,590"/>
+<area shape="poly" id="edge23_Node000013_Node000015" title=" " alt="" coords="794,615,902,588,903,593,796,620"/>
+<area shape="rect" id="Node000016" href="$csp_8c.html#a4cfb5884d7fe282dbecebefb53bb9cdd" title="Gets the variable ID associated with a specific position in the constraint." alt="" coords="916,742,1052,782"/>
+<area shape="poly" id="edge25_Node000013_Node000016" title=" " alt="" coords="804,635,840,652,858,671,865,691,873,710,888,728,905,738,902,743,885,732,868,712,861,693,853,674,837,656,801,640"/>
+<area shape="rect" id="Node000017" href="$csp_8c.html#aba7697a379d5f761429bb911e2bc2bbc" title="Gets the constraint at the specified position in the CSP problem." alt="" coords="887,807,1081,832"/>
+<area shape="poly" id="edge27_Node000013_Node000017" title=" " alt="" coords="803,633,823,640,840,652,855,670,862,688,865,724,868,759,875,776,889,792,896,798,892,802,885,796,870,778,863,760,860,724,857,689,850,672,837,656,820,645,801,638"/>
+<area shape="rect" id="Node000018" href="$csp_8c.html#a1dc56cea8c87ec1ef2e4489536cd1f0e" title="Gets the number of constraints in the CSP problem." alt="" coords="903,614,1065,654"/>
+<area shape="poly" id="edge29_Node000013_Node000018" title=" " alt="" coords="802,628,890,630,890,635,802,634"/>
+<area shape="poly" id="edge22_Node000014_Node000004" title=" " alt="" coords="1051,681,1080,664,1114,626,1140,583,1159,539,1171,503,1176,505,1164,541,1145,585,1118,630,1083,668,1054,685"/>
+<area shape="poly" id="edge24_Node000015_Node000004" title=" " alt="" coords="1051,547,1080,536,1149,496,1152,501,1082,540,1053,552"/>
+<area shape="poly" id="edge26_Node000016_Node000004" title=" " alt="" coords="1051,746,1080,728,1102,703,1121,674,1149,612,1166,552,1175,505,1180,505,1171,554,1154,614,1125,677,1106,706,1083,732,1053,751"/>
+<area shape="poly" id="edge28_Node000017_Node000004" title=" " alt="" coords="1061,804,1080,792,1107,760,1129,722,1146,682,1159,641,1173,564,1178,504,1183,505,1179,564,1164,643,1151,684,1134,725,1112,763,1083,796,1064,809"/>
+<area shape="poly" id="edge30_Node000018_Node000004" title=" " alt="" coords="1059,612,1080,600,1106,577,1130,551,1165,501,1169,504,1134,555,1110,581,1083,604,1062,616"/>
+<area shape="poly" id="edge32_Node000019_Node000014" title=" " alt="" coords="805,718,902,706,903,711,806,724"/>
+<area shape="poly" id="edge33_Node000019_Node000016" title=" " alt="" coords="806,735,903,748,902,754,805,740"/>
+<area shape="poly" id="edge34_Node000019_Node000017" title=" " alt="" coords="806,737,840,750,855,761,865,772,874,782,888,792,907,800,904,805,885,796,870,786,861,775,851,765,837,755,804,742"/>
+<area shape="poly" id="edge35_Node000019_Node000018" title=" " alt="" coords="805,714,837,701,861,683,885,664,899,657,901,662,888,668,864,687,840,706,807,719"/>
+<area shape="poly" id="edge37_Node000020_Node000014" title=" " alt="" coords="809,682,903,689,902,694,808,687"/>
+<area shape="poly" id="edge38_Node000020_Node000015" title=" " alt="" coords="807,665,837,652,852,640,861,627,870,613,885,600,902,591,904,595,888,604,874,617,865,630,856,643,840,656,809,670"/>
+<area shape="poly" id="edge39_Node000020_Node000016" title=" " alt="" coords="805,690,840,701,864,714,888,728,905,735,903,740,885,732,861,719,838,706,803,695"/>
+<area shape="poly" id="edge40_Node000020_Node000017" title=" " alt="" coords="809,686,840,701,859,724,865,748,872,771,888,792,898,798,895,803,885,796,867,773,860,749,854,727,837,705,807,690"/>
+<area shape="poly" id="edge41_Node000020_Node000018" title=" " alt="" coords="808,665,889,649,890,654,809,670"/>
+<area shape="poly" id="edge48_Node000023_Node000004" title=" " alt="" coords="754,551,775,520,804,483,842,448,886,421,938,403,982,400,1027,407,1082,421,1121,436,1154,455,1151,460,1118,441,1081,426,1026,412,982,405,939,409,888,426,845,452,808,487,779,523,759,554"/>
+<area shape="poly" id="edge45_Node000023_Node000014" title=" " alt="" coords="819,590,840,603,856,618,865,634,873,649,888,664,905,674,902,678,885,668,869,653,860,637,852,622,837,607,816,595"/>
+<area shape="poly" id="edge46_Node000023_Node000015" title=" " alt="" coords="839,569,902,568,902,574,839,574"/>
+<area shape="poly" id="edge47_Node000023_Node000016" title=" " alt="" coords="824,591,841,603,854,619,861,635,865,667,870,698,876,713,889,728,905,740,902,745,885,732,872,716,864,700,860,668,856,637,849,622,837,607,821,595"/>
+<area shape="poly" id="edge49_Node000023_Node000017" title=" " alt="" coords="826,591,841,603,858,628,865,652,866,676,865,700,863,724,864,747,872,770,889,792,895,797,891,801,885,796,867,772,859,748,857,724,859,700,861,676,860,653,853,630,837,607,823,595"/>
+<area shape="poly" id="edge52_Node000023_Node000018" title=" " alt="" coords="823,590,892,608,891,613,822,595"/>
+<area shape="rect" id="Node000024" href="$csp_8c.html#a86b3f53f47b41dcdd6109aaa9103d5fa" title="Gets the domain size for a variable in the CSP problem." alt="" coords="895,436,1073,461"/>
+<area shape="poly" id="edge50_Node000023_Node000024" title=" " alt="" coords="767,550,819,511,886,472,908,463,910,468,888,476,822,515,770,555"/>
+<area shape="rect" id="Node000025" href="$csp_8c.html#abf80aeaad4438b9cbaefaa941e4f2315" title="Gets the number of variables (domains) in the CSP problem." alt="" coords="903,486,1065,526"/>
+<area shape="poly" id="edge53_Node000023_Node000025" title=" " alt="" coords="815,550,897,527,899,532,817,555"/>
+<area shape="poly" id="edge51_Node000024_Node000004" title=" " alt="" coords="1070,459,1116,466,1116,471,1069,464"/>
+<area shape="poly" id="edge54_Node000025_Node000004" title=" " alt="" coords="1064,492,1116,485,1116,490,1065,497"/>
+<area shape="poly" id="edge56_Node000026_Node000004" title=" " alt="" coords="571,896,679,919,744,928,814,932,885,929,954,916,1020,893,1051,876,1080,856,1099,832,1116,794,1132,746,1145,693,1164,586,1175,504,1180,505,1169,587,1150,695,1137,748,1121,796,1104,835,1083,860,1054,881,1023,898,956,922,885,934,814,937,744,934,678,925,570,901"/>
+</map>

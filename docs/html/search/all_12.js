@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['value_20lcv_0',['Least Constraining Value (LCV)',['../heuristics_8h.html#heuristics_lcv',1,'']]],
-  ['values_20mrv_1',['Minimum Remaining Values (MRV)',['../heuristics_8h.html#heuristics_mrv',1,'']]],
-  ['variables_2',['variables',['../struct___c_s_p_constraint.html#a451242bab6a8aa0216439004e8bdacfe',1,'_CSPConstraint']]]
+  ['usage_0',['usage',['../forward-checking_8h.html#fc_example',1,'Example Usage'],['../heuristics_8h.html#heuristics_usage',1,'Usage']]],
+  ['usage_20example_1',['Usage Example',['../index.html#autotoc_md5',1,'']]]
 ];

@@ -1,0 +1,5 @@
+<map id="csp_constraint_create" name="csp_constraint_create">
+<area shape="rect" id="Node000001" title="Creates a new constraint with the specified arity and check function." alt="" coords="5,5,160,31"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="208,5,313,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,15,194,15,194,21,160,21"/>
+</map>

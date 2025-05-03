@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['select_5funassigned_5fvar_0',['select_unassigned_var',['../heuristics_8c.html#a934ee1c54ecdfa65b205d3f9888e38de',1,'select_unassigned_var(const CSPForwardCheckContext *ctx):&#160;heuristics.c'],['../heuristics_8h.html#a934ee1c54ecdfa65b205d3f9888e38de',1,'select_unassigned_var(const CSPForwardCheckContext *ctx):&#160;heuristics.c']]],
-  ['sudoku_5fnot_5fequal_1',['sudoku_not_equal',['../solve-sudoku_8c.html#afb4bcd67882bd5f0bab530abc8ac1b41',1,'solve-sudoku.c']]],
-  ['sudoku_5fnot_5fequal_5fchecker_2',['sudoku_not_equal_checker',['../sudoku__utils_8c.html#a10505509f8f62f6ab218963ba678a7c7',1,'sudoku_utils.c']]],
-  ['sudoku_5fpreassigned_3',['sudoku_preassigned',['../solve-sudoku_8c.html#a57be35bb847709b5413ff936f9ce1f5c',1,'solve-sudoku.c']]],
-  ['sudoku_5fpreassigned_5fchecker_4',['sudoku_preassigned_checker',['../sudoku__utils_8c.html#aaeca61f4b50e068c553d17aca39d8653',1,'sudoku_utils.c']]],
-  ['sumleq_5',['sumleq',['../test-forward-checking_8c.html#a6b4a37aa63bd372d499018b7e0a71a01',1,'sumLeq(const CSPConstraint *constraint, const size_t *values, const void *data):&#160;test-forward-checking.c'],['../test-order-values-lcv_8c.html#a522f11a170b84aca2da6e173cb73bbd1',1,'sumLeq(CSPConstraint const *c, const size_t *v, const void *d):&#160;test-order-values-lcv.c']]]
+  ['read_5fpuzzle_0',['read_puzzle',['../solve-sudoku_8c.html#aa84f94bc5671b980eced6d1a62552dfd',1,'solve-sudoku.c']]],
+  ['read_5fsudoku_5fpuzzle_1',['read_sudoku_puzzle',['../sudoku__utils_8c.html#aa966dd3296a286c6510abb5c68092e22',1,'read_sudoku_puzzle(FILE *in, int initial_grid[SUDOKU_CELLS]):&#160;sudoku_utils.c'],['../sudoku__utils_8h.html#aa966dd3296a286c6510abb5c68092e22',1,'read_sudoku_puzzle(FILE *in, int initial_grid[SUDOKU_CELLS]):&#160;sudoku_utils.c']]],
+  ['restore_5fpruned_2',['restore_pruned',['../heuristics_8c.html#a22131bfb5921b024b7886b33b3fa1c4b',1,'restore_pruned(CSPForwardCheckContext *ctx, const size_t *counts, size_t **pruned):&#160;heuristics.c'],['../heuristics_8h.html#a22131bfb5921b024b7886b33b3fa1c4b',1,'restore_pruned(CSPForwardCheckContext *ctx, const size_t *counts, size_t **pruned):&#160;heuristics.c']]]
 ];

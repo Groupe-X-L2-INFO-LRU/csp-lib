@@ -1,0 +1,22 @@
+digraph mrv_heuristic {
+  rankdir=LR;
+  node [shape=record, style=filled, fillcolor=lightskyblue, fontname="Roboto", fontsize=12];
+  edge [fontname="Roboto", fontsize=10];
+  
+  subgraph cluster_0 {
+    label = "Variables and their domains";
+    color = lightgrey;
+    style = filled;
+    
+    var1 [label="{Variable 1|{1|2|3|4|5}}", fillcolor=lightblue];
+    var2 [label="{Variable 2|{2|5}}", fillcolor=lightgreen];
+    var3 [label="{Variable 3|{3|4|7}}", fillcolor=lightblue];
+    var4 [label="{Variable 4|{1|2|3|4}}", fillcolor=lightblue];
+  }
+
+  mrv [label="MRV Heuristic\nSelects variable with\nsmallest domain", shape=box, fillcolor=gold];
+  result [label="Variable 2\nSelected: Smallest domain (2 values)", shape=box, fillcolor=lightgreen];
+  
+  mrv -> var2 [style=dashed, label="identifies"];
+  var2 -> result [style=bold];
+}

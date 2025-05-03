@@ -1,0 +1,10 @@
+<map id="destroy_ctx" name="destroy_ctx">
+<area shape="rect" id="Node000001" title=" " alt="" coords="320,31,413,56"/>
+<area shape="rect" id="Node000002" href="$test-select-unassigned-var_8c.html#abd1084a4ba75b3e0e2f222dc15cdbec8" title=" " alt="" coords="127,5,250,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="306,37,250,29,251,24,307,32"/>
+<area shape="rect" id="Node000004" href="$test-select-unassigned-var_8c.html#ade408e9a4302addb0a1986d2b9b5e039" title=" " alt="" coords="105,55,272,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="307,54,272,59,272,53,306,49"/>
+<area shape="rect" id="Node000003" href="$test-select-unassigned-var_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,31,57,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="114,33,58,42,57,37,113,27"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="92,55,57,50,58,45,93,50"/>
+</map>

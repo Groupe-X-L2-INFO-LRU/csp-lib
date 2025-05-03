@@ -1,0 +1,5 @@
+<map id="csp_constraint_get_arity" name="csp_constraint_get_arity">
+<area shape="rect" id="Node000001" title="Gets the arity of a constraint." alt="" coords="5,5,141,45"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="189,13,295,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,23,176,23,176,28,142,28"/>
+</map>

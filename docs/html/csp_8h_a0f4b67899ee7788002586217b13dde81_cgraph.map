@@ -1,0 +1,8 @@
+<map id="csp_problem_destroy" name="csp_problem_destroy">
+<area shape="rect" id="Node000001" title="Destroys a CSP problem instance and frees all associated resources." alt="" coords="5,31,159,56"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#a8fd5c98995a35845e7e57f9b13666231" title="Destroys a constraint and frees all associated resources." alt="" coords="207,5,369,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,31,193,27,193,32,159,37"/>
+<area shape="rect" id="Node000003" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="417,31,523,56"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="159,41,404,41,404,46,159,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="370,27,404,32,404,37,369,32"/>
+</map>

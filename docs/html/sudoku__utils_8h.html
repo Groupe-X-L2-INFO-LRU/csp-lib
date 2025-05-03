@@ -109,6 +109,18 @@ $(document).ready(function(){initNavTree('sudoku__utils_8h.html',''); initResiza
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="sudoku__utils_8h__incl.png" border="0" usemap="#asrc_2sudoku__utils_8h" alt=""/></div>
+<map name="asrc_2sudoku__utils_8h" id="asrc_2sudoku__utils_8h">
+<area shape="rect" title="Utilities for modeling and solving Sudoku puzzles using the CSP framework." alt="" coords="22,5,154,31"/>
+<area shape="rect" title=" " alt="" coords="5,152,85,177"/>
+<area shape="poly" title=" " alt="" coords="78,32,61,53,47,80,42,109,43,138,38,138,36,109,41,78,56,50,74,29"/>
+<area shape="rect" title=" " alt="" coords="56,79,120,104"/>
+<area shape="poly" title=" " alt="" coords="91,31,91,65,85,65,85,31"/>
+<area shape="rect" href="csp_8h.html" title="Header file for the CSP (Constraint Satisfaction Problem) library." alt="" coords="145,79,199,104"/>
+<area shape="poly" title=" " alt="" coords="103,29,149,67,146,72,100,33"/>
+<area shape="poly" title=" " alt="" coords="153,106,79,147,77,143,150,102"/>
+<area shape="rect" title=" " alt="" coords="135,152,209,177"/>
+<area shape="poly" title=" " alt="" coords="175,104,175,138,169,138,169,104"/>
+</map>
 </div>
 </div><div class="textblock"><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> This graph shows which files directly or indirectly include this file:</div>
@@ -116,6 +128,19 @@ $(document).ready(function(){initNavTree('sudoku__utils_8h.html',''); initResiza
 </div>
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="sudoku__utils_8h__dep__incl.png" border="0" usemap="#asrc_2sudoku__utils_8hdep" alt=""/></div>
+<map name="asrc_2sudoku__utils_8hdep" id="asrc_2sudoku__utils_8hdep">
+<area shape="rect" title="Utilities for modeling and solving Sudoku puzzles using the CSP framework." alt="" coords="374,5,506,31"/>
+<area shape="rect" href="sudoku__utils_8c.html" title=" " alt="" coords="5,86,136,111"/>
+<area shape="poly" title=" " alt="" coords="368,36,149,81,117,89,116,83,147,76,367,31"/>
+<area shape="rect" href="test-create-sudoku-problem_8c.html" title=" " alt="" coords="160,79,333,119"/>
+<area shape="poly" title=" " alt="" coords="400,38,294,81,292,76,398,33"/>
+<area shape="rect" href="test-print-sudoku-solution_8c.html" title=" " alt="" coords="358,79,522,119"/>
+<area shape="poly" title=" " alt="" coords="443,44,443,79,437,79,437,44"/>
+<area shape="rect" href="test-read-sudoku-puzzle_8c.html" title=" " alt="" coords="547,79,709,119"/>
+<area shape="poly" title=" " alt="" coords="481,33,584,76,582,81,479,38"/>
+<area shape="rect" href="test-solve-sudoku-integration_8c.html" title=" " alt="" coords="734,79,901,119"/>
+<area shape="poly" title=" " alt="" coords="509,31,734,77,733,83,508,36"/>
+</map>
 </div>
 </div>
 <p><a href="sudoku__utils_8h_source.html">Go to the source code of this file.</a></p>
@@ -144,69 +169,14 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utilities for modeling and solving Sudoku puzzles using the CSP framework. </p>
 <p>This file provides utilities for handling Sudoku puzzles as constraint satisfaction problems. It includes functions for reading puzzles from files, creating the corresponding CSP problems with appropriate constraints, and printing solutions in a human-readable format.</p>
-<h1><a class="anchor" id="sudoku_modeling"></a>
-Sudoku as a CSP</h1>
 <p>The Sudoku puzzle is modeled as a CSP with 81 variables (one for each cell), each with domain {1,2,...,9}. The constraints ensure that:</p><ol type="1">
 <li>Each row contains all digits 1-9 without repetition</li>
 <li>Each column contains all digits 1-9 without repetition</li>
 <li>Each 3x3 block contains all digits 1-9 without repetition</li>
 <li>Pre-filled cells must keep their initial values</li>
 </ol>
-<h1><a class="anchor" id="sudoku_example"></a>
-Example Usage</h1>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="csp_8h.html">csp.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="forward-checking_8h.html">forward-checking.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="sudoku__utils_8h.html">sudoku_utils.h</a>&quot;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>() {</div>
-<div class="line">    <span class="comment">// Initialize the library</span></div>
-<div class="line">    <a class="code hl_function" href="csp_8c.html#a9ae781811992703aec18cf10d7685c80">csp_init</a>();</div>
-<div class="line">    </div>
-<div class="line">    <span class="comment">// Read a puzzle from a file</span></div>
-<div class="line">    FILE *file = fopen(<span class="stringliteral">&quot;puzzle.txt&quot;</span>, <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line">    <span class="keywordtype">int</span> grid[<a class="code hl_define" href="solve-sudoku_8c.html#a4b3fc164dc375bb7eaffebd9b17ab84f">SUDOKU_SIZE</a> * <a class="code hl_define" href="solve-sudoku_8c.html#a4b3fc164dc375bb7eaffebd9b17ab84f">SUDOKU_SIZE</a>] = {0};</div>
-<div class="line">    <span class="keywordflow">if</span> (!<a class="code hl_function" href="sudoku__utils_8c.html#aa966dd3296a286c6510abb5c68092e22">read_sudoku_puzzle</a>(file, grid)) {</div>
-<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Failed to read puzzle\n&quot;</span>);</div>
-<div class="line">        fclose(file);</div>
-<div class="line">        <span class="keywordflow">return</span> 1;</div>
-<div class="line">    }</div>
-<div class="line">    fclose(file);</div>
-<div class="line">    </div>
-<div class="line">    <span class="comment">// Create a CSP problem from the Sudoku puzzle</span></div>
-<div class="line">    <a class="code hl_struct" href="struct___c_s_p_problem.html">CSPProblem</a> *problem = <a class="code hl_function" href="sudoku__utils_8c.html#ade548bfca512830b9aac3569243d254f">create_sudoku_problem</a>(grid);</div>
-<div class="line">    </div>
-<div class="line">    <span class="comment">// Solve the puzzle</span></div>
-<div class="line">    <span class="keywordtype">size_t</span> solution[<a class="code hl_define" href="solve-sudoku_8c.html#a4b3fc164dc375bb7eaffebd9b17ab84f">SUDOKU_SIZE</a> * <a class="code hl_define" href="solve-sudoku_8c.html#a4b3fc164dc375bb7eaffebd9b17ab84f">SUDOKU_SIZE</a>];</div>
-<div class="line">    <span class="keywordtype">bool</span> solved = solve_with_forward_checking(problem, solution, NULL, NULL);</div>
-<div class="line">    </div>
-<div class="line">    <span class="comment">// Print the solution</span></div>
-<div class="line">    <span class="keywordflow">if</span> (solved) {</div>
-<div class="line">        <a class="code hl_function" href="sudoku__utils_8c.html#a93955a603cd3bd84a2231f360f2e0fd5">print_sudoku_solution</a>(solution);</div>
-<div class="line">    } <span class="keywordflow">else</span> {</div>
-<div class="line">        printf(<span class="stringliteral">&quot;No solution found!\n&quot;</span>);</div>
-<div class="line">    }</div>
-<div class="line">    </div>
-<div class="line">    <span class="comment">// Clean up</span></div>
-<div class="line">    <a class="code hl_function" href="csp_8c.html#a0f4b67899ee7788002586217b13dde81">csp_problem_destroy</a>(problem);</div>
-<div class="line">    <a class="code hl_function" href="csp_8c.html#a1cb2bdbf4475cdf23c40206614fd5d53">csp_finish</a>();</div>
-<div class="line">    </div>
-<div class="line">    <span class="keywordflow">return</span> 0;</div>
-<div class="line">}</div>
-<div class="ttc" id="acsp_8c_html_a0f4b67899ee7788002586217b13dde81"><div class="ttname"><a href="csp_8c.html#a0f4b67899ee7788002586217b13dde81">csp_problem_destroy</a></div><div class="ttdeci">void csp_problem_destroy(CSPProblem *csp)</div><div class="ttdoc">Destroys a CSP problem instance and frees all associated resources.</div><div class="ttdef"><b>Definition</b> <a href="csp_8c_source.html#l00204">csp.c:204</a></div></div>
-<div class="ttc" id="acsp_8c_html_a1cb2bdbf4475cdf23c40206614fd5d53"><div class="ttname"><a href="csp_8c.html#a1cb2bdbf4475cdf23c40206614fd5d53">csp_finish</a></div><div class="ttdeci">bool csp_finish(void)</div><div class="ttdoc">Finalizes the CSP library.</div><div class="ttdef"><b>Definition</b> <a href="csp_8c_source.html#l00052">csp.c:52</a></div></div>
-<div class="ttc" id="acsp_8c_html_a9ae781811992703aec18cf10d7685c80"><div class="ttname"><a href="csp_8c.html#a9ae781811992703aec18cf10d7685c80">csp_init</a></div><div class="ttdeci">bool csp_init(void)</div><div class="ttdoc">Initializes the CSP library.</div><div class="ttdef"><b>Definition</b> <a href="csp_8c_source.html#l00034">csp.c:34</a></div></div>
-<div class="ttc" id="acsp_8h_html"><div class="ttname"><a href="csp_8h.html">csp.h</a></div><div class="ttdoc">Header file for the CSP (Constraint Satisfaction Problem) library.</div></div>
-<div class="ttc" id="aforward-checking_8h_html"><div class="ttname"><a href="forward-checking_8h.html">forward-checking.h</a></div><div class="ttdoc">Forward checking algorithm for constraint satisfaction problems.</div></div>
-<div class="ttc" id="amain_8c_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdef"><b>Definition</b> <a href="main_8c_source.html#l00003">main.c:3</a></div></div>
-<div class="ttc" id="asolve-sudoku_8c_html_a4b3fc164dc375bb7eaffebd9b17ab84f"><div class="ttname"><a href="solve-sudoku_8c.html#a4b3fc164dc375bb7eaffebd9b17ab84f">SUDOKU_SIZE</a></div><div class="ttdeci">#define SUDOKU_SIZE</div><div class="ttdef"><b>Definition</b> <a href="solve-sudoku_8c_source.html#l00016">solve-sudoku.c:16</a></div></div>
-<div class="ttc" id="astruct___c_s_p_problem_html"><div class="ttname"><a href="struct___c_s_p_problem.html">_CSPProblem</a></div><div class="ttdef"><b>Definition</b> <a href="csp__internal_8h_source.html#l00058">csp_internal.h:58</a></div></div>
-<div class="ttc" id="asudoku__utils_8c_html_a93955a603cd3bd84a2231f360f2e0fd5"><div class="ttname"><a href="sudoku__utils_8c.html#a93955a603cd3bd84a2231f360f2e0fd5">print_sudoku_solution</a></div><div class="ttdeci">void print_sudoku_solution(const size_t solution[SUDOKU_CELLS])</div><div class="ttdoc">Prints a solved Sudoku grid in a human-readable format.</div><div class="ttdef"><b>Definition</b> <a href="sudoku__utils_8c_source.html#l00086">sudoku_utils.c:86</a></div></div>
-<div class="ttc" id="asudoku__utils_8c_html_aa966dd3296a286c6510abb5c68092e22"><div class="ttname"><a href="sudoku__utils_8c.html#aa966dd3296a286c6510abb5c68092e22">read_sudoku_puzzle</a></div><div class="ttdeci">bool read_sudoku_puzzle(FILE *in, int initial_grid[SUDOKU_CELLS])</div><div class="ttdoc">Reads a Sudoku puzzle from the given input stream.</div><div class="ttdef"><b>Definition</b> <a href="sudoku__utils_8c_source.html#l00050">sudoku_utils.c:50</a></div></div>
-<div class="ttc" id="asudoku__utils_8c_html_ade548bfca512830b9aac3569243d254f"><div class="ttname"><a href="sudoku__utils_8c.html#ade548bfca512830b9aac3569243d254f">create_sudoku_problem</a></div><div class="ttdeci">CSPProblem * create_sudoku_problem(const int initial_grid[SUDOKU_CELLS])</div><div class="ttdoc">Creates a CSP problem that models the Sudoku puzzle.</div><div class="ttdef"><b>Definition</b> <a href="sudoku__utils_8c_source.html#l00111">sudoku_utils.c:111</a></div></div>
-<div class="ttc" id="asudoku__utils_8h_html"><div class="ttname"><a href="sudoku__utils_8h.html">sudoku_utils.h</a></div><div class="ttdoc">Utilities for modeling and solving Sudoku puzzles using the CSP framework.</div></div>
-</div><!-- fragment --><dl class="section author"><dt>Author</dt><dd>Quentin Sautiere </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>3 mai 2025 </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Quentin Sautiere </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>May 2025 </dd></dl>
 <dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="sudoku__utils_8h_source.html">sudoku_utils.h</a>.</p>
@@ -225,7 +195,7 @@ Example Usage</h1>
 
 <p>Total number of cells in a standard Sudoku grid. </p>
 
-<p class="definition">Definition at line <a class="el" href="sudoku__utils_8h_source.html#l00080">80</a> of file <a class="el" href="sudoku__utils_8h_source.html">sudoku_utils.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sudoku__utils_8h_source.html#l00033">33</a> of file <a class="el" href="sudoku__utils_8h_source.html">sudoku_utils.h</a>.</p>
 
 </div>
 </div>
@@ -243,7 +213,7 @@ Example Usage</h1>
 
 <p>Number of rows and columns in a standard Sudoku grid. </p>
 
-<p class="definition">Definition at line <a class="el" href="sudoku__utils_8h_source.html#l00078">78</a> of file <a class="el" href="sudoku__utils_8h_source.html">sudoku_utils.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="sudoku__utils_8h_source.html#l00031">31</a> of file <a class="el" href="sudoku__utils_8h_source.html">sudoku_utils.h</a>.</p>
 
 </div>
 </div>
@@ -298,6 +268,39 @@ Example Usage</h1>
 </div>
 <div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="sudoku__utils_8h_ade548bfca512830b9aac3569243d254f_cgraph.png" border="0" usemap="#asudoku__utils_8h_ade548bfca512830b9aac3569243d254f_cgraph" alt=""/></div>
+<map name="asudoku__utils_8h_ade548bfca512830b9aac3569243d254f_cgraph" id="asudoku__utils_8h_ade548bfca512830b9aac3569243d254f_cgraph">
+<area shape="rect" title="Creates a CSP problem that models the Sudoku puzzle." alt="" coords="5,200,176,225"/>
+<area shape="rect" href="csp_8c.html#a7c7ffdd26fbe5e2729b593cc6937cdcf" title="Creates a new constraint with the specified arity and check function." alt="" coords="468,5,623,31"/>
+<area shape="poly" title=" " alt="" coords="100,198,149,145,184,114,223,89,280,64,341,45,400,32,454,23,455,29,401,37,342,50,282,69,225,94,187,119,152,149,104,202"/>
+<area shape="rect" href="csp_8c.html#a6929282e729d2c786b6be546b1c3e312" title="Sets which CSP variable is related to a specific position in the constraint." alt="" coords="478,55,613,95"/>
+<area shape="poly" title=" " alt="" coords="106,198,157,163,189,144,223,129,285,109,348,95,464,78,464,84,349,100,286,114,225,134,191,149,159,168,110,202"/>
+<area shape="rect" href="csp_8c.html#a536e0507b779b2300d004ef8347d4d8b" title="Creates a new CSP problem instance with the specified parameters." alt="" coords="473,120,618,145"/>
+<area shape="poly" title=" " alt="" coords="118,197,166,177,223,159,284,148,346,140,459,131,459,137,347,145,285,153,225,165,168,182,120,202"/>
+<area shape="rect" href="csp_8c.html#a0f4b67899ee7788002586217b13dde81" title="Destroys a CSP problem instance and frees all associated resources." alt="" coords="243,175,397,200"/>
+<area shape="poly" title=" " alt="" coords="176,201,230,195,230,200,177,206"/>
+<area shape="rect" href="csp_8c.html#ade8bd97367581ba9f1d4c8675fa11636" title="Sets a constraint at the specified position in the CSP problem." alt="" coords="224,224,416,249"/>
+<area shape="poly" title=" " alt="" coords="177,219,211,223,210,228,176,224"/>
+<area shape="rect" href="csp_8c.html#a0d1cbedfaeb27e353d49f3f9c9f5a30a" title="Sets the domain size for a variable in the CSP problem." alt="" coords="231,273,409,299"/>
+<area shape="poly" title=" " alt="" coords="126,223,225,258,256,267,254,272,223,263,124,228"/>
+<area shape="rect" href="sudoku__utils_8c.html#a10505509f8f62f6ab218963ba678a7c7" title=" " alt="" coords="225,323,415,348"/>
+<area shape="poly" title=" " alt="" coords="107,223,157,265,190,288,225,308,246,316,244,321,223,312,187,292,154,269,104,227"/>
+<area shape="rect" href="sudoku__utils_8c.html#aaeca61f4b50e068c553d17aca39d8653" title=" " alt="" coords="246,373,394,413"/>
+<area shape="poly" title=" " alt="" coords="102,224,149,288,185,326,226,358,235,364,233,369,222,363,181,329,145,291,98,227"/>
+<area shape="rect" href="csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="675,196,780,221"/>
+<area shape="poly" title=" " alt="" coords="606,28,628,41,661,74,687,112,720,182,715,184,682,115,657,77,625,45,603,33"/>
+<area shape="poly" title=" " alt="" coords="607,93,628,105,674,144,710,183,706,187,671,148,625,110,604,98"/>
+<area shape="poly" title=" " alt="" coords="580,143,628,162,687,188,684,193,626,167,578,148"/>
+<area shape="poly" title=" " alt="" coords="397,189,661,203,661,208,397,194"/>
+<area shape="rect" href="csp_8c.html#a8fd5c98995a35845e7e57f9b13666231" title="Destroys a constraint and frees all associated resources." alt="" coords="464,221,627,247"/>
+<area shape="poly" title=" " alt="" coords="383,197,471,216,469,221,382,203"/>
+<area shape="poly" title=" " alt="" coords="627,220,661,215,662,220,627,225"/>
+<area shape="poly" title=" " alt="" coords="373,247,426,257,490,264,558,265,626,255,662,243,694,226,697,231,664,248,627,261,559,270,489,269,425,262,372,252"/>
+<area shape="poly" title=" " alt="" coords="409,292,514,292,571,285,626,271,666,252,700,228,703,233,669,257,628,277,572,290,515,297,409,297"/>
+<area shape="rect" href="csp_8c.html#a4cfb5884d7fe282dbecebefb53bb9cdd" title="Gets the variable ID associated with a specific position in the constraint." alt="" coords="477,373,613,413"/>
+<area shape="poly" title=" " alt="" coords="371,345,465,369,463,375,370,351"/>
+<area shape="poly" title=" " alt="" coords="597,370,625,352,653,323,677,291,712,232,716,235,682,294,657,327,628,356,600,375"/>
+<area shape="poly" title=" " alt="" coords="394,390,464,390,464,395,394,395"/>
+</map>
 </div>
 <div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the caller graph for this function:</div>
@@ -305,6 +308,11 @@ Example Usage</h1>
 </div>
 <div id="dynsection-3-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="sudoku__utils_8h_ade548bfca512830b9aac3569243d254f_icgraph.png" border="0" usemap="#asudoku__utils_8h_ade548bfca512830b9aac3569243d254f_icgraph" alt=""/></div>
+<map name="asudoku__utils_8h_ade548bfca512830b9aac3569243d254f_icgraph" id="asudoku__utils_8h_ade548bfca512830b9aac3569243d254f_icgraph">
+<area shape="rect" title="Creates a CSP problem that models the Sudoku puzzle." alt="" coords="105,5,276,31"/>
+<area shape="rect" href="test-create-sudoku-problem_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,57,31"/>
+<area shape="poly" title=" " alt="" coords="91,21,58,21,58,15,91,15"/>
+</map>
 </div>
 
 </div>
@@ -363,6 +371,11 @@ Example Usage</h1>
 </div>
 <div id="dynsection-4-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="sudoku__utils_8h_a93955a603cd3bd84a2231f360f2e0fd5_icgraph.png" border="0" usemap="#asudoku__utils_8h_a93955a603cd3bd84a2231f360f2e0fd5_icgraph" alt=""/></div>
+<map name="asudoku__utils_8h_a93955a603cd3bd84a2231f360f2e0fd5_icgraph" id="asudoku__utils_8h_a93955a603cd3bd84a2231f360f2e0fd5_icgraph">
+<area shape="rect" title="Prints a solved Sudoku grid in a human&#45;readable format." alt="" coords="105,5,264,31"/>
+<area shape="rect" href="test-print-sudoku-solution_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,57,31"/>
+<area shape="poly" title=" " alt="" coords="91,21,58,21,58,15,91,15"/>
+</map>
 </div>
 
 </div>
@@ -425,6 +438,11 @@ initial_grid != NULL and can store at least SUDOKU_CELLS integers </dd></dl>
 </div>
 <div id="dynsection-5-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="sudoku__utils_8h_aa966dd3296a286c6510abb5c68092e22_icgraph.png" border="0" usemap="#asudoku__utils_8h_aa966dd3296a286c6510abb5c68092e22_icgraph" alt=""/></div>
+<map name="asudoku__utils_8h_aa966dd3296a286c6510abb5c68092e22_icgraph" id="asudoku__utils_8h_aa966dd3296a286c6510abb5c68092e22_icgraph">
+<area shape="rect" title="Reads a Sudoku puzzle from the given input stream." alt="" coords="105,5,252,31"/>
+<area shape="rect" href="test-read-sudoku-puzzle_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,57,31"/>
+<area shape="poly" title=" " alt="" coords="92,21,58,21,58,15,92,15"/>
+</map>
 </div>
 
 </div>
@@ -435,7 +453,7 @@ initial_grid != NULL and can store at least SUDOKU_CELLS integers </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="sudoku__utils_8h.html">sudoku_utils.h</a></li>
-    <li class="footer">Generated on Sat May 3 2025 22:54:35 for CSP-lib: Constraint Satisfaction Problem Solver Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+    <li class="footer">Generated on Sun May 4 2025 01:54:22 for CSP-lib: Constraint Satisfaction Problem Solver Library by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
   </ul>
 </div>
 </body>
