@@ -84,10 +84,7 @@ int main(int argc, char *argv[]) {
         // Solve the CSP problem using forward checking with MRV and LCV heuristics
         bool result = csp_problem_solve_forward_checking(problem, queens, NULL);
 
-        // Destroy the CSP problem
-        while (index--) {
-            csp_constraint_destroy(csp_problem_get_constraint(problem, index));
-        }
+        // Destroy the CSP problem (no need to manually destroy constraints)
         csp_problem_destroy(problem);
 
         // Print the solution
