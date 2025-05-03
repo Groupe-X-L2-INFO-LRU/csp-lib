@@ -1,11 +1,12 @@
 #include <assert.h>
 #include <stdio.h>
+
 #include "../src/csp.h"
 #include "../src/forward-checking.h"
 
 /* Contrainte simple : deux vars diff */
 static bool diff(CSPConstraint const *c, const size_t *v, const void *data) {
-    (void)data; // unused
+    (void)data;  // unused
     size_t a = csp_constraint_get_variable(c, 0);
     size_t b = csp_constraint_get_variable(c, 1);
     return v[a] != v[b];
@@ -26,7 +27,7 @@ void test_solve_simple(void) {
     assert(ok);
     assert(vals[0] != vals[1]);
 
-    csp_constraint_destroy(con);
+    // Don't manually destroy constraints - let csp_problem_destroy handle it
     csp_problem_destroy(csp);
     csp_finish();
     printf("test_solve_simple passed\n");

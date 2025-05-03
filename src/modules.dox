@@ -1,0 +1,424 @@
+/**
+ * @file modules.dox
+ * @brief Module organization for CSP library documentation
+ */
+
+/**
+ * @defgroup core Core Components
+ * @brief Core structures and functions for defining CSP problems
+ * 
+ * The Core Components module contains the fundamental building blocks used to define
+ * Constraint Satisfaction Problems:
+ * - Variable management
+ * - Domain definitions
+ * - Constraint creation and manipulation
+ * - Problem construction
+ */
+
+/**
+ * @defgroup algorithms Solving Algorithms
+ * @brief Algorithms for solving CSP problems
+ * 
+ * This module contains various algorithms for solving CSP problems:
+ * - Simple backtracking 
+ * - Forward checking
+ * - Arc consistency
+ */
+
+/**
+ * @defgroup heuristics Heuristics
+ * @brief Heuristic functions to improve solving efficiency
+ * 
+ * Heuristics significantly improve the performance of solving algorithms by making
+ * intelligent choices:
+ * - Variable selection heuristics (MRV)
+ * - Value ordering heuristics (LCV)
+ * - Domain pruning techniques
+ */
+
+/**
+ * @defgroup applications Applications
+ * @brief Practical applications and examples
+ * 
+ * This module provides complete implementations of common CSP applications:
+ * - Sudoku solver
+ * - N-Queens problem
+ * - Other examples
+ */
+
+/**
+ * @defgroup utilities Utilities
+ * @brief Helper functions and utilities
+ * 
+ * This module provides various utility functions used throughout the library:
+ * - File I/O
+ * - Formatting and printing
+ * - Memory management
+ * - Debug helpers
+ */
+
+/**
+ * @mainpage CSP Library Documentation
+ *
+ * @section intro Introduction
+ * 
+ * Welcome to the CSP Library, a comprehensive C library for solving Constraint Satisfaction Problems (CSPs).
+ * This library implements various algorithms and heuristics for efficient problem solving, with a focus on
+ * clean design and flexibility.
+ *
+ * @section overview Library Overview
+ *
+ * The library is organized into several modules:
+ * - @ref core "Core Components": Basic building blocks for defining CSP problems
+ * - @ref algorithms "Solving Algorithms": Different algorithms for solving CSPs 
+ * - @ref heuristics "Heuristics": Techniques to improve solver efficiency
+ * - @ref applications "Applications": Complete implementations of common CSP problems
+ * - @ref utilities "Utilities": Helper functions and tools
+ *
+ * @section getting_started Getting Started
+ *
+ * See the @ref page_quickstart "Quick Start Guide" for examples of how to use the library.
+ *
+ * For installation instructions, refer to the README.md file or the @ref page_installation "Installation Guide".
+ *
+ * @section examples Examples
+ *
+ * The library includes several examples that demonstrate how to use it for common problems:
+ * - @ref page_sudoku "Sudoku Solver": A complete Sudoku puzzle solver
+ * - @ref page_nqueens "N-Queens Problem": Solver for the classic N-Queens placement problem
+ *
+ * @section reference API Reference
+ *
+ * For detailed information about the library's functions and data structures,
+ * see the @ref core "Core API" documentation.
+ */
+
+/**
+ * @page page_quickstart Quick Start Guide
+ * 
+ * @section quickstart_intro Introduction
+ * 
+ * This guide will help you get started with using the CSP library to solve constraint satisfaction problems.
+ * 
+ * @section quickstart_basic Basic Concepts
+ * 
+ * A CSP problem consists of:
+ * - Variables with domains (possible values)
+ * - Constraints between variables
+ * - A goal to find values for all variables that satisfy all constraints
+ * 
+ * @section quickstart_example Example: Simple Binary CSP
+ * 
+ * Here's a simple example that demonstrates how to create and solve a binary CSP:
+ * 
+ * @code{.c}
+ * #include "csp.h"
+ * #include "forward-checking.h"
+ * #include <stdio.h>
+ * 
+ * // Define a constraint check function
+ * bool not_equal(const CSPConstraint *constraint, const size_t *values, const void *data) {
+ *     size_t var1 = csp_constraint_get_variable(constraint, 0);
+ *     size_t var2 = csp_constraint_get_variable(constraint, 1);
+ *     return values[var1] != values[var2];
+ * }
+ * 
+ * int main() {
+ *     // Initialize the library
+ *     csp_init();
+ *     
+ *     // Create a problem with 3 variables, each with domain size 3
+ *     size_t domains[] = {3, 3, 3};
+ *     CSPProblem *problem = csp_problem_create(3, domains);
+ *     
+ *     // Add constraints: all variables must have different values
+ *     CSPConstraint *c1 = csp_constraint_create(2, not_equal);
+ *     csp_constraint_set_variable(c1, 0, 0);  // Variable 0
+ *     csp_constraint_set_variable(c1, 1, 1);  // Variable 1
+ *     csp_problem_add_constraint(problem, c1);
+ *     
+ *     CSPConstraint *c2 = csp_constraint_create(2, not_equal);
+ *     csp_constraint_set_variable(c2, 0, 0);  // Variable 0
+ *     csp_constraint_set_variable(c2, 1, 2);  // Variable 2
+ *     csp_problem_add_constraint(problem, c2);
+ *     
+ *     CSPConstraint *c3 = csp_constraint_create(2, not_equal);
+ *     csp_constraint_set_variable(c3, 0, 1);  // Variable 1
+ *     csp_constraint_set_variable(c3, 1, 2);  // Variable 2
+ *     csp_problem_add_constraint(problem, c3);
+ *     
+ *     // Solve the problem using forward checking
+ *     size_t solution[3];
+ *     bool solved = solve_with_forward_checking(problem, solution, NULL, NULL);
+ *     
+ *     // Print the solution
+ *     if (solved) {
+ *         printf("Solution found:\n");
+ *         for (size_t i = 0; i < 3; i++) {
+ *             printf("Variable %zu = %zu\n", i, solution[i]);
+ *         }
+ *     } else {
+ *         printf("No solution found!\n");
+ *     }
+ *     
+ *     // Clean up
+ *     csp_problem_destroy(problem);
+ *     csp_finish();
+ *     
+ *     return 0;
+ * }
+ * @endcode
+ * 
+ * @section quickstart_next Next Steps
+ * 
+ * - See the @ref applications "Applications" section for more complex examples
+ * - Learn about advanced solving techniques in the @ref algorithms "Algorithms" section
+ * - Explore performance optimization with @ref heuristics "Heuristics"
+ */
+
+/**
+ * @page page_installation Installation Guide
+ * 
+ * @section installation_requirements Requirements
+ * 
+ * To build and use the CSP library, you'll need:
+ * - A C compiler (GCC, Clang, etc.)
+ * - CMake (version 3.5 or higher)
+ * - Make or Ninja build system
+ * 
+ * @section installation_steps Installation Steps
+ * 
+ * @subsection installation_clone Clone the Repository
+ * 
+ * ```bash
+ * git clone https://github.com/Groupe-X-L2-INFO-LRU/csp-lib.git
+ * cd csp-lib
+ * ```
+ * 
+ * @subsection installation_build Build the Library
+ * 
+ * ```bash
+ * mkdir -p build
+ * cd build
+ * cmake ..
+ * make
+ * ```
+ * 
+ * @subsection installation_test Run Tests (Optional)
+ * 
+ * ```bash
+ * ctest
+ * ```
+ * 
+ * @subsection installation_install Install (Optional)
+ * 
+ * ```bash
+ * sudo make install
+ * ```
+ * 
+ * This will install the library to your system. By default, this installs to `/usr/local/lib` 
+ * and headers to `/usr/local/include`.
+ */
+
+/**
+ * @page page_sudoku Sudoku Solver
+ * 
+ * @section sudoku_intro Introduction to Sudoku
+ * 
+ * Sudoku is a popular logic-based number placement puzzle. The objective is to fill
+ * a 9×9 grid with digits so that each column, each row, and each of the nine 3×3 subgrids
+ * contains all of the digits from 1 to 9.
+ * 
+ * @section sudoku_modeling Modeling as a CSP
+ * 
+ * A Sudoku puzzle can be modeled as a CSP as follows:
+ * - Variables: The 81 cells of the grid
+ * - Domains: Each cell can contain values 1-9
+ * - Constraints: 
+ *   - Row constraint: Cells in the same row must have different values
+ *   - Column constraint: Cells in the same column must have different values
+ *   - Box constraint: Cells in the same 3x3 box must have different values
+ *   - Initial values: Pre-assigned cells must keep their values
+ * 
+ * @section sudoku_implementation Implementation
+ * 
+ * Here's how to use the CSP library to solve a Sudoku puzzle:
+ * 
+ * @code{.c}
+ * #include "csp.h"
+ * #include "forward-checking.h"
+ * #include "sudoku_utils.h"
+ * #include <stdio.h>
+ * 
+ * int main() {
+ *     // Initialize CSP library
+ *     csp_init();
+ *     
+ *     // Read a Sudoku puzzle from file
+ *     FILE *puzzleFile = fopen("puzzle.txt", "r");
+ *     int puzzle[81];
+ *     read_sudoku_puzzle(puzzleFile, puzzle);
+ *     fclose(puzzleFile);
+ *     
+ *     // Create the Sudoku CSP problem
+ *     CSPProblem *sudokuProblem = create_sudoku_problem(puzzle);
+ *     
+ *     // Solve using forward checking
+ *     size_t solution[81];
+ *     bool solved = solve_with_forward_checking(
+ *         sudokuProblem, solution, NULL, NULL
+ *     );
+ *     
+ *     // Print the solution
+ *     if (solved) {
+ *         print_sudoku_solution(solution);
+ *     } else {
+ *         printf("No solution found!\n");
+ *     }
+ *     
+ *     // Clean up
+ *     csp_problem_destroy(sudokuProblem);
+ *     csp_finish();
+ *     
+ *     return 0;
+ * }
+ * @endcode
+ * 
+ * @section sudoku_puzzle_format Puzzle Format
+ * 
+ * The input puzzle should be in a simple text format where:
+ * - Each row is on a separate line
+ * - Digits 1-9 represent filled cells
+ * - Periods (.) or zeros (0) represent empty cells
+ * 
+ * Example:
+ * ```
+ * 53..7....
+ * 6..195...
+ * .98....6.
+ * 8...6...3
+ * 4..8.3..1
+ * 7...2...6
+ * .6....28.
+ * ...419..5
+ * ....8..79
+ * ```
+ */
+
+/**
+ * @page page_nqueens N-Queens Problem
+ * 
+ * @section nqueens_intro Introduction to N-Queens
+ * 
+ * The N-Queens problem is a classic puzzle: place N chess queens on an N×N chessboard
+ * so that no two queens threaten each other. This means no two queens can share the
+ * same row, column, or diagonal.
+ * 
+ * @section nqueens_modeling Modeling as a CSP
+ * 
+ * The N-Queens problem can be modeled as a CSP as follows:
+ * - Variables: The N columns of the board
+ * - Domains: Each queen can be placed in any of the N rows
+ * - Constraints: No two queens can share the same row or diagonal
+ *   (column constraints are implicitly satisfied by our variable choice)
+ * 
+ * @section nqueens_implementation Implementation
+ * 
+ * Here's how to use the CSP library to solve the N-Queens problem:
+ * 
+ * @code{.c}
+ * #include "csp.h"
+ * #include "forward-checking.h"
+ * #include <stdio.h>
+ * #include <stdlib.h>
+ * 
+ * // Check function for N-Queens constraints
+ * bool queens_not_attack(const CSPConstraint *constraint, const size_t *values, const void *data) {
+ *     size_t q1 = csp_constraint_get_variable(constraint, 0);
+ *     size_t q2 = csp_constraint_get_variable(constraint, 1);
+ *     
+ *     // Queens are in different columns by construction
+ *     // Check if they're in the same row
+ *     if (values[q1] == values[q2]) {
+ *         return false;
+ *     }
+ *     
+ *     // Check if they're on the same diagonal
+ *     size_t col_diff = (q2 > q1) ? q2 - q1 : q1 - q2;
+ *     size_t row_diff = (values[q2] > values[q1]) ? 
+ *                         values[q2] - values[q1] : 
+ *                         values[q1] - values[q2];
+ *                         
+ *     return row_diff != col_diff;
+ * }
+ * 
+ * // Create an N-Queens problem
+ * CSPProblem *create_nqueens_problem(size_t n) {
+ *     // Create domains - each queen can be in any of the N rows
+ *     size_t *domains = malloc(n * sizeof(size_t));
+ *     for (size_t i = 0; i < n; i++) {
+ *         domains[i] = n;
+ *     }
+ *     
+ *     // Create the CSP problem
+ *     CSPProblem *problem = csp_problem_create(n, domains);
+ *     free(domains);
+ *     
+ *     // Add constraints between all pairs of queens
+ *     for (size_t i = 0; i < n; i++) {
+ *         for (size_t j = i+1; j < n; j++) {
+ *             CSPConstraint *c = csp_constraint_create(2, queens_not_attack);
+ *             csp_constraint_set_variable(c, 0, i);
+ *             csp_constraint_set_variable(c, 1, j);
+ *             csp_problem_add_constraint(problem, c);
+ *         }
+ *     }
+ *     
+ *     return problem;
+ * }
+ * 
+ * // Print an N-Queens solution
+ * void print_nqueens_solution(size_t n, const size_t *solution) {
+ *     for (size_t row = 0; row < n; row++) {
+ *         for (size_t col = 0; col < n; col++) {
+ *             if (solution[col] == row) {
+ *                 printf("Q ");
+ *             } else {
+ *                 printf(". ");
+ *             }
+ *         }
+ *         printf("\n");
+ *     }
+ * }
+ * 
+ * int main(int argc, char *argv[]) {
+ *     // Get board size
+ *     size_t n = (argc > 1) ? atoi(argv[1]) : 8;  // Default to 8-queens
+ *     
+ *     // Initialize CSP library
+ *     csp_init();
+ *     
+ *     // Create the N-Queens problem
+ *     CSPProblem *problem = create_nqueens_problem(n);
+ *     
+ *     // Solve using forward checking
+ *     size_t *solution = malloc(n * sizeof(size_t));
+ *     bool solved = solve_with_forward_checking(problem, solution, NULL, NULL);
+ *     
+ *     // Print the solution
+ *     if (solved) {
+ *         printf("Solution found for %zu-Queens:\n", n);
+ *         print_nqueens_solution(n, solution);
+ *     } else {
+ *         printf("No solution found for %zu-Queens!\n", n);
+ *     }
+ *     
+ *     // Clean up
+ *     free(solution);
+ *     csp_problem_destroy(problem);
+ *     csp_finish();
+ *     
+ *     return 0;
+ * }
+ * @endcode
+ */

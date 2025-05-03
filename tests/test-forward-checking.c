@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 #include "../src/csp.h"
+#include "../src/csp_internal.h"
 #include "../src/forward-checking.h"
-#include "../src/csp.inc"
 
 // Constraint functions
 
@@ -22,7 +22,12 @@ static bool sumLeq(const CSPConstraint *constraint, const size_t *values, const 
 
 // Test cases
 
-static bool always_true(const CSPConstraint *c, const size_t *v, const void *d) { (void)c; (void)v; (void)d; return true; }
+static bool always_true(const CSPConstraint *c, const size_t *v, const void *d) {
+    (void)c;
+    (void)v;
+    (void)d;
+    return true;
+}
 
 void test_single_var(void) {
     CSPProblem *csp = csp_problem_create(1, 1);
@@ -34,7 +39,7 @@ void test_single_var(void) {
     size_t values[1];
     assert(csp_problem_solve_forward_checking(csp, values, NULL));
     assert(values[0] < 3);
-    csp_constraint_destroy(con);
+    // Don't manually destroy constraints - let csp_problem_destroy handle it
     csp_problem_destroy(csp);
     printf("test_single_var passed\n");
 }
@@ -43,14 +48,15 @@ void test_two_var_diff(void) {
     CSPProblem *csp = csp_problem_create(2, 1);
     csp_problem_set_domain(csp, 0, 2);
     csp_problem_set_domain(csp, 1, 2);
-    CSPConstraint *con = csp_constraint_create(2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
+    CSPConstraint *con = csp_constraint_create(
+        2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
     csp_constraint_set_variable(con, 0, 0);
     csp_constraint_set_variable(con, 1, 1);
     csp_problem_set_constraint(csp, 0, con);
     size_t values[2];
     assert(csp_problem_solve_forward_checking(csp, values, NULL));
     assert(values[0] != values[1]);
-    csp_constraint_destroy(con);
+    // Don't manually destroy constraints - let csp_problem_destroy handle it
     csp_problem_destroy(csp);
     printf("test_two_var_diff passed\n");
 }
@@ -59,13 +65,14 @@ void test_unsatisfiable(void) {
     CSPProblem *csp = csp_problem_create(2, 1);
     csp_problem_set_domain(csp, 0, 1);
     csp_problem_set_domain(csp, 1, 1);
-    CSPConstraint *con = csp_constraint_create(2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
+    CSPConstraint *con = csp_constraint_create(
+        2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
     csp_constraint_set_variable(con, 0, 0);
     csp_constraint_set_variable(con, 1, 1);
     csp_problem_set_constraint(csp, 0, con);
     size_t values[2];
     assert(!csp_problem_solve_forward_checking(csp, values, NULL));
-    csp_constraint_destroy(con);
+    // Don't manually destroy constraints - let csp_problem_destroy handle it
     csp_problem_destroy(csp);
     printf("test_unsatisfiable passed\n");
 }
@@ -75,10 +82,12 @@ void test_three_var_diff(void) {
     csp_problem_set_domain(csp, 0, 3);
     csp_problem_set_domain(csp, 1, 3);
     csp_problem_set_domain(csp, 2, 3);
-    CSPConstraint *c1 = csp_constraint_create(2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
+    CSPConstraint *c1 = csp_constraint_create(
+        2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
     csp_constraint_set_variable(c1, 0, 0);
     csp_constraint_set_variable(c1, 1, 1);
-    CSPConstraint *c2 = csp_constraint_create(2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
+    CSPConstraint *c2 = csp_constraint_create(
+        2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
     csp_constraint_set_variable(c2, 0, 1);
     csp_constraint_set_variable(c2, 1, 2);
     csp_problem_set_constraint(csp, 0, c1);
@@ -87,8 +96,7 @@ void test_three_var_diff(void) {
     assert(csp_problem_solve_forward_checking(csp, values, NULL));
     assert(values[0] != values[1]);
     assert(values[1] != values[2]);
-    csp_constraint_destroy(c1);
-    csp_constraint_destroy(c2);
+    // Don't manually destroy constraints - let csp_problem_destroy handle it
     csp_problem_destroy(csp);
     printf("test_three_var_diff passed\n");
 }
@@ -105,7 +113,7 @@ void test_with_data(void) {
     const size_t max_sum = 3;
     assert(csp_problem_solve_forward_checking(csp, values, &max_sum));
     assert(values[0] + values[1] <= max_sum);
-    csp_constraint_destroy(con);
+    // Don't manually destroy constraints - let csp_problem_destroy handle it
     csp_problem_destroy(csp);
     printf("test_with_data passed\n");
 }

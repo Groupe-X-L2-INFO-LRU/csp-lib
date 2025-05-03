@@ -1,0 +1,58 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Roboto,fontsize=10,labelfontname=Roboto,labelfontsize=10];
+  node [fontname=Roboto,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="main",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="test_context_create\l_destroy",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$test-context_8c.html#a885c8a80baefd5f7c87af51f76ffb2f9",tooltip=" "];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="csp_finish",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a1cb2bdbf4475cdf23c40206614fd5d53",tooltip="Finalizes the CSP library."];
+  Node2 -> Node4 [id="edge3_Node000002_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="csp_forward_check_context\l_create",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$forward-checking_8c.html#a80a2e22a4514587505e87b68cd29841b",tooltip="Creates and initializes a forward checking context."];
+  Node4 -> Node5 [id="edge4_Node000004_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="csp_constraint_get\l_arity",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a0ec9ba5a3f78127657d0ab0f2d3a5bbd",tooltip="Gets the arity of a constraint."];
+  Node5 -> Node6 [id="edge5_Node000005_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="csp_initialised",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#aca1712012517bff1090a471f502cf729",tooltip="Checks if the CSP library is initialized."];
+  Node4 -> Node7 [id="edge6_Node000004_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="csp_constraint_get\l_check",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#ac9b8e8925b0302c3cdd35b0186a1acd8",tooltip="Gets the check function associated with a constraint."];
+  Node7 -> Node6 [id="edge7_Node000007_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node8 [id="edge8_Node000004_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="csp_constraint_get\l_variable",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a4cfb5884d7fe282dbecebefb53bb9cdd",tooltip="Gets the variable ID associated with a specific position in the constraint."];
+  Node8 -> Node6 [id="edge9_Node000008_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node6 [id="edge10_Node000004_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node9 [id="edge11_Node000004_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="csp_problem_get_constraint",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#aba7697a379d5f761429bb911e2bc2bbc",tooltip="Gets the constraint at the specified position in the CSP problem."];
+  Node9 -> Node6 [id="edge12_Node000009_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node10 [id="edge13_Node000004_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="csp_problem_get_domain",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a86b3f53f47b41dcdd6109aaa9103d5fa",tooltip="Gets the domain size for a variable in the CSP problem."];
+  Node10 -> Node6 [id="edge14_Node000010_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node11 [id="edge15_Node000004_Node000011",color="steelblue1",style="solid",tooltip=" "];
+  Node11 [id="Node000011",label="csp_problem_get_num\l_constraints",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a1dc56cea8c87ec1ef2e4489536cd1f0e",tooltip="Gets the number of constraints in the CSP problem."];
+  Node11 -> Node6 [id="edge16_Node000011_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node4 -> Node12 [id="edge17_Node000004_Node000012",color="steelblue1",style="solid",tooltip=" "];
+  Node12 [id="Node000012",label="csp_problem_get_num\l_domains",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#abf80aeaad4438b9cbaefaa941e4f2315",tooltip="Gets the number of variables (domains) in the CSP problem."];
+  Node12 -> Node6 [id="edge18_Node000012_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node13 [id="edge19_Node000002_Node000013",color="steelblue1",style="solid",tooltip=" "];
+  Node13 [id="Node000013",label="csp_forward_check_context\l_destroy",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$forward-checking_8c.html#a0787ac68808df63955a93e55aa5235e2",tooltip="Destroys a forward checking context and frees all associated memory."];
+  Node13 -> Node6 [id="edge20_Node000013_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node14 [id="edge21_Node000002_Node000014",color="steelblue1",style="solid",tooltip=" "];
+  Node14 [id="Node000014",label="csp_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a9ae781811992703aec18cf10d7685c80",tooltip="Initializes the CSP library."];
+  Node14 -> Node15 [id="edge22_Node000014_Node000015",color="steelblue1",style="solid",tooltip=" "];
+  Node15 [id="Node000015",label="_verify",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#afdbe5d4548be89653cd14254ecfc3efc",tooltip=" "];
+  Node15 -> Node6 [id="edge23_Node000015_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node16 [id="edge24_Node000002_Node000016",color="steelblue1",style="solid",tooltip=" "];
+  Node16 [id="Node000016",label="csp_problem_create",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a536e0507b779b2300d004ef8347d4d8b",tooltip="Creates a new CSP problem instance with the specified parameters."];
+  Node16 -> Node6 [id="edge25_Node000016_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node17 [id="edge26_Node000002_Node000017",color="steelblue1",style="solid",tooltip=" "];
+  Node17 [id="Node000017",label="csp_problem_destroy",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a0f4b67899ee7788002586217b13dde81",tooltip="Destroys a CSP problem instance and frees all associated resources."];
+  Node17 -> Node18 [id="edge27_Node000017_Node000018",color="steelblue1",style="solid",tooltip=" "];
+  Node18 [id="Node000018",label="csp_constraint_destroy",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a8fd5c98995a35845e7e57f9b13666231",tooltip="Destroys a constraint and frees all associated resources."];
+  Node18 -> Node6 [id="edge28_Node000018_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node17 -> Node6 [id="edge29_Node000017_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node2 -> Node19 [id="edge30_Node000002_Node000019",color="steelblue1",style="solid",tooltip=" "];
+  Node19 [id="Node000019",label="csp_problem_set_domain",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a0d1cbedfaeb27e353d49f3f9c9f5a30a",tooltip="Sets the domain size for a variable in the CSP problem."];
+  Node19 -> Node6 [id="edge31_Node000019_Node000006",color="steelblue1",style="solid",tooltip=" "];
+}
