@@ -47,7 +47,7 @@ void test_lcv_basic(void) {
     printf("test_lcv_basic order: [%zu, %zu, %zu]\n", ordered[0], ordered[1], ordered[2]);
 
     // Cleanup
-    csp_constraint_destroy(con);
+    // Don't manually destroy constraints - let csp_problem_destroy handle it
     csp_problem_destroy(csp);
     csp_forward_check_context_destroy(ctx);
     // Finalize the CSP library

@@ -41,8 +41,7 @@ int main(void) {
         assert(values[0] != values[1]);
         assert(values[0] == 0 || values[0] == 1);
         assert(values[1] == 0 || values[1] == 1);
-        // Destroy the constraint
-        csp_constraint_destroy(csp_problem_get_constraint(problem, 0));
+        // Don't manually destroy constraints - let csp_problem_destroy handle it
         // Destroy the problem
         csp_problem_destroy(problem);
     }

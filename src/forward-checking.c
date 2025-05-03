@@ -2,10 +2,14 @@
 #include "forward-checking.h"
 
 #include <assert.h>
+#include <signal.h>  // For sig_atomic_t
 #include <stdlib.h>
 #include <string.h>
 
 #include "heuristics.h"
+
+// Declare the global timeout flag that can be set externally
+volatile sig_atomic_t timeout_occurred = 0;
 
 /**
  * @brief Checks consistency of the current assignment under forward checking.
@@ -70,9 +74,17 @@ static bool fc_is_consistent(const CSPProblem *csp, const size_t *values, const 
  * @param ctx The forward checking context.
  * @return true if a solution is found, false otherwise.
  */
+// External flag that can be set by a signal handler to indicate timeout
+extern volatile sig_atomic_t timeout_occurred;
+
 static bool backtrack_fc(const CSPProblem *csp, size_t *values, const void *data,
                          CSPForwardCheckContext *ctx) {
     assert(csp_initialised());
+
+    // First check if we've received a timeout signal
+    if (timeout_occurred) {
+        return false;  // Exit early if timeout occurred
+    }
 
     // Check if we've assigned all variables - if so, we've found a complete solution
     for (size_t v = 0; v < ctx->num_domains; ++v) {
@@ -131,6 +143,7 @@ proceed:;
         if (!counts || !pruned) {
             free(counts);
             free(pruned);
+            free(order);  // Free order memory too
             ctx->assigned[var] = false;
             return false;
         }
@@ -143,12 +156,15 @@ proceed:;
             free(order);
             restore_pruned(ctx, counts, pruned);
             free(counts);
+            free(pruned);
             return true;
         }
 
         // Step 7: If we reach here, this assignment didn't lead to a solution
         // Backtrack: restore the pruned values and try another value
         restore_pruned(ctx, counts, pruned);
+        free(counts);
+        free(pruned);
 
         // Mark this variable as unassigned again
         ctx->assigned[var] = false;

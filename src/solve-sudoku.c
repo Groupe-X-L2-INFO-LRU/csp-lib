@@ -199,10 +199,7 @@ int main(int argc, char *argv[]) {
     // Solve the Sudoku with forward checking and heuristics
     bool solved = csp_problem_solve_forward_checking(problem, solution, NULL);
 
-    // Cleanup: destroy all constraints
-    while (ci--) {
-        csp_constraint_destroy(csp_problem_get_constraint(problem, ci));
-    }
+    // Cleanup: no need to manually destroy constraints - csp_problem_destroy will handle that
     csp_problem_destroy(problem);
 
     // Print result

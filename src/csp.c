@@ -201,6 +201,14 @@ void csp_problem_destroy(CSPProblem *csp) {
     assert(csp_initialised());
     assert(printf("Destroying CSP problem with %lu domains and %lu constraints\n", csp->num_domains,
                   csp->num_constraints));
+
+    // Free all constraints before freeing the constraints array
+    for (size_t i = 0; i < csp->num_constraints; i++) {
+        if (csp->constraints[i] != NULL) {
+            csp_constraint_destroy(csp->constraints[i]);
+        }
+    }
+
     free(csp->constraints);
     free(csp->domains);
     free(csp);

@@ -26,6 +26,7 @@ add_library(csp SHARED
   src/csp.inc
   src/forward-checking.c
   src/heuristics.c
+  src/sudoku_utils.c
 )
 target_include_directories(csp PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 

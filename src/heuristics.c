@@ -200,7 +200,7 @@ void order_values_lcv(const CSPProblem *csp, CSPForwardCheckContext *ctx, const 
     // Set the number of valid values found
     *n_vals = n;
 
-    // Free the temporary array
+    // Free the pairs array we allocated
     free(pairs);
 }
 
