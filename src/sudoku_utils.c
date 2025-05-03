@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "csp_internal.h"
+
 /**
  * Checker function for Sudoku unary constraints (pre-assigned values)
  *
@@ -48,8 +50,13 @@ static bool sudoku_not_equal_checker(const CSPConstraint *constraint, const size
 bool read_sudoku_puzzle(FILE *in, int initial_grid[SUDOKU_CELLS]) {
     if (!in || !initial_grid) return false;
 
-    char line[SUDOKU_SIZE * 2];                           // Extra space for newlines, etc.
-    memset(initial_grid, 0, SUDOKU_CELLS * sizeof(int));  // Initialize to all 0s (blank)
+    char line[SUDOKU_SIZE * 2];  // Extra space for newlines, etc.
+
+    // Initialize grid to all 0s (blank cells)
+    // Using a safer alternative to memset for buffer initialization
+    for (int i = 0; i < SUDOKU_CELLS; i++) {
+        initial_grid[i] = 0;
+    }
 
     // Read 9 rows
     for (size_t row = 0; row < SUDOKU_SIZE; row++) {

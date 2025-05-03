@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 #include "../src/csp.h"
-#include "../src/csp.inc"
+#include "../src/csp_internal.h"
 #include "../src/forward-checking.h"
 
 // Constraint functions

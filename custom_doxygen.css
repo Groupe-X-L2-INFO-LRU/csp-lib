@@ -1,0 +1,242 @@
+/* Custom Doxygen CSS styles for CSP Library */
+
+/* General styles */
+body, table, div, p, dl {
+    font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Header styles */
+#titlearea {
+    background-color: #2b3137;
+    color: white;
+    padding: 12px 0;
+    border-bottom: 1px solid #1e252d;
+}
+
+#projectlogo img {
+    max-height: 55px;
+    margin-right: 15px;
+}
+
+#projectname {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 10px 0 5px 0;
+}
+
+#projectbrief {
+    font-size: 14px;
+    font-style: italic;
+}
+
+#projectnumber {
+    font-size: 14px;
+    margin-left: 10px;
+    color: #acd2ff;
+}
+
+/* Navigation tree */
+#nav-tree {
+    background-color: #f8f9fa;
+}
+
+#nav-tree .selected {
+    background-image: none;
+    background-color: #4c8be0;
+    color: white;
+    text-shadow: none;
+}
+
+/* Main content area */
+.contents {
+    padding: 20px;
+    margin: 10px;
+}
+
+/* Section headers */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5em;
+    border-bottom: 1px solid #eaecef;
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+/* Function & Class styling */
+.memtitle {
+    background: #e9f2ff;
+    border-top: 1px solid #c4d9f6;
+    border-left: 1px solid #c4d9f6;
+    border-right: 1px solid #c4d9f6;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    margin-bottom: -1px;
+    padding: 8px;
+    font-weight: 600;
+}
+
+.memitem {
+    padding: 0;
+    margin-bottom: 20px;
+    border: 1px solid #c4d9f6;
+    border-radius: 0 0 4px 4px;
+}
+
+.memproto {
+    background: #f4f8ff;
+    padding: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.memdoc {
+    padding: 15px;
+    background-color: #ffffff;
+}
+
+/* Code blocks */
+div.fragment {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #eaecef;
+    overflow: auto;
+    margin: 15px 0;
+}
+
+pre.fragment {
+    margin: 0;
+    padding: 15px;
+}
+
+/* Code syntax highlighting */
+span.keyword {
+    color: #0086b3;
+    font-weight: bold;
+}
+
+span.keywordtype {
+    color: #0086b3;
+    font-weight: bold;
+}
+
+span.keywordflow {
+    color: #d73a49;
+    font-weight: bold;
+}
+
+span.comment {
+    color: #6a737d;
+    font-style: italic;
+}
+
+span.preprocessor {
+    color: #6f42c1;
+}
+
+span.stringliteral {
+    color: #032f62;
+}
+
+span.charliteral {
+    color: #032f62;
+}
+
+/* Tables */
+table.memberdecls {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table.memberdecls td, table.memberdecls th {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #eaecef;
+}
+
+table.memberdecls tr:hover {
+    background-color: #f6f8fa;
+}
+
+/* Function parameters table */
+.paramname {
+    font-weight: bold;
+    color: #e83e8c;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.paramkey {
+    color: #005cc5;
+}
+
+/* Tabs */
+.tabs, .tabs2, .tabs3 {
+    background-color: #2b3137;
+    width: 100%;
+}
+
+.tablist li {
+    background-color: transparent !important;
+}
+
+.tablist a {
+    color: #fff;
+    text-shadow: none;
+}
+
+.tablist li.current a {
+    background-color: #4c8be0;
+    color: #fff;
+    text-shadow: none;
+}
+
+/* Links */
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0352a3;
+    text-decoration: underline;
+}
+
+/* Footer */
+hr.footer {
+    display: none;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    color: #586069;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eaecef;
+    margin-top: 30px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #side-nav {
+        display: none;
+    }
+    #nav-path {
+        display: none;
+    }
+    body {
+        padding: 10px;
+    }
+}

@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "csp_internal.h"
 #include "heuristics.h"
 
 // Declare the global timeout flag that can be set externally

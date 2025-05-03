@@ -22,7 +22,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "./csp.inc"
+/* Include the internal header file with structure definitions */
+#include "csp_internal.h"
 
 static int counter = 0;
 
@@ -85,7 +86,10 @@ CSPConstraint *csp_constraint_create(size_t arity, CSPChecker *check) {
 
         // Initialize all variables to 0
         // (These will be set to actual variable indices later with csp_constraint_set_variable)
-        memset(constraint->variables, 0, arity * sizeof(size_t));
+        // Using a safer alternative to memset for buffer initialization
+        for (size_t i = 0; i < arity; i++) {
+            constraint->variables[i] = 0;
+        }
     }
 
     // Return the created constraint, or NULL if allocation failed

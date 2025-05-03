@@ -1,0 +1,31 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Roboto,fontsize=10,labelfontname=Roboto,labelfontsize=10];
+  node [fontname=Roboto,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="LR";
+  Node1 [id="Node000001",label="main",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="csp_constraint_create",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a7c7ffdd26fbe5e2729b593cc6937cdcf",tooltip="Creates a new constraint with the specified arity and check function."];
+  Node2 -> Node3 [id="edge2_Node000002_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="csp_initialised",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#aca1712012517bff1090a471f502cf729",tooltip="Checks if the CSP library is initialized."];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="csp_constraint_destroy",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a8fd5c98995a35845e7e57f9b13666231",tooltip="Destroys a constraint and frees all associated resources."];
+  Node4 -> Node3 [id="edge4_Node000004_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node5 [id="edge5_Node000001_Node000005",color="steelblue1",style="solid",tooltip=" "];
+  Node5 [id="Node000005",label="csp_constraint_set\l_variable",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a6929282e729d2c786b6be546b1c3e312",tooltip="Sets which CSP variable is related to a specific position in the constraint."];
+  Node5 -> Node3 [id="edge6_Node000005_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node6 [id="edge7_Node000001_Node000006",color="steelblue1",style="solid",tooltip=" "];
+  Node6 [id="Node000006",label="csp_constraint_to_check",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a8e96fe29fce42103f0e6dc9cc5baa167",tooltip="Determines if a constraint can be checked at the current stage of problem solving."];
+  Node6 -> Node3 [id="edge8_Node000006_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node7 [id="edge9_Node000001_Node000007",color="steelblue1",style="solid",tooltip=" "];
+  Node7 [id="Node000007",label="csp_finish",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a1cb2bdbf4475cdf23c40206614fd5d53",tooltip="Finalizes the CSP library."];
+  Node1 -> Node8 [id="edge10_Node000001_Node000008",color="steelblue1",style="solid",tooltip=" "];
+  Node8 [id="Node000008",label="csp_init",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#a9ae781811992703aec18cf10d7685c80",tooltip="Initializes the CSP library."];
+  Node8 -> Node9 [id="edge11_Node000008_Node000009",color="steelblue1",style="solid",tooltip=" "];
+  Node9 [id="Node000009",label="_verify",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$csp_8c.html#afdbe5d4548be89653cd14254ecfc3efc",tooltip=" "];
+  Node9 -> Node3 [id="edge12_Node000009_Node000003",color="steelblue1",style="solid",tooltip=" "];
+  Node1 -> Node10 [id="edge13_Node000001_Node000010",color="steelblue1",style="solid",tooltip=" "];
+  Node10 [id="Node000010",label="dummy_check",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$test-constraint-to-check_8c.html#ab45cf7470550c633d13e78705f038840",tooltip=" "];
+}

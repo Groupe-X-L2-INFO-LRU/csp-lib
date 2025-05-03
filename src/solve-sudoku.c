@@ -98,17 +98,30 @@ bool read_puzzle(FILE *in) {
 
 int main(int argc, char *argv[]) {
     FILE *in = stdin;
+    bool using_file = false;
+
     if (argc == 2) {
         in = fopen(argv[1], "r");
         if (!in) {
-            fprintf(stderr, "Cannot open file: %s\n", argv[1]);
+            // Using snprintf for safer string formatting
+            char error_msg[256];
+            snprintf(error_msg, sizeof(error_msg), "Cannot open file: %s\n", argv[1]);
+            fputs(error_msg, stderr);
             return EXIT_FAILURE;
         }
+        using_file = true;
     }
 
     // Read the puzzle
-    if (!read_puzzle(in)) {
-        fprintf(stderr, "Failed to read puzzle\n");
+    bool read_success = read_puzzle(in);
+
+    // Close file if we opened one
+    if (using_file) {
+        fclose(in);
+    }
+
+    if (!read_success) {
+        fputs("Failed to read puzzle\n", stderr);
         return EXIT_FAILURE;
     }
 

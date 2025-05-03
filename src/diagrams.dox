@@ -1,0 +1,178 @@
+/**
+ * @file diagrams.dox
+ * @brief Diagrams and illustrations for CSP library documentation
+ */
+
+/**
+ * @page page_visual_guide Visual Guide to CSPs
+ * 
+ * @section visual_csp_concept Basic CSP Concepts
+ * 
+ * A constraint satisfaction problem (CSP) consists of:
+ * 
+ * @dot
+ * digraph csp_components {
+ *     rankdir=LR;
+ *     node [shape=box, style=filled, fillcolor=lightskyblue, fontname=Helvetica];
+ *     variables [label="Variables\nX₁, X₂, ..., Xₙ"];
+ *     domains [label="Domains\nD₁, D₂, ..., Dₙ"];
+ *     constraints [label="Constraints\nC₁, C₂, ..., Cₘ"];
+ *     
+ *     variables -> domains [label="each has"];
+ *     variables -> constraints [label="related by"];
+ * }
+ * @enddot
+ * 
+ * @section visual_backtracking Backtracking Search
+ * 
+ * The basic backtracking algorithm explores the search space as a tree:
+ * 
+ * @dot
+ * digraph backtracking {
+ *     node [shape=circle, style=filled, fillcolor=white, fontname=Helvetica];
+ *     root [label="Start", fillcolor=lightblue];
+ *     n1 [label="X₁=1"];
+ *     n2 [label="X₁=2"];
+ *     n3 [label="X₁=3"];
+ *     n11 [label="X₂=1"];
+ *     n12 [label="X₂=2", fillcolor=lightpink];
+ *     n13 [label="X₂=3"];
+ *     n21 [label="X₂=1"];
+ *     n22 [label="X₂=2"];
+ *     n23 [label="X₂=3"];
+ *     n31 [label="X₂=1", fillcolor=lightgreen];
+ *     n32 [label="X₂=2"];
+ *     n33 [label="X₂=3"];
+ *     
+ *     root -> n1;
+ *     root -> n2;
+ *     root -> n3;
+ *     
+ *     n1 -> n11;
+ *     n1 -> n12 [style=dotted, color=red, label="constraint violation"];
+ *     n1 -> n13;
+ *     
+ *     n2 -> n21;
+ *     n2 -> n22;
+ *     n2 -> n23;
+ *     
+ *     n3 -> n31 [color=green, label="solution found"];
+ *     n3 -> n32;
+ *     n3 -> n33;
+ * }
+ * @enddot
+ * 
+ * @section visual_forward_checking Forward Checking
+ * 
+ * Forward checking prunes inconsistent values from the domains of future variables:
+ * 
+ * @dot
+ * digraph forward_checking {
+ *     rankdir=LR;
+ *     node [shape=record, style=filled, fillcolor=white, fontname=Helvetica];
+ *     
+ *     subgraph cluster_before {
+ *         label="Before assigning X₁=2";
+ *         bgcolor=lightgrey;
+ *         x1_before [label="X₁|{1|2|3}"];
+ *         x2_before [label="X₂|{1|2|3|4}"];
+ *         x3_before [label="X₃|{1|2|3}"];
+ *     }
+ *     
+ *     subgraph cluster_after {
+ *         label="After assigning X₁=2";
+ *         bgcolor=aliceblue;
+ *         x1_after [label="X₁|{2}", fillcolor=lightgreen];
+ *         x2_after [label="X₂|{1|3|4}", fillcolor=lightyellow];
+ *         x3_after [label="X₃|{1|3}", fillcolor=lightyellow];
+ *         
+ *         note [shape=note, label="Values 2 pruned from X₂, X₃\ndue to constraint X₁≠X₂, X₁≠X₃", fillcolor=lightyellow];
+ *     }
+ *     
+ *     x1_before -> x1_after [label="Assign"];
+ *     x2_before -> x2_after [label="Prune"];
+ *     x3_before -> x3_after [label="Prune"];
+ * }
+ * @enddot
+ * 
+ * @section visual_mrv Minimum Remaining Values (MRV) Heuristic
+ * 
+ * The MRV heuristic chooses the variable with the smallest domain:
+ * 
+ * @dot
+ * digraph mrv_heuristic {
+ *     node [shape=record, style=filled, fontname=Helvetica];
+ *     
+ *     x1 [label="X₁|{1|2|3|4|5}", fillcolor=lightblue];
+ *     x2 [label="X₂|{2|3}", fillcolor=lightgreen];
+ *     x3 [label="X₃|{1|2|3|4}", fillcolor=lightblue];
+ *     x4 [label="X₄|{5|9|10}", fillcolor=lightblue];
+ *     
+ *     mrv [shape=box, label="MRV selects X₂\n(smallest domain)", fillcolor=gold];
+ *     
+ *     edge [style=invis];
+ *     x1 -> x2 -> x3 -> x4;
+ *     x2 -> mrv [style=solid, color=green];
+ * }
+ * @enddot
+ * 
+ * @section visual_lcv Least Constraining Value (LCV) Heuristic
+ * 
+ * The LCV heuristic orders values by how many constraints they impose on future variables:
+ * 
+ * @dot
+ * digraph lcv_heuristic {
+ *     rankdir=LR;
+ *     node [shape=circle, style=filled, fillcolor=lightblue, fontname=Helvetica];
+ *     
+ *     subgraph cluster_variable {
+ *         label="Variable X₁ with domain {1, 2, 3}";
+ *         bgcolor=lightgrey;
+ *         
+ *         val1 [label="1"];
+ *         val2 [label="2"];
+ *         val3 [label="3"];
+ *     }
+ *     
+ *     subgraph cluster_constraints {
+ *         label="Constraints imposed on other variables";
+ *         bgcolor=aliceblue;
+ *         
+ *         c1 [label="5 constraints", fillcolor=lightpink];
+ *         c2 [label="1 constraint", fillcolor=lightgreen];
+ *         c3 [label="3 constraints", fillcolor=lightyellow];
+ *     }
+ *     
+ *     order [shape=box, label="LCV Orders:\n1. Value 2 (least constraining)\n2. Value 3\n3. Value 1 (most constraining)", fillcolor=gold];
+ *     
+ *     val1 -> c1;
+ *     val2 -> c2;
+ *     val3 -> c3;
+ *     
+ *     {c1, c2, c3} -> order;
+ * }
+ * @enddot
+ * 
+ * @section visual_sudoku Sudoku as a CSP
+ * 
+ * A Sudoku puzzle can be represented as a CSP:
+ * 
+ * @dot
+ * digraph sudoku_csp {
+ *     node [shape=record, fontname=Helvetica];
+ *     
+ *     variables [label="Variables|81 cells", style=filled, fillcolor=lightblue];
+ *     domains [label="Domains|{1|2|3|4|5|6|7|8|9}", style=filled, fillcolor=lightgreen];
+ *     
+ *     constraints [label="Constraints", style=filled, fillcolor=lightpink];
+ *     c1 [label="Row constraints|Each row contains 1-9"];
+ *     c2 [label="Column constraints|Each column contains 1-9"];
+ *     c3 [label="Box constraints|Each 3x3 box contains 1-9"];
+ *     c4 [label="Given values|Pre-filled cells keep their values"];
+ *     
+ *     variables -> domains;
+ *     variables -> constraints;
+ *     constraints -> {c1, c2, c3, c4};
+ * }
+ * @enddot
+ */

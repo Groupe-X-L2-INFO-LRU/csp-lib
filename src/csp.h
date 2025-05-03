@@ -7,6 +7,7 @@
 /**
  * @file csp.h
  * @brief Header file for the CSP (Constraint Satisfaction Problem) library.
+ * @ingroup core
  *
  * This file defines the core structures and functions for working with Constraint
  * Satisfaction Problems. CSP is a mathematical problem where variables must be
@@ -14,34 +15,82 @@
  * This library provides mechanisms for defining, manipulating and solving CSPs
  * using various algorithms like backtracking and forward checking with heuristics.
  *
+ * @section csp_concepts Core Concepts
+ *
+ * <b>Variables and Domains:</b> Each variable has a domain of possible values. In this library,
+ * variables are identified by their indices (0 to N-1), and each domain consists of values
+ * from 0 to domain_size-1.
+ *
+ * <b>Constraints:</b> Relations that restrict the values variables can take simultaneously.
+ * The library supports constraints of arbitrary arity (number of variables involved).
+ * 
+ * <b>Problem Structure:</b> A collection of variables with their domains, and constraints between
+ * these variables. The goal is to assign a value to each variable from its domain, such that
+ * all constraints are satisfied.
+ *
+ * @section csp_workflow Basic Workflow
+ *
+ * 1. Initialize the library: csp_init()
+ * 2. Create a problem: csp_problem_create()
+ * 3. Create and add constraints: csp_constraint_create(), csp_problem_add_constraint()
+ * 4. Solve the problem: Use one of the solving algorithms, e.g., solve_with_forward_checking()
+ * 5. Process the solution
+ * 6. Clean up resources: csp_problem_destroy(), csp_finish()
+ *
  * @author Ch. Demko (original)
- * @date 2024-2025
+ * @date 3 mai 2025
  * @version 1.0
  */
 
 /**
  * @brief The constraint of a CSP problem.
+ * @ingroup core
  *
  * A constraint defines a relation between variables that must be satisfied
  * for a valid solution. This is an opaque data type; use the API functions
  * to interact with constraints.
+ * 
+ * Constraints are defined by:
+ * - A set of variables involved in the constraint
+ * - A checker function that determines if an assignment satisfies the constraint
+ * - Optional external data that can be passed to the checker function
+ * 
+ * @see csp_constraint_create()
+ * @see csp_constraint_set_variable()
+ * @see csp_constraint_get_variable()
+ * @see csp_constraint_get_arity()
+ * @see csp_constraint_destroy()
  */
 typedef struct _CSPConstraint CSPConstraint;
 
 /**
  * @brief The CSP problem.
+ * @ingroup core
  *
  * Represents a complete Constraint Satisfaction Problem, containing the set of
  * variables, their domains, and the constraints between them. This is an opaque
  * data type; use the API functions to interact with CSP problems.
+ * 
+ * A CSP problem consists of:
+ * - A set of variables (identified by their indices)
+ * - A domain for each variable (values from 0 to domain_size-1)
+ * - A set of constraints that must be satisfied
+ *
+ * @see csp_problem_create()
+ * @see csp_problem_add_constraint()
+ * @see csp_problem_get_num_variables()
+ * @see csp_problem_get_domain_size()
+ * @see csp_problem_destroy()
  */
 typedef struct _CSPProblem CSPProblem;
 
 /**
  * @brief The check function of a CSP constraint.
+ * @ingroup core
  *
  * This function type is used to check whether a constraint is satisfied
- * for a given assignment of values to variables.
+ * for a given assignment of values to variables. It is provided by the user
+ * when creating constraints to define the specific conditions that must be met.
  *
  * @param constraint The constraint to check.
  * @param values The current assignment of values to variables.
@@ -54,10 +103,24 @@ typedef bool CSPChecker(const CSPConstraint *, const size_t *, const void *);
 
 /**
  * @brief Initializes the CSP library.
+ * @ingroup core
  *
  * This function must be called before using any other function in the CSP library.
  * The library uses a reference counting mechanism, so each call to csp_init() must
  * be matched with a corresponding call to csp_finish().
+ * 
+ * @code{.c}
+ * // Initialize the library
+ * if (!csp_init()) {
+ *     fprintf(stderr, "Failed to initialize CSP library\n");
+ *     return EXIT_FAILURE;
+ * }
+ * 
+ * // Use the library...
+ * 
+ * // Clean up when done
+ * csp_finish();
+ * @endcode
  *
  * @return true if the library was successfully initialized (or was already initialized),
  *         false otherwise.
@@ -211,7 +274,8 @@ extern bool csp_constraint_to_check(const CSPConstraint *constraint, size_t inde
  * @return A new CSP problem instance, or NULL if memory allocation failed.
  * @pre The CSP library must be initialized via csp_init().
  * @pre num_domains must be greater than 0.
- * @pre num_constraints can be 0 for testing purposes, although typically CSPs have at least one constraint.
+ * @pre num_constraints can be 0 for testing purposes, although typically CSPs have at least one
+ * constraint.
  * @post Each variable's domain size is initialized to 0.
  * @post Each constraint slot is initialized to NULL.
  * @post The CSP problem has the specified number of domains and constraints.
@@ -234,7 +298,7 @@ extern void csp_problem_destroy(CSPProblem *csp);
 /**
  * @brief Gets the number of constraints in the CSP problem.
  *
- * Constraints define relationships between variables that must be satisfied 
+ * Constraints define relationships between variables that must be satisfied
  * for a valid solution.
  *
  * @param csp The CSP problem to query.
@@ -336,7 +400,8 @@ extern size_t csp_problem_get_domain(const CSPProblem *csp, size_t index);
  * @pre csp must not be NULL.
  * @pre values must not be NULL.
  */
-extern bool csp_problem_is_consistent(const CSPProblem *csp, const size_t *values, const void *data, size_t index);
+extern bool csp_problem_is_consistent(const CSPProblem *csp, const size_t *values, const void *data,
+                                      size_t index);
 
 /**
  * @brief Recursively solves the CSP problem using backtracking from a given variable.
@@ -355,7 +420,8 @@ extern bool csp_problem_is_consistent(const CSPProblem *csp, const size_t *value
  * @pre values must not be NULL.
  * @post If a solution is found, values contains the solution assignments.
  */
-extern bool csp_problem_backtrack(const CSPProblem *csp, size_t *values, const void *data, size_t index);
+extern bool csp_problem_backtrack(const CSPProblem *csp, size_t *values, const void *data,
+                                  size_t index);
 
 /**
  * @brief Solves a CSP problem using the basic backtracking algorithm.

@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-#include "csp.inc"
+#include "csp_internal.h"
 
 /**
  * @file heuristics.c

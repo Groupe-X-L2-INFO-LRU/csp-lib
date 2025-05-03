@@ -12,10 +12,6 @@ if(POLICY CMP0110)
   cmake_policy(SET CMP0110 NEW)
 endif()
 
-# Add the executable
-add_executable(solve-queens src/solve-queens.c)
-target_link_libraries(solve-queens PRIVATE csp)
-
 # Add Sudoku solver executable
 add_executable(solve-sudoku src/solve-sudoku.c)
 target_link_libraries(solve-sudoku PRIVATE csp)
@@ -23,15 +19,11 @@ target_link_libraries(solve-sudoku PRIVATE csp)
 # Add the library
 add_library(csp SHARED
   src/csp.c
-  src/csp.inc
   src/forward-checking.c
   src/heuristics.c
   src/sudoku_utils.c
 )
 target_include_directories(csp PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
-
-# Link the library to the executable
-target_link_libraries(solve-queens PRIVATE csp)
 
 # Find test files
 file(GLOB FILES "${CMAKE_CURRENT_SOURCE_DIR}/tests/test-*.c")
