@@ -16,6 +16,10 @@ endif()
 add_executable(solve-queens src/solve-queens.c)
 target_link_libraries(solve-queens PRIVATE csp)
 
+# Add Sudoku solver executable
+add_executable(solve-sudoku src/solve-sudoku.c)
+target_link_libraries(solve-sudoku PRIVATE csp)
+
 # Add the library
 add_library(csp SHARED
   src/csp.c
