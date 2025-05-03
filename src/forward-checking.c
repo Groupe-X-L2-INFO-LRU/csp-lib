@@ -1,3 +1,4 @@
+// filepath: src/forward-checking.c
 #include "forward-checking.h"
 
 #include <assert.h>
@@ -7,46 +8,45 @@
 #include "heuristics.h"
 
 /**
- * @file forward-checking.c
- * @brief Implementation    // Step 3: Initialize the domain information for each variable
-    for (size_t i = 0; i < n; ++i) {
-        // Get the domain size for this variable from the CSP problem
-        ctx->original_domain_sizes[i] = csp_problem_get_domain(csp, i);
-        size_t d = ctx->original_domain_sizes[i];
-
-        // Allocate memory for tracking which values are available in this domain
-        ctx->current_domains[i] = calloc(d, sizeof(bool));
-
-        // Check if memory allocation succeeded
-        if (!ctx->current_domains[i]) {
-            // Clean up on failure: free all previously allocated domain arrays
-            for (size_t j = 0; j < i; ++j) {
-                free(ctx->current_domains[j]);
+ * @brief Checks consistency of the current assignment under forward checking.
+ *
+ * Only constraints whose all variables have already been assigned (according to ctx->assigned)
+ * are tested. Unassigned variables are ignored, avoiding false conflicts on default values.
+ */
+static bool fc_is_consistent(const CSPProblem *csp, const size_t *values, const void *data,
+                             const CSPForwardCheckContext *ctx) {
+    size_t ncons = csp_problem_get_num_constraints(csp);
+    for (size_t ci = 0; ci < ncons; ++ci) {
+        CSPConstraint *con = csp_problem_get_constraint(csp, ci);
+        size_t ar = csp_constraint_get_arity(con);
+        bool ready = true;
+        // Check if all vars in this constraint have been assigned
+        for (size_t i = 0; i < ar; ++i) {
+            size_t var = csp_constraint_get_variable(con, i);
+            if (!ctx->assigned[var]) {
+                ready = false;
+                break;
             }
-            free(ctx->assigned);
-            free(ctx->original_domain_sizes);
-            free(ctx->current_domains);
-            free(ctx);
-            return NULL;
         }
-
-        // Initialize all values in this domain as available (not pruned)
-        for (size_t v = 0; v < d; ++v) {
-            ctx->current_domains[i][v] = true;
-        }
+        if (!ready) continue;
+        // All variables assigned -> test constraint
+        CSPChecker *check_func = csp_constraint_get_check(con);
+        if (!check_func(con, values, data)) return false;
     }
+    return true;
+}
 
-    // Return the initialized context
-    return ctx;king algorithm for CSP solving.
+/**
+ * @file forward-checking.c
+ * @brief Forward checking algorithm with MRV and LCV heuristics implementation.
  *
- * This file provides the implementation of the forward checking algorithm with MRV
- * (Minimum Remaining Values) and LCV (Least Constraining Value) heuristics for solving
- * constraint satisfaction problems. Forward checking is an optimization over basic
- * backtracking that prunes inconsistent values as soon as a variable is assigned.
+ * This module implements a CSP solver that uses forward checking to prune domains
+ * as soon as a variable is assigned, combined with two heuristics:
+ * - Minimum Remaining Values (MRV) for variable ordering
+ * - Least Constraining Value (LCV) for value ordering
  *
- * @author Ch. Demko (original)
- * @date 2024-2025
- * @version 1.0
+ * Forward checking reduces search space by removing inconsistent values early,
+ * and the heuristics guide the search toward a solution efficiently.
  */
 
 /**
@@ -88,12 +88,12 @@ proceed:;
     // Step 2: Determine the maximum number of values in this variable's domain
     size_t max_vals = ctx->original_domain_sizes[var];
 
-    // Allocate space for the ordered values
+    // Allocate space for the ordered values buffer
     size_t *order = malloc(max_vals * sizeof(size_t));
-    size_t n_vals = 0;  // Will hold the actual number of valid values
+    size_t n_vals = 0;  // Number of values after ordering
 
     // Step 3: Order the values for this variable using the LCV heuristic
-    // (order values by how constraining they are on neighboring variables)
+    // (tries least constraining values first)
     order_values_lcv(csp, ctx, values, data, var, order, &n_vals);
 
     // Step 4: Try each possible value for this variable in the order determined by LCV
@@ -104,13 +104,20 @@ proceed:;
         // Assign this value to the variable
         values[var] = val;
 
-        // Check if this assignment is consistent with all constraints
-        // (only checks constraints where all variables are already assigned)
-        if (!csp_problem_is_consistent(csp, values, data, ctx->num_domains)) continue;
-
-        // Mark this variable as assigned
+        // Mark this variable as assigned for forward checking
         ctx->assigned[var] = true;
 
+        // Check consistency among already assigned variables
+        if (!fc_is_consistent(csp, values, data, ctx)) {
+            ctx->assigned[var] = false;
+            continue;
+        }
+
+        // No need to check global consistency here since fc_is_consistent already
+        // checks constraints among assigned variables only
+
+        // Step 5: Forward checking - prune values from neighboring variables
+        // that would conflict with ou
         // Step 5: Forward checking - prune values from neighboring variables
         // that would conflict with our current assignment
 
@@ -219,6 +226,34 @@ CSPForwardCheckContext *csp_forward_check_context_create(const CSPProblem *csp) 
             ctx->current_domains[i][v] = true;
         }
     }
+    // ---- Initial pruning for unary (pre-assigned) constraints ----
+    // Iterate all constraints and prune domains for arity-1 constraints
+    size_t total_cons = csp_problem_get_num_constraints(csp);
+    // Temporary assignment array for testing
+    size_t *tmp_vals = calloc(ctx->num_domains, sizeof(size_t));
+    for (size_t ci = 0; ci < total_cons; ++ci) {
+        CSPConstraint *con = csp_problem_get_constraint(csp, ci);
+        if (csp_constraint_get_arity(con) != 1) continue;  // only unary
+        size_t var = csp_constraint_get_variable(con, 0);
+        size_t dsize = ctx->original_domain_sizes[var];
+        CSPChecker *checker = csp_constraint_get_check(con);
+        // Test each value in the variable's domain
+        for (size_t d = 0; d < dsize; ++d) {
+            if (!ctx->current_domains[var][d]) continue;
+            tmp_vals[var] = d;
+            // If the constraint fails, mark this value unavailable
+            if (!checker(con, tmp_vals, NULL)) {
+                ctx->current_domains[var][d] = false;
+            }
+        }
+        // If exactly one value remains, consider variable assigned
+        size_t count = 0;
+        for (size_t d = 0; d < dsize; ++d) {
+            if (ctx->current_domains[var][d]) ++count;
+        }
+        if (count == 1) ctx->assigned[var] = true;
+    }
+    free(tmp_vals);
     return ctx;
 }
 
