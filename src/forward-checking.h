@@ -1,17 +1,16 @@
-// forward-checking.h
-
 #ifndef FORWARD_CHECKING_H_
 #define FORWARD_CHECKING_H_
 
 #include "csp.h"
 
 /**
- * @brief Context for forward checking.
+ * @brief Context for forward checking with heuristics.
  */
 typedef struct _CSPForwardCheckContext {
     size_t num_domains;
     size_t *original_domain_sizes;
     bool **current_domains;
+    bool *assigned;
 } CSPForwardCheckContext;
 
 /**
@@ -30,7 +29,7 @@ extern CSPForwardCheckContext *csp_forward_check_context_create(const CSPProblem
 extern void csp_forward_check_context_destroy(CSPForwardCheckContext *context);
 
 /**
- * @brief Solve the CSP problem using forward checking.
+ * @brief Solve the CSP problem using forward checking with MRV and LCV heuristics.
  * @param csp The CSP problem to solve.
  * @param values Array to store variable assignments.
  * @param data User-provided data for constraint checks.
