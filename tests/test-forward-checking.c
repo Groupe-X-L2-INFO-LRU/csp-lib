@@ -7,7 +7,7 @@
 
 // Constraint functions
 
-static bool diff(const CSPConstraint *constraint, const size_t *values, const void *data) {
+static bool diff(const CSPConstraint *constraint, const size_t *values) {
     size_t a = csp_constraint_get_variable(constraint, 0);
     size_t b = csp_constraint_get_variable(constraint, 1);
     return values[a] != values[b];
@@ -43,7 +43,7 @@ void test_two_var_diff(void) {
     CSPProblem *csp = csp_problem_create(2, 1);
     csp_problem_set_domain(csp, 0, 2);
     csp_problem_set_domain(csp, 1, 2);
-    CSPConstraint *con = csp_constraint_create(2, diff);
+    CSPConstraint *con = csp_constraint_create(2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
     csp_constraint_set_variable(con, 0, 0);
     csp_constraint_set_variable(con, 1, 1);
     csp_problem_set_constraint(csp, 0, con);
@@ -59,7 +59,7 @@ void test_unsatisfiable(void) {
     CSPProblem *csp = csp_problem_create(2, 1);
     csp_problem_set_domain(csp, 0, 1);
     csp_problem_set_domain(csp, 1, 1);
-    CSPConstraint *con = csp_constraint_create(2, diff);
+    CSPConstraint *con = csp_constraint_create(2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
     csp_constraint_set_variable(con, 0, 0);
     csp_constraint_set_variable(con, 1, 1);
     csp_problem_set_constraint(csp, 0, con);
@@ -75,10 +75,10 @@ void test_three_var_diff(void) {
     csp_problem_set_domain(csp, 0, 3);
     csp_problem_set_domain(csp, 1, 3);
     csp_problem_set_domain(csp, 2, 3);
-    CSPConstraint *c1 = csp_constraint_create(2, diff);
+    CSPConstraint *c1 = csp_constraint_create(2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
     csp_constraint_set_variable(c1, 0, 0);
     csp_constraint_set_variable(c1, 1, 1);
-    CSPConstraint *c2 = csp_constraint_create(2, diff);
+    CSPConstraint *c2 = csp_constraint_create(2, (bool (*)(const CSPConstraint *, const size_t *, const void *))diff);
     csp_constraint_set_variable(c2, 0, 1);
     csp_constraint_set_variable(c2, 1, 2);
     csp_problem_set_constraint(csp, 0, c1);
