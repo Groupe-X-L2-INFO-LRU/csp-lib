@@ -1,0 +1,186 @@
+/**
+ * @file algorithms.dox
+ * @brief Detailed explanation of CSP solving algorithms
+ */
+
+/**
+ * @page page_algorithms CSP Solving Algorithms
+ * 
+ * @section algorithms_overview Overview
+ * 
+ * This page provides a detailed explanation of the algorithms implemented in the CSP library
+ * for solving constraint satisfaction problems.
+ * 
+ * @section algorithms_backtracking Simple Backtracking
+ * 
+ * Backtracking is the most basic approach to solving CSPs. It works by incrementally building a solution
+ * and abandoning a partial solution ("backtracking") when it determines the partial solution cannot be extended
+ * to a valid complete solution.
+ * 
+ * @subsection backtracking_algorithm Basic Backtracking Algorithm
+ * 
+ * ```
+ * function BACKTRACK(assignment, csp):
+ *     if assignment is complete:
+ *         return assignment
+ *     
+ *     var = SELECT-UNASSIGNED-VARIABLE(csp)
+ *     for each value in DOMAIN(var):
+ *         if value is consistent with assignment:
+ *             add {var = value} to assignment
+ *             result = BACKTRACK(assignment, csp)
+ *             if result ≠ failure:
+ *                 return result
+ *             remove {var = value} from assignment
+ *     
+ *     return failure
+ * ```
+ * 
+ * @subsection backtracking_advantages Advantages
+ * - Simple to implement
+ * - Complete (will find a solution if one exists)
+ * - Uses minimal memory
+ * 
+ * @subsection backtracking_disadvantages Disadvantages
+ * - Inefficient for large problems
+ * - Doesn't detect inconsistencies until late in the search
+ * - Can waste time exploring doomed paths
+ * 
+ * @section algorithms_forward_checking Forward Checking
+ * 
+ * Forward checking is an enhancement to backtracking that performs constraint propagation whenever
+ * a value is assigned to a variable. It maintains a list of available values for unassigned variables
+ * and immediately removes values that are inconsistent with the current assignment.
+ * 
+ * @subsection forward_checking_algorithm Forward Checking Algorithm
+ * 
+ * ```
+ * function FORWARD-CHECK(assignment, csp):
+ *     if assignment is complete:
+ *         return assignment
+ *     
+ *     var = SELECT-UNASSIGNED-VARIABLE(csp)
+ *     for each value in DOMAIN(var):
+ *         if value is consistent with assignment:
+ *             add {var = value} to assignment
+ *             
+ *             // Forward checking: temporarily prune inconsistent values
+ *             saved_domains = {}
+ *             for each unassigned variable V:
+ *                 for each value D in DOMAIN(V):
+ *                     if D is inconsistent with {var = value}:
+ *                         remove D from DOMAIN(V)
+ *                         save this removal in saved_domains
+ *                 if DOMAIN(V) is empty:
+ *                     restore all saved_domains
+ *                     remove {var = value} from assignment
+ *                     continue to next value
+ *             
+ *             result = FORWARD-CHECK(assignment, csp)
+ *             if result ≠ failure:
+ *                 return result
+ *                 
+ *             restore all saved_domains
+ *             remove {var = value} from assignment
+ *     
+ *     return failure
+ * ```
+ * 
+ * @subsection forward_checking_advantages Advantages
+ * - Detects inconsistencies earlier than simple backtracking
+ * - Reduces the search space significantly
+ * - Can be combined with various heuristics
+ * 
+ * @subsection forward_checking_disadvantages Disadvantages
+ * - More memory usage than simple backtracking
+ * - More complex implementation
+ * - Only checks immediate consequences of assignments
+ * 
+ * @section algorithms_heuristics Variable and Value Selection Heuristics
+ * 
+ * Heuristics guide the search by determining which variable to assign next and which value to try first.
+ * 
+ * @subsection mrv_heuristic Minimum Remaining Values (MRV)
+ * 
+ * The MRV heuristic selects the variable with the fewest remaining legal values in its domain.
+ * 
+ * ```
+ * function SELECT-UNASSIGNED-VARIABLE-MRV(csp):
+ *     return the variable with minimum DOMAIN-SIZE(var) among unassigned variables
+ * ```
+ * 
+ * @subsection lcv_heuristic Least Constraining Value (LCV)
+ * 
+ * The LCV heuristic chooses the value that rules out the fewest choices for neighboring variables.
+ * 
+ * ```
+ * function ORDER-DOMAIN-VALUES-LCV(var, assignment, csp):
+ *     for each value in DOMAIN(var):
+ *         count = 0
+ *         for each unassigned variable V that is connected to var by a constraint:
+ *             for each value D in DOMAIN(V):
+ *                 if D is inconsistent with {var = value}:
+ *                     count = count + 1
+ *         constraints[value] = count
+ *     
+ *     return DOMAIN(var) sorted by ascending order of constraints
+ * ```
+ * 
+ * @section algorithms_advanced Advanced Techniques
+ * 
+ * @subsection arc_consistency Arc Consistency
+ * 
+ * Arc consistency (AC-3) ensures that every value in a variable's domain satisfies all binary constraints 
+ * with previously assigned variables. This can be implemented as a preprocessing step or during search.
+ * 
+ * ```
+ * function AC-3(csp):
+ *     queue = all arcs in csp
+ *     while queue is not empty:
+ *         (Xi, Xj) = REMOVE-FIRST(queue)
+ *         if REVISE(csp, Xi, Xj):
+ *             if DOMAIN(Xi) is empty:
+ *                 return false
+ *             for each Xk where k ≠ i and k ≠ j:
+ *                 add (Xk, Xi) to queue
+ *     return true
+ *     
+ * function REVISE(csp, Xi, Xj):
+ *     revised = false
+ *     for each value x in DOMAIN(Xi):
+ *         if no value y in DOMAIN(Xj) allows (x,y) to satisfy the constraint:
+ *             remove x from DOMAIN(Xi)
+ *             revised = true
+ *     return revised
+ * ```
+ * 
+ * @subsection backjumping Backjumping
+ * 
+ * Backjumping identifies the source of failure and jumps back directly to the variable causing the failure, 
+ * rather than to the most recent decision point.
+ * 
+ * @subsection nogood_learning No-Good Learning
+ * 
+ * This technique records combinations of values that have been proven not to be part of any solution, 
+ * avoiding repeated exploration of failed paths.
+ * 
+ * @section algorithms_implementation Implementation in CSP Library
+ * 
+ * In our library, the forward checking algorithm is implemented in the `solve_with_forward_checking()` function
+ * in forward-checking.c. This implementation integrates both the MRV and LCV heuristics for efficient solving.
+ * 
+ * The core of the implementation is a recursive function that:
+ * 
+ * 1. Checks if all variables are assigned (base case)
+ * 2. Selects an unassigned variable using the MRV heuristic
+ * 3. Orders the domain values using the LCV heuristic
+ * 4. For each value:
+ *    - Assigns the value to the variable
+ *    - Prunes inconsistent values from domains of unassigned variables
+ *    - Recursively continues the search
+ *    - Restores pruned values on backtracking
+ * 
+ * @see solve_with_forward_checking()
+ * @see select_unassigned_variable_mrv()
+ * @see order_domain_values_lcv()
+ */

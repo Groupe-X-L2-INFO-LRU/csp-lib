@@ -1,0 +1,5 @@
+<map id="csp_forward_check_context_destroy" name="csp_forward_check_context_destroy">
+<area shape="rect" id="Node000001" title="Destroys a forward checking context and frees all associated memory." alt="" coords="5,5,196,45"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="244,13,349,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,23,230,23,230,28,196,28"/>
+</map>

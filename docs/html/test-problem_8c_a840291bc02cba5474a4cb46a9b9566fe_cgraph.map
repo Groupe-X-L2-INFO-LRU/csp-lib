@@ -1,0 +1,33 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,208,57,233"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#a1cb2bdbf4475cdf23c40206614fd5d53" title="Finalizes the CSP library." alt="" coords="145,5,227,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="32,207,37,174,50,129,71,82,86,59,104,40,131,24,133,29,107,44,90,63,76,84,55,131,43,175,37,208"/>
+<area shape="rect" id="Node000003" href="$csp_8c.html#a9ae781811992703aec18cf10d7685c80" title="Initializes the CSP library." alt="" coords="153,55,219,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="35,207,59,155,79,124,104,97,138,77,141,82,107,101,83,127,64,157,40,209"/>
+<area shape="rect" id="Node000005" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="557,257,663,283"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="44,206,70,184,104,165,215,122,263,108,309,99,355,96,402,102,453,117,511,141,541,162,566,189,600,244,595,246,562,192,538,166,508,146,452,122,401,107,354,102,310,104,265,113,217,127,106,170,73,188,48,210"/>
+<area shape="rect" id="Node000006" href="$csp_8c.html#a536e0507b779b2300d004ef8347d4d8b" title="Creates a new CSP problem instance with the specified parameters." alt="" coords="339,156,485,181"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="57,208,105,193,219,175,325,168,326,173,220,181,106,198,59,213"/>
+<area shape="rect" id="Node000007" href="$csp_8c.html#a0f4b67899ee7788002586217b13dde81" title="Destroys a CSP problem instance and frees all associated resources." alt="" coords="109,208,263,233"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="57,218,95,218,95,223,57,223"/>
+<area shape="rect" id="Node000009" href="$csp_8c.html#aba7697a379d5f761429bb911e2bc2bbc" title="Gets the constraint at the specified position in the CSP problem." alt="" coords="315,307,509,332"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="58,227,106,242,230,275,340,301,339,306,228,280,105,247,57,232"/>
+<area shape="rect" id="Node000010" href="$csp_8c.html#a86b3f53f47b41dcdd6109aaa9103d5fa" title="Gets the domain size for a variable in the CSP problem." alt="" coords="323,356,501,381"/>
+<area shape="poly" id="edge14_Node000001_Node000010" title=" " alt="" coords="44,232,71,261,107,289,156,312,208,331,310,354,309,359,207,336,154,317,104,294,67,265,40,236"/>
+<area shape="rect" id="Node000011" href="$csp_8c.html#a1dc56cea8c87ec1ef2e4489536cd1f0e" title="Gets the number of constraints in the CSP problem." alt="" coords="105,371,267,411"/>
+<area shape="poly" id="edge16_Node000001_Node000011" title=" " alt="" coords="40,232,64,285,84,316,107,344,130,362,127,367,103,348,79,319,60,287,35,235"/>
+<area shape="rect" id="Node000012" href="$csp_8c.html#abf80aeaad4438b9cbaefaa941e4f2315" title="Gets the number of variables (domains) in the CSP problem." alt="" coords="105,449,267,489"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="37,233,43,269,55,318,76,372,107,422,127,439,123,443,103,425,72,375,50,320,38,270,32,234"/>
+<area shape="rect" id="Node000004" href="$csp_8c.html#afdbe5d4548be89653cd14254ecfc3efc" title=" " alt="" coords="380,55,444,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="220,65,366,65,366,70,220,70"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="445,69,478,79,511,97,544,131,570,171,590,210,603,243,598,245,585,212,565,174,540,135,508,101,476,84,443,74"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="461,179,511,198,550,222,584,246,581,251,547,226,508,203,459,184"/>
+<area shape="poly" id="edge11_Node000007_Node000005" title=" " alt="" coords="263,220,380,227,510,242,553,251,552,256,509,247,379,232,263,225"/>
+<area shape="rect" id="Node000008" href="$csp_8c.html#a8fd5c98995a35845e7e57f9b13666231" title="Destroys a constraint and frees all associated resources." alt="" coords="331,257,493,283"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="245,231,340,252,339,257,244,236"/>
+<area shape="poly" id="edge10_Node000008_Node000005" title=" " alt="" coords="493,267,543,267,543,273,493,273"/>
+<area shape="poly" id="edge13_Node000009_Node000005" title=" " alt="" coords="463,304,545,283,546,289,464,309"/>
+<area shape="poly" id="edge15_Node000010_Node000005" title=" " alt="" coords="475,353,508,341,549,316,583,290,586,294,552,321,510,346,476,358"/>
+<area shape="poly" id="edge17_Node000011_Node000005" title=" " alt="" coords="267,408,323,415,385,417,448,410,479,402,508,390,537,371,561,346,595,294,599,296,565,349,540,375,511,395,481,407,449,415,385,422,323,420,267,413"/>
+<area shape="poly" id="edge19_Node000012_Node000005" title=" " alt="" coords="267,473,324,473,386,467,450,451,480,439,508,424,540,396,566,361,585,326,598,295,603,297,590,328,570,364,544,400,511,428,482,444,451,456,387,472,324,478,267,479"/>
+</map>

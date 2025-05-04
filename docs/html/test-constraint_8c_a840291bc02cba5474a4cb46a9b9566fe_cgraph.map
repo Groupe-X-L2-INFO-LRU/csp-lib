@@ -1,0 +1,28 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,191,57,216"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#a7c7ffdd26fbe5e2729b593cc6937cdcf" title="Creates a new constraint with the specified arity and check function." alt="" coords="293,5,448,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="36,189,61,146,81,121,104,100,145,74,190,55,279,29,280,34,192,60,148,79,107,104,85,125,66,149,41,192"/>
+<area shape="rect" id="Node000004" href="$csp_8c.html#a8fd5c98995a35845e7e57f9b13666231" title="Destroys a constraint and frees all associated resources." alt="" coords="289,55,452,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="44,188,70,165,104,142,149,122,196,105,285,80,286,86,197,110,151,127,107,147,73,169,47,192"/>
+<area shape="rect" id="Node000005" href="$csp_8c.html#a0ec9ba5a3f78127657d0ab0f2d3a5bbd" title="Gets the arity of a constraint." alt="" coords="303,105,439,145"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="57,191,105,175,200,153,289,135,290,141,201,158,106,181,58,196"/>
+<area shape="rect" id="Node000006" href="$csp_8c.html#ac9b8e8925b0302c3cdd35b0186a1acd8" title="Gets the check function associated with a constraint." alt="" coords="303,169,439,209"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="57,199,105,197,289,189,289,194,105,202,58,205"/>
+<area shape="rect" id="Node000007" href="$csp_8c.html#a4cfb5884d7fe282dbecebefb53bb9cdd" title="Gets the variable ID associated with a specific position in the constraint." alt="" coords="105,211,241,251"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="58,206,92,213,91,218,57,211"/>
+<area shape="rect" id="Node000008" href="$csp_8c.html#a1cb2bdbf4475cdf23c40206614fd5d53" title="Finalizes the CSP library." alt="" coords="133,276,214,301"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="47,214,74,238,107,261,121,268,119,273,104,266,70,242,44,218"/>
+<area shape="rect" id="Node000009" href="$csp_8c.html#a9ae781811992703aec18cf10d7685c80" title="Initializes the CSP library." alt="" coords="140,325,207,351"/>
+<area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="40,215,65,262,84,289,107,312,128,324,126,329,104,316,80,292,60,265,35,217"/>
+<area shape="rect" id="Node000011" href="$test-constraint_8c.html#ab45cf7470550c633d13e78705f038840" title=" " alt="" coords="118,375,229,400"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="38,215,45,245,58,284,78,325,107,361,112,366,109,370,103,365,74,328,53,286,40,247,32,217"/>
+<area shape="rect" id="Node000003" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="500,144,605,169"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="430,28,453,40,480,60,503,85,539,131,534,134,499,88,476,64,451,44,428,33"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="420,78,453,90,492,111,525,134,522,138,489,116,451,95,418,83"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="439,134,487,142,486,148,438,139"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="438,174,486,166,487,171,439,179"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="241,236,342,237,397,231,451,218,491,199,525,176,528,180,494,204,453,223,398,236,342,242,241,241"/>
+<area shape="rect" id="Node000010" href="$csp_8c.html#afdbe5d4548be89653cd14254ecfc3efc" title=" " alt="" coords="339,303,403,328"/>
+<area shape="poly" id="edge13_Node000009_Node000010" title=" " alt="" coords="207,332,325,318,325,323,207,337"/>
+<area shape="poly" id="edge14_Node000010_Node000003" title=" " alt="" coords="394,300,450,263,495,220,531,179,535,182,499,223,454,267,397,305"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="read_puzzle" name="read_puzzle">
+<area shape="rect" id="Node000001" title="Reads a Sudoku puzzle from stdin or file: 9 lines of 9 digits or dots." alt="" coords="105,5,200,31"/>
+<area shape="rect" id="Node000002" href="$solve-sudoku_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="5,5,57,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,21,58,21,58,15,92,15"/>
+</map>

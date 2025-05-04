@@ -1,0 +1,21 @@
+digraph lcv_heuristic {
+  rankdir=LR;
+  node [shape=record, style=filled, fillcolor=lightskyblue, fontname="Roboto", fontsize=12];
+  edge [fontname="Roboto", fontsize=10];
+  
+  subgraph cluster_0 {
+    label = "Variable X with domain values";
+    color = lightgrey;
+    style = filled;
+    
+    val1 [label="{Value 1|Rules out 5 values\nin neighbor domains}", fillcolor=lightcoral];
+    val2 [label="{Value 2|Rules out 2 values\nin neighbor domains}", fillcolor=lightgreen];
+    val3 [label="{Value 3|Rules out 4 values\nin neighbor domains}", fillcolor=lightyellow];
+  }
+
+  lcv [label="LCV Heuristic\nSelects value that\nrules out fewest possibilities\nin neighbor domains", shape=box, fillcolor=gold];
+  result [label="Value 2 Selected:\nLeast constraining (rules out only 2 values)", shape=box, fillcolor=lightgreen];
+  
+  lcv -> val2 [style=dashed, label="identifies"];
+  val2 -> result [style=bold];
+}

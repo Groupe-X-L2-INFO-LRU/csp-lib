@@ -1,0 +1,5 @@
+<map id="csp_problem_set_domain" name="csp_problem_set_domain">
+<area shape="rect" id="Node000001" title="Sets the domain size for a variable in the CSP problem." alt="" coords="5,5,183,31"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="231,5,336,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,15,217,15,217,21,183,21"/>
+</map>

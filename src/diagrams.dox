@@ -1,0 +1,252 @@
+/**
+ * @file diagrams.dox
+ * @brief Diagrams and visualizations for CSP library documentation
+ */
+
+/**
+ * @page page_diagrams Architecture Diagrams
+ * 
+ * @section architecture_overview Library Architecture Overview
+ * 
+ * The diagram below shows the high-level architecture of the CSP library:
+ * 
+ * @dot
+ * digraph architecture {
+ *   rankdir=TB;
+ *   node [shape=box, style=filled, fillcolor=lightskyblue, fontname="Roboto", fontsize=12];
+ *   edge [fontname="Roboto", fontsize=10];
+ *   
+ *   core [label="Core Components\n(csp.h)", URL="@ref core"];
+ *   algorithms [label="Solving Algorithms\n(forward-checking.h)", URL="@ref algorithms"];
+ *   heuristics [label="Heuristics\n(heuristics.h)", URL="@ref heuristics"];
+ *   applications [label="Applications\n(sudoku_utils.h, etc.)", URL="@ref applications"];
+ *   utilities [label="Utilities", URL="@ref utilities"];
+ *   
+ *   core -> algorithms [label="uses"];
+ *   core -> applications [label="implements"];
+ *   algorithms -> heuristics [label="employs"];
+ *   applications -> algorithms [label="uses"];
+ *   algorithms -> utilities [label="uses"];
+ *   applications -> utilities [label="uses"];
+ * }
+ * @enddot
+ * 
+ * @section csp_structure CSP Structure
+ * 
+ * This diagram illustrates the structure of a CSP problem:
+ * 
+ * @dot
+ * digraph csp_structure {
+ *   rankdir=TB;
+ *   node [shape=box, style=filled, fillcolor=lightskyblue, fontname="Roboto", fontsize=12];
+ *   edge [fontname="Roboto", fontsize=10];
+ *   
+ *   problem [label="CSPProblem", shape=record, fillcolor=gold, 
+ *            label="{CSPProblem|+ num_domains\l+ domains[]\l+ num_constraints\l+ constraints[]\l}"];
+ *   
+ *   constraint1 [label="CSPConstraint 1", shape=record, 
+ *               label="{CSPConstraint|+ check()\l+ arity\l+ variables[]\l}"];
+ *   constraint2 [label="CSPConstraint 2", shape=record, 
+ *               label="{CSPConstraint|+ check()\l+ arity\l+ variables[]\l}"];
+ *   constraint3 [label="CSPConstraint 3", shape=record, 
+ *               label="{CSPConstraint|+ check()\l+ arity\l+ variables[]\l}"];
+ *               
+ *   var0 [label="Variable 0\nDomain: [0,1,2]", shape=circle, fillcolor=lightgreen];
+ *   var1 [label="Variable 1\nDomain: [0,1,2,3]", shape=circle, fillcolor=lightgreen];
+ *   var2 [label="Variable 2\nDomain: [0,1]", shape=circle, fillcolor=lightgreen];
+ *   var3 [label="Variable 3\nDomain: [0,1,2,3,4]", shape=circle, fillcolor=lightgreen];
+ *   
+ *   problem -> constraint1 [label="contains"];
+ *   problem -> constraint2 [label="contains"];
+ *   problem -> constraint3 [label="contains"];
+ *   
+ *   constraint1 -> var0 [label="refers to"];
+ *   constraint1 -> var1 [label="refers to"];
+ *   constraint2 -> var1 [label="refers to"];
+ *   constraint2 -> var2 [label="refers to"];
+ *   constraint3 -> var0 [label="refers to"];
+ *   constraint3 -> var2 [label="refers to"];
+ *   constraint3 -> var3 [label="refers to"];
+ *   
+ *   problem -> var0 [style=dashed, label="has domain"];
+ *   problem -> var1 [style=dashed, label="has domain"];
+ *   problem -> var2 [style=dashed, label="has domain"];
+ *   problem -> var3 [style=dashed, label="has domain"];
+ * }
+ * @enddot
+ * 
+ * @section forward_checking_algorithm Forward Checking Algorithm
+ * 
+ * This flowchart illustrates the forward checking algorithm:
+ * 
+ * @dot
+ * digraph forward_checking {
+ *   rankdir=TB;
+ *   node [shape=box, style=filled, fillcolor=lightskyblue, fontname="Roboto", fontsize=12];
+ *   edge [fontname="Roboto", fontsize=10];
+ *   
+ *   start [label="Start", shape=oval];
+ *   all_assigned [label="All variables assigned?", shape=diamond];
+ *   select_var [label="Select unassigned variable\n(Using MRV heuristic)", fillcolor=lightgreen];
+ *   order_values [label="Order domain values\n(Using LCV heuristic)", fillcolor=lightgreen];
+ *   assign_value [label="Assign value to variable"];
+ *   prune [label="Prune inconsistent values\nfrom domains of\nunassigned variables"];
+ *   domains_ok [label="All domains non-empty?", shape=diamond];
+ *   recursive_call [label="Recursively solve\nremaining problem"];
+ *   solution_found [label="Solution found?", shape=diamond];
+ *   backtrack [label="Backtrack:\nRestore pruned values\nTry next value"];
+ *   more_values [label="More values to try?", shape=diamond];
+ *   success [label="Return solution", shape=oval, fillcolor=lightgreen];
+ *   failure [label="Return failure", shape=oval, fillcolor=lightcoral];
+ *   
+ *   start -> all_assigned;
+ *   all_assigned -> success [label="Yes"];
+ *   all_assigned -> select_var [label="No"];
+ *   select_var -> order_values;
+ *   order_values -> assign_value;
+ *   assign_value -> prune;
+ *   prune -> domains_ok;
+ *   domains_ok -> recursive_call [label="Yes"];
+ *   domains_ok -> backtrack [label="No"];
+ *   recursive_call -> solution_found;
+ *   solution_found -> success [label="Yes"];
+ *   solution_found -> backtrack [label="No"];
+ *   backtrack -> more_values;
+ *   more_values -> assign_value [label="Yes"];
+ *   more_values -> failure [label="No"];
+ * }
+ * @enddot
+ * 
+ * @section sudoku_constraints Sudoku Constraints Visualization
+ * 
+ * This diagram shows how constraints are applied in a Sudoku puzzle:
+ * 
+ * @dot
+ * digraph sudoku_constraints {
+ *   rankdir=TB;
+ *   node [shape=box, style=filled, fillcolor=lightskyblue, fontname="Roboto", fontsize=12];
+ *   edge [fontname="Roboto", fontsize=10];
+ *   
+ *   subgraph cluster_0 {
+ *     label = "9x9 Sudoku Grid";
+ *     color = black;
+ *     style = rounded;
+ *     grid [shape=plaintext, label=<
+ *       <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="10">
+ *         <TR>
+ *           <TD BGCOLOR="lightpink">(0,0)</TD>
+ *           <TD BGCOLOR="lightpink">(0,1)</TD>
+ *           <TD BGCOLOR="lightpink">(0,2)</TD>
+ *           <TD>(0,3)</TD>
+ *           <TD>(0,4)</TD>
+ *           <TD>(0,5)</TD>
+ *           <TD>(0,6)</TD>
+ *           <TD>(0,7)</TD>
+ *           <TD>(0,8)</TD>
+ *         </TR>
+ *         <TR>
+ *           <TD BGCOLOR="lightpink">(1,0)</TD>
+ *           <TD BGCOLOR="lightpink">(1,1)</TD>
+ *           <TD BGCOLOR="lightpink">(1,2)</TD>
+ *           <TD>(1,3)</TD>
+ *           <TD>(1,4)</TD>
+ *           <TD>(1,5)</TD>
+ *           <TD>(1,6)</TD>
+ *           <TD>(1,7)</TD>
+ *           <TD>(1,8)</TD>
+ *         </TR>
+ *         <TR>
+ *           <TD BGCOLOR="lightpink">(2,0)</TD>
+ *           <TD BGCOLOR="lightpink">(2,1)</TD>
+ *           <TD BGCOLOR="lightpink">(2,2)</TD>
+ *           <TD>(2,3)</TD>
+ *           <TD>(2,4)</TD>
+ *           <TD>(2,5)</TD>
+ *           <TD>(2,6)</TD>
+ *           <TD>(2,7)</TD>
+ *           <TD>(2,8)</TD>
+ *         </TR>
+ *         <TR>
+ *           <TD BGCOLOR="lightcyan">(3,0)</TD>
+ *           <TD>(3,1)</TD>
+ *           <TD>(3,2)</TD>
+ *           <TD>(3,3)</TD>
+ *           <TD>(3,4)</TD>
+ *           <TD>(3,5)</TD>
+ *           <TD>(3,6)</TD>
+ *           <TD>(3,7)</TD>
+ *           <TD BGCOLOR="lightyellow">(3,8)</TD>
+ *         </TR>
+ *         <TR>
+ *           <TD BGCOLOR="lightcyan">(4,0)</TD>
+ *           <TD>(4,1)</TD>
+ *           <TD>(4,2)</TD>
+ *           <TD>(4,3)</TD>
+ *           <TD BGCOLOR="lightgreen">(4,4)</TD>
+ *           <TD>(4,5)</TD>
+ *           <TD>(4,6)</TD>
+ *           <TD>(4,7)</TD>
+ *           <TD BGCOLOR="lightyellow">(4,8)</TD>
+ *         </TR>
+ *         <TR>
+ *           <TD BGCOLOR="lightcyan">(5,0)</TD>
+ *           <TD>(5,1)</TD>
+ *           <TD>(5,2)</TD>
+ *           <TD>(5,3)</TD>
+ *           <TD>(5,4)</TD>
+ *           <TD>(5,5)</TD>
+ *           <TD>(5,6)</TD>
+ *           <TD>(5,7)</TD>
+ *           <TD BGCOLOR="lightyellow">(5,8)</TD>
+ *         </TR>
+ *         <TR>
+ *           <TD>(6,0)</TD>
+ *           <TD>(6,1)</TD>
+ *           <TD>(6,2)</TD>
+ *           <TD>(6,3)</TD>
+ *           <TD>(6,4)</TD>
+ *           <TD>(6,5)</TD>
+ *           <TD BGCOLOR="lightgrey">(6,6)</TD>
+ *           <TD BGCOLOR="lightgrey">(6,7)</TD>
+ *           <TD BGCOLOR="lightgrey">(6,8)</TD>
+ *         </TR>
+ *         <TR>
+ *           <TD>(7,0)</TD>
+ *           <TD>(7,1)</TD>
+ *           <TD>(7,2)</TD>
+ *           <TD>(7,3)</TD>
+ *           <TD>(7,4)</TD>
+ *           <TD>(7,5)</TD>
+ *           <TD BGCOLOR="lightgrey">(7,6)</TD>
+ *           <TD BGCOLOR="lightgrey">(7,7)</TD>
+ *           <TD BGCOLOR="lightgrey">(7,8)</TD>
+ *         </TR>
+ *         <TR>
+ *           <TD>(8,0)</TD>
+ *           <TD>(8,1)</TD>
+ *           <TD>(8,2)</TD>
+ *           <TD>(8,3)</TD>
+ *           <TD>(8,4)</TD>
+ *           <TD>(8,5)</TD>
+ *           <TD BGCOLOR="lightgrey">(8,6)</TD>
+ *           <TD BGCOLOR="lightgrey">(8,7)</TD>
+ *           <TD BGCOLOR="lightgrey">(8,8)</TD>
+ *         </TR>
+ *       </TABLE>
+ *     >];
+ *   }
+ *   
+ *   row_constraint [label="Row Constraint\nAll cells in the same row\nmust have different values", fillcolor=lightcyan];
+ *   column_constraint [label="Column Constraint\nAll cells in the same column\nmust have different values", fillcolor=lightyellow];
+ *   box_constraint [label="Box Constraint\nAll cells in the same 3x3 box\nmust have different values", fillcolor=lightpink];
+ *   subproblem [label="Subproblem Constraint\nAll cells in a box must\nsatisfy additional constraints", fillcolor=lightgrey];
+ *   cell_highlight [label="Cell (4,4)\nConstrained by its row,\ncolumn, and 3x3 box", fillcolor=lightgreen];
+ *   
+ *   row_constraint -> grid [label="applies to"];
+ *   column_constraint -> grid [label="applies to"];
+ *   box_constraint -> grid [label="applies to"];
+ *   subproblem -> grid [label="applies to"];
+ *   cell_highlight -> grid [label="highlighted as"];
+ * }
+ * @enddot
+ */

@@ -1,0 +1,19 @@
+<map id="prune_neighbors" name="prune_neighbors">
+<area shape="rect" id="Node000001" title="Prunes inconsistent values from neighboring variables after an assignment." alt="" coords="5,141,135,166"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#a0ec9ba5a3f78127657d0ab0f2d3a5bbd" title="Gets the arity of a constraint." alt="" coords="212,5,348,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,138,123,98,151,75,181,55,198,47,200,51,184,60,154,79,127,102,85,142"/>
+<area shape="rect" id="Node000004" href="$csp_8c.html#ac9b8e8925b0302c3cdd35b0186a1acd8" title="Gets the check function associated with a constraint." alt="" coords="212,69,348,109"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="112,138,200,111,201,116,114,143"/>
+<area shape="rect" id="Node000005" href="$csp_8c.html#a4cfb5884d7fe282dbecebefb53bb9cdd" title="Gets the variable ID associated with a specific position in the constraint." alt="" coords="212,133,348,173"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="135,151,198,151,198,156,135,156"/>
+<area shape="rect" id="Node000006" href="$csp_8c.html#aba7697a379d5f761429bb911e2bc2bbc" title="Gets the constraint at the specified position in the CSP problem." alt="" coords="183,198,377,223"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="115,163,183,183,217,192,216,197,182,188,114,169"/>
+<area shape="rect" id="Node000007" href="$csp_8c.html#a1dc56cea8c87ec1ef2e4489536cd1f0e" title="Gets the number of constraints in the CSP problem." alt="" coords="199,248,361,288"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="88,164,129,197,184,232,201,240,199,245,181,237,126,202,84,168"/>
+<area shape="rect" id="Node000003" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="425,141,531,166"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="349,41,379,55,425,91,460,128,456,132,421,95,376,60,347,46"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="343,107,426,134,424,139,342,112"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="348,151,411,151,411,156,348,156"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="331,195,377,183,425,168,426,173,378,188,333,200"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="348,246,376,232,417,204,452,174,455,178,421,208,379,237,350,250"/>
+</map>

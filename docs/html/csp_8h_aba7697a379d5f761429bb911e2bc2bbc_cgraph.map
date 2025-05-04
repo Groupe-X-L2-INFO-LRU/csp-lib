@@ -1,0 +1,5 @@
+<map id="csp_problem_get_constraint" name="csp_problem_get_constraint">
+<area shape="rect" id="Node000001" title="Gets the constraint at the specified position in the CSP problem." alt="" coords="5,5,200,31"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="248,5,353,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="201,15,234,15,234,21,201,21"/>
+</map>

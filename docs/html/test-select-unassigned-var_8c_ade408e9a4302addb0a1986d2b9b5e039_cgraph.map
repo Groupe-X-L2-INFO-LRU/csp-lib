@@ -1,0 +1,9 @@
+<map id="test_mrv_skip_assigned" name="test_mrv_skip_assigned">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,55,172,80"/>
+<area shape="rect" id="Node000002" href="$test-select-unassigned-var_8c.html#aebc07e8d23c3dfb50987857e7c1ac669" title=" " alt="" coords="253,5,347,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="143,52,239,29,240,34,144,57"/>
+<area shape="rect" id="Node000003" href="$test-select-unassigned-var_8c.html#a780b011a9c1a532f4f65d0d1a9d09105" title=" " alt="" coords="260,55,340,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,65,246,65,246,70,172,70"/>
+<area shape="rect" id="Node000004" href="$heuristics_8c.html#a934ee1c54ecdfa65b205d3f9888e38de" title="Implements the Minimum Remaining Values (MRV) heuristic for variable selection." alt="" coords="220,104,380,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="144,77,232,98,231,103,143,83"/>
+</map>

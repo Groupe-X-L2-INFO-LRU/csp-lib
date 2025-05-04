@@ -1,0 +1,5 @@
+<map id="csp_problem_create" name="csp_problem_create">
+<area shape="rect" id="Node000001" title="Creates a new CSP problem instance with the specified parameters." alt="" coords="5,5,151,31"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="199,5,304,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,15,185,15,185,21,151,21"/>
+</map>

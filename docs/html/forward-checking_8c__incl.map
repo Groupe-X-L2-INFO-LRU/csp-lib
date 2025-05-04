@@ -1,0 +1,26 @@
+<map id="src/forward&#45;checking.c" name="src/forward&#45;checking.c">
+<area shape="rect" id="Node000001" title="Forward checking algorithm with MRV and LCV heuristics implementation." alt="" coords="166,5,327,31"/>
+<area shape="rect" id="Node000002" href="$forward-checking_8h.html" title="Forward checking algorithm for constraint satisfaction problems." alt="" coords="331,152,472,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="309,28,352,46,373,60,390,77,403,107,406,138,401,138,398,108,386,80,369,64,350,51,307,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="24,79,96,104"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="217,33,104,76,102,71,216,28"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="120,79,189,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="233,33,182,72,179,68,230,29"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="213,79,280,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="249,31,249,65,244,65,244,31"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="305,79,375,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="263,29,315,68,312,72,260,33"/>
+<area shape="rect" id="Node000010" href="$csp__internal_8h.html" title="Internal header for CSP library implementation." alt="" coords="71,152,179,177"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="166,32,74,51,37,64,14,80,9,90,9,99,21,117,45,132,74,145,72,150,42,137,17,120,4,101,4,89,10,77,34,60,73,46,165,27"/>
+<area shape="rect" id="Node000011" href="$heuristics_8h.html" title="Heuristics for improving CSP solver performance." alt="" coords="451,79,544,104"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="288,28,444,72,443,77,286,33"/>
+<area shape="rect" id="Node000003" href="$csp_8h.html" title="Header file for the CSP (Constraint Satisfaction Problem) library." alt="" coords="374,225,429,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="404,178,404,212,399,212,399,178"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="361,299,441,324"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="404,251,404,285,399,285,399,251"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="470,299,543,324"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="420,248,480,289,477,293,417,253"/>
+<area shape="poly" id="edge10_Node000010_Node000003" title=" " alt="" coords="170,175,361,224,360,229,169,180"/>
+<area shape="poly" id="edge13_Node000011_Node000002" title=" " alt="" coords="483,106,430,146,426,141,480,102"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="500,104,508,284,503,285,495,104"/>
+</map>

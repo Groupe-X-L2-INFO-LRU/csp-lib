@@ -1,0 +1,40 @@
+<map id="restore_pruned" name="restore_pruned">
+<area shape="rect" id="Node000001" title="Restores previously pruned values when backtracking." alt="" coords="740,236,859,261"/>
+<area shape="rect" id="Node000002" href="$forward-checking_8c.html#a1f0b1f4d23987c6c2209df2c7e2570ce" title=" " alt="" coords="564,183,661,208"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="740,235,657,211,658,205,742,230"/>
+<area shape="rect" id="Node000014" href="$test-prune-neighbors_8c.html#adfd3efeb770bf4bc80c71cdab729c81d" title=" " alt="" coords="533,236,692,261"/>
+<area shape="poly" id="edge18_Node000001_Node000014" title=" " alt="" coords="726,251,692,251,692,246,726,246"/>
+<area shape="rect" id="Node000016" href="$test-restore-pruned_8c.html#a762d70ca352fb5ef5378618485a8b591" title=" " alt="" coords="538,285,687,311"/>
+<area shape="poly" id="edge20_Node000001_Node000016" title=" " alt="" coords="738,267,663,288,661,283,737,262"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="646,172,636,164,613,161,593,163,583,168,580,174,586,181,582,184,575,174,579,164,591,158,613,156,638,160,649,168"/>
+<area shape="rect" id="Node000003" href="$forward-checking_8c.html#aab2b763fd1833131dc1b7f43b2c7942a" title="Solves a CSP problem using the forward checking algorithm with heuristics." alt="" coords="292,171,485,211"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="550,197,486,196,486,190,551,192"/>
+<area shape="rect" id="Node000004" href="$test-solve-sudoku-integration_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="149,5,201,31"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="363,162,311,102,278,71,243,44,200,26,202,21,245,40,282,67,315,99,367,158"/>
+<area shape="rect" id="Node000005" href="$solve-queens_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="149,55,201,80"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="350,165,301,129,243,94,200,77,202,72,245,89,304,124,354,160"/>
+<area shape="rect" id="Node000006" href="$test-forward-checking_8c.html#ad73208eb4ba9df875d1fdf3c0b43a6e7" title=" " alt="" coords="117,153,232,179"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="278,181,232,175,232,170,279,176"/>
+<area shape="rect" id="Node000008" href="$test-solve-forward-checking_8c.html#ad2ec5370481a424ba0df59de2b8ede5b" title=" " alt="" coords="109,104,240,129"/>
+<area shape="poly" id="edge8_Node000003_Node000008" title=" " alt="" coords="317,169,243,143,211,132,213,127,245,138,319,164"/>
+<area shape="rect" id="Node000010" href="$test-forward-checking_8c.html#aebadbf73aad5c0730e4272306f6a5388" title=" " alt="" coords="105,203,244,228"/>
+<area shape="poly" id="edge10_Node000003_Node000010" title=" " alt="" coords="278,206,245,210,244,205,278,201"/>
+<area shape="rect" id="Node000011" href="$test-forward-checking_8c.html#ab497f67117be78c07a415960ba822485" title=" " alt="" coords="111,252,238,277"/>
+<area shape="poly" id="edge12_Node000003_Node000011" title=" " alt="" coords="315,218,293,226,212,254,211,249,291,221,313,213"/>
+<area shape="rect" id="Node000012" href="$test-forward-checking_8c.html#a769d87bae594656fbf9732ac5173f5b1" title=" " alt="" coords="110,301,239,327"/>
+<area shape="poly" id="edge14_Node000003_Node000012" title=" " alt="" coords="301,220,294,225,278,241,270,258,262,275,246,292,225,304,223,299,242,288,258,272,266,255,274,238,290,221,298,216"/>
+<area shape="rect" id="Node000013" href="$test-forward-checking_8c.html#a8d8bb23667ef5a832ac998a3204d6838" title=" " alt="" coords="119,351,230,376"/>
+<area shape="poly" id="edge16_Node000003_Node000013" title=" " alt="" coords="298,221,294,225,282,239,276,253,271,282,265,311,258,326,246,341,229,353,226,348,242,337,254,323,260,310,265,281,270,251,278,236,290,221,295,217"/>
+<area shape="rect" id="Node000007" href="$test-forward-checking_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,252,57,277"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="117,187,107,192,70,223,44,254,40,250,67,219,104,188,114,182"/>
+<area shape="rect" id="Node000009" href="$test-solve-forward-checking_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="5,104,57,129"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="96,119,57,119,57,114,96,114"/>
+<area shape="poly" id="edge11_Node000010_Node000007" title=" " alt="" coords="125,235,59,258,57,253,123,230"/>
+<area shape="poly" id="edge13_Node000011_Node000007" title=" " alt="" coords="98,267,57,267,57,262,98,262"/>
+<area shape="poly" id="edge15_Node000012_Node000007" title=" " alt="" coords="123,299,57,276,59,271,125,294"/>
+<area shape="poly" id="edge17_Node000013_Node000007" title=" " alt="" coords="114,347,104,342,67,310,40,279,44,276,70,306,107,337,117,343"/>
+<area shape="rect" id="Node000015" href="$test-prune-neighbors_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="363,236,415,261"/>
+<area shape="poly" id="edge19_Node000014_Node000015" title=" " alt="" coords="520,251,415,251,415,246,520,246"/>
+<area shape="rect" id="Node000017" href="$test-restore-pruned_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title=" " alt="" coords="363,285,415,311"/>
+<area shape="poly" id="edge21_Node000016_Node000017" title=" " alt="" coords="524,301,415,301,415,295,524,295"/>
+</map>

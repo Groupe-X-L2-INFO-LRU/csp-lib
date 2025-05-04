@@ -1,0 +1,15 @@
+<map id="csp_problem_solve" name="csp_problem_solve">
+<area shape="rect" id="Node000001" title="Solves a CSP problem using the basic backtracking algorithm." alt="" coords="5,14,144,40"/>
+<area shape="rect" id="Node000002" href="$csp_8c.html#aca1712012517bff1090a471f502cf729" title="Checks if the CSP library is initialized." alt="" coords="853,53,959,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,16,192,12,365,4,500,4,634,14,806,38,850,47,849,52,805,43,634,19,500,9,365,10,192,18,145,21"/>
+<area shape="rect" id="Node000003" href="$csp_8c.html#a44764bc53c05b60468d28bdbfbbf5353" title="Recursively solves the CSP problem using backtracking from a given variable." alt="" coords="192,52,356,77"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="144,37,193,46,192,52,143,42"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="356,59,560,54,805,56,840,58,839,63,805,62,560,60,356,64"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="241,53,235,43,238,33,252,27,274,25,301,29,312,37,309,41,299,33,274,30,253,32,242,37,240,43,246,50"/>
+<area shape="rect" id="Node000004" href="$csp_8c.html#aa99de6b1a87c93273c7e4df221ad4318" title="Checks if the current partial assignment is consistent with all constraints." alt="" coords="404,78,588,104"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="357,72,391,76,390,81,356,77"/>
+<area shape="poly" id="edge8_Node000004_Node000002" title=" " alt="" coords="588,83,840,67,840,72,588,88"/>
+<area shape="rect" id="Node000005" href="$csp_8c.html#a8e96fe29fce42103f0e6dc9cc5baa167" title="Determines if a constraint can be checked at the current stage of problem solving." alt="" coords="636,129,805,154"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="554,101,651,123,650,129,553,106"/>
+<area shape="poly" id="edge7_Node000005_Node000002" title=" " alt="" coords="755,126,804,107,864,82,866,86,806,112,757,131"/>
+</map>
