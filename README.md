@@ -52,6 +52,12 @@ make <executable name> # to launch a specific exectuable
 - Respect the naming convention
 - Comment your code
 - Generate _Doxygen_ documentation
+- Before commit, enter the next commands :
+
+```bash
+clang-tidy src/* #check the syntax of your code
+clang-format -i src/\* #reformat your code
+```
 
 ## Requirements
 
@@ -60,7 +66,11 @@ make <executable name> # to launch a specific exectuable
 
 ## Usage Example
 
-TODO: Add example code when lib is completed
+To solve sudoku, enter this command :
+`./solve-sudoku <puzzle file>`
+
+The puzzle file must be resolvable and must respect the input format : each line correspond to a sudoku line and the hidden numbers are replace by a '.'
+For more informations, see [puzzle.txt](puzzle.txt) file
 
 ## Contribution
 
@@ -76,3 +86,7 @@ Please respect the directives writen on [Contributing.md](CONTRIBUTING.md)
 
 MIT - All right reserved
 For more informations, please check [LiCENSE](LICENSE)
+
+```
+
+```
