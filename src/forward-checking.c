@@ -1,4 +1,14 @@
-// filepath: src/forward-checking.c
+/**
+ * @file forward-checking
+ * @brief Forward checking algorithm with MRV and LCV heuristics implementation.
+ *
+    * This module implements a CSP solver that uses forward checking to prune domains
+ *
+ * @author Quentin Sautière
+ * @date 2025
+ * @version 1.0
+ */
+
 #include "forward-checking.h"
 
 #include <assert.h>

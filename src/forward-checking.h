@@ -6,7 +6,9 @@
 /**
  * @file forward-checking.h
  * @brief Forward checking algorithm for constraint satisfaction problems.
- * @ingroup algorithms
+ * @ingroup algorithms*
+ * @author Quentin Sautière
+ * @date 2025
  *
  * This file provides an implementation of the forward checking algorithm for solving
  * constraint satisfaction problems. Forward checking is an improvement over basic

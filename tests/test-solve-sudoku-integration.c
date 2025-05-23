@@ -90,11 +90,11 @@ int main() {
     memcpy(grid_copy, grid, SUDOKU_CELLS * sizeof(int));
 
     // Add a timeout mechanism to prevent infinite loops
-    printf("Starting solver with a maximum timeout of 3 seconds...\n");
+    printf("Starting solver with a maximum timeout of 6 seconds...\n");
     time_t start_time = time(NULL);
 
-    // Set timeout alarm for 3 seconds
-    alarm(3);
+    // Set timeout alarm for 6 seconds
+    alarm(6);
 
     // Solve using forward checking
     bool solved = csp_problem_solve_forward_checking(problem, solution, grid_copy);
