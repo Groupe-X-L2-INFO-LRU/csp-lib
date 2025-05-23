@@ -1,4 +1,17 @@
-// filepath: solve-sudoku.c
+/**
+    * solve-sudoku.c
+    *
+    * @file solve-sudoku.c
+    * @brief Sudoku solver using CSP with forward checking and heuristics.
+    * @author Quentin Sautière
+    * @date 2025
+    This program models the Sudoku problem as a Constraint Satisfaction Problem (CSP) using the CSP
+library. It uses forward checking with MRV and LCV heuristics to efficiently solve the puzzle. The
+Sudoku grid is represented as 81 variables with domains 1..9 and all-different constraints on rows,
+columns, and 3x3 blocks.
+    *
+*/
+
 //
 // This program models the Sudoku problem as a Constraint Satisfaction Problem (CSP)
 // using the CSP library. It uses forward checking with MRV and LCV heuristics
